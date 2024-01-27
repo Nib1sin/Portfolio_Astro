@@ -3,6 +3,7 @@ import NextJS from "../icons/NextJs.astro"
 import Tailwind from "../icons/Tailwind.astro"
 import GitHub from "../icons/Github.astro"
 import LinkButton from "./LinkButton.astro"
+import SocialPill from '@/icons/SocialPill.astro';
 
 const TAGS = {
   NEXT: {
@@ -29,7 +30,7 @@ const PROJECTS = [
 ]
 ---
 
-<section class="flex flex-col gap-y-16">
+<article class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article>
@@ -41,10 +42,12 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`rounded-full ${tag.class} `}
               >
-                <tag.icon class="size-4" />
+              <SocialPill>
+                <tag.icon class="size-6 " />
                 {tag.name}
+              </SocialPill> 
               </span>
             </li>
           ))}
@@ -92,4 +95,4 @@ const PROJECTS = [
       </article>
     ))
   }
-</section>
+</article>

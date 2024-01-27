@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import "@fontsource-variable/onest"
 import Footer from '@/components/Footer.astro'
+import { ViewTransitions } from "astro:transitions"
 
 interface Props {
 	title: string;
@@ -20,6 +21,7 @@ const { description, title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body class="relative text-black dark:text-white">
 		<!--
@@ -39,6 +41,7 @@ const { description, title } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		color-scheme: light dark;
@@ -68,4 +71,9 @@ const { description, title } = Astro.props;
 		color: rgba(255, 255, 255, 0.9);
 		}
 	}
+
+	.link-active {
+        @apply bg-transparent/90 font-semibold dark:bg-transparent/10 shadow-lg shadow-white/10 backdrop-blur-sm;
+    }
+	
 </style>
