@@ -4,6 +4,10 @@ import "@fontsource-variable/onest"
 import Footer from '@/components/Footer.astro'
 import { ViewTransitions } from "astro:transitions"
 
+import i18next, { t } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
+
 interface Props {
 	title: string;
 	description: string;
@@ -13,7 +17,7 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={i18next.language}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -35,6 +39,7 @@ const { description, title } = Astro.props;
 		bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
 		dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
 		</div>
+		<h1>{ t('home.title') }</h1>
 		
 		<Header />
 		<slot />
