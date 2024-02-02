@@ -1,0 +1,60 @@
+---
+const personalImageAlt = "Pedro"
+import Badge from "@/components/Badge.astro"
+import LinkedInIcon from "@/icons/LinkedIn.astro"
+import MailIcon from "@/icons/Mail.astro"
+import SocialPill from "@/icons/SocialPill.astro"
+import GitHubIcon from "@/icons/Github.astro";
+---
+
+
+<div class="max-w-[800px]">
+
+    <!--
+    <img
+    class="rounded-full size-12 nb-4"
+    src="/public/me.jpg" 
+    alt="nibi photo" />
+    -->
+    <div class="flex gap-4 mb-4">
+        <img 
+            src="/public/me_logo.jpeg" 
+            class="rounded-full shadow-lg size-24"
+            alt="nibi photo"/>
+        <a
+            href="https://www.linkedin.com/in/pjaimer/"
+            target="_blank"
+            rel="noopener"
+            class="flex justify-center items-center hover:scale-105 transition" >
+            <Badge>Contratame</Badge>
+        </a>
+    </div>
+    <h1 class="p-hidden text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 ">
+    Hello there, Im Pedro
+    </h1>
+    <h2 class="text-xl lg:text-2xl text-balance max-w-[1000px] text-red-800 dark:text-red-400 pt-6 lg:pt-10">
+        <strong>Full Stack Software Engineer ☕ .</strong>
+        <span class="mt-6 text-xl text-gray-900 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+        Enfocado en actualizar, desarrollar e implementar productos con extra atención en los detalles.
+        </span>
+        <span class="text-red-800 dark:text-red-400">
+        Especializado en crear aplicaciones únicas 💻.
+        </span>
+    </h2>
+
+    <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/pjaimer/">
+            <LinkedInIcon class="size-4 md:size-6"></LinkedInIcon>
+            LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/">
+            <GitHubIcon class="size-4 md:size-6"></GitHubIcon>
+            Github
+        </SocialPill>
+        <SocialPill href="mailto:nibi.amdukia@gmail.com">
+            <MailIcon class="size-4 md:size-6"></MailIcon>
+            nibi.amdukia@gmail.com
+        </SocialPill>
+    </nav>
+
+</div>

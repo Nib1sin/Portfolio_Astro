@@ -4,18 +4,21 @@ const EXPERIENCE = [
     {
         date: 'Febrary 2022',
         title: 'Application UI code in Tailwind CSS',
+        company: "Twitch",
         description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
         link: '#'
     },
     {
         date: 'March 2022',
         title: 'Marketing UI design in Figma',
+        company: "Twitch",
         description: 'All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.',
         link: '#'
     },
     {
         date: 'April 2022',
         title: 'E-Commerce UI code in Tailwind CSS',
+        company: "Twitch",
         description: 'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
         link: '#'
     }
@@ -24,10 +27,10 @@ const EXPERIENCE = [
 ---
 
 
-<ol class="relative border-s border-gray-200 ml-3">
+<ol class="relative mt-16">
     {
         EXPERIENCE.map(experience=>(
-            <li class="mb-10 ms-4">
+            <li class="">
                 <ExperienceItem {...experience}/>
             </li>
         ))

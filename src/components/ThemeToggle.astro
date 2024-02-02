@@ -5,8 +5,10 @@ import SystemIcon from '../icons/System.astro'
 const THEMES = ['Light', 'Dark', 'System']
 ---
 
-<div class="relative">
-  <button id="theme-toggle-btn" class="appearance-none border-none flex backdrop-blur-md">
+<div class="relative ml-1 mr-1">
+  <button 
+    id="theme-toggle-btn" 
+    class="appearance-none border-none flex backdrop-blur-xl ">
     <span class="sr-only">Elegir Tema</span>
     <SunIcon id="light" class="theme-toggle-icon size-[1.2rem] transition-all" />
     <MoonIcon id="dark" class="theme-toggle-icon absolute size-[1.2rem] transition-all" />
