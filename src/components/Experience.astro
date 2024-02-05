@@ -2,30 +2,44 @@
 import ExperienceItem from "./ExperienceItem.astro"
 const EXPERIENCE = [
     {
-        date: 'Febrary 2022',
-        title: 'Application UI code in Tailwind CSS',
-        company: "Twitch",
-        description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
-        link: '#'
+        date: 'Agosto 2018 - Ahora',
+        title: 'Full Stack Software Developer',
+        company: "Sydema",
+        description: [
+            "• Analista desarrollador, evolución y mantenimiento de Laweb4. Aplicación web para el proceso de recuperación del crédito.", 
+            "• Desarrollo de aplicaciones web utilizando tecnologías como JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Service, DataBases (Sql y No-Sql), Gradle y Git.",
+            "• Desarrollo de Procesos Batch para el transferimiento de datos de diferentes tipos de Data bases (Spring Batch, SqlLoader).",
+            "• Responsable de la gestión y mantenimiento de servidores Linux (RedHat), en la cual se basa la aplicación."
+        ],
+        link: 'http://www.sydema.it/laweb4.html'
     },
     {
-        date: 'March 2022',
-        title: 'Marketing UI design in Figma',
-        company: "Twitch",
-        description: 'All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.',
-        link: '#'
+        date: 'Enero 2017 - Enero 2018',
+        title: 'Junior Software Developer',
+        company: "Movistar",
+        description: [
+            "• Desarrollador de software de gestión de clientes, control de actividades y de rédito. Desarrollado principalmente en c++.", 
+            "• Control, gestión y validación de los data bases de los clientes/proveedores (Sql server y MongoDB)",
+            "• Desarrollo e implementación de un software estadístico y probabilístico que genera ofertas a los posibles clientes. (Scripts dinámicos con Python)",
+            "• Gestión de los servicios implementados en Windows server.",
+            "• Producción de reportes semanales que indicaban los posibles targets a los cuales se ofrecerían los distintos servicios. (Generados con JasperReport)"
+        ],
+        link: 'https://empresas.movistar.com.pe/'
     },
     {
-        date: 'April 2022',
-        title: 'E-Commerce UI code in Tailwind CSS',
-        company: "Twitch",
-        description: 'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
-        link: '#'
+        date: 'Junio 2016 - Diciembre 2016',
+        title: 'Practicante IT',
+        company: "SUNAT",
+        description: [
+            "• Gestión de los ingresos tributarios recaudados en el periodo 2016-II.",
+            "• Durante mi estancia en SUNAT he aprendido las bases de la organización de proyectos y aplicarlos a diferentes niveles en la lógica de algoritmos.",
+            "• Redacción de reportes utilizando querys para obtener el resultado deseado para el usuario final."
+        ],
+        link: 'http://www.sunat.gob.pe'
     }
 
 ]
 ---
-
 
 <ol class="relative mt-16">
     {
@@ -35,23 +49,4 @@ const EXPERIENCE = [
             </li>
         ))
     }
-    
-    
-    <!--
-    <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">March 2022</time>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Marketing UI design in Figma</h3>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
-    </li>
-    <li class="ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">April 2022</time>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">E-Commerce UI code in Tailwind CSS</h3>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
-    </li>
-    -->
 </ol>
-
-
-
