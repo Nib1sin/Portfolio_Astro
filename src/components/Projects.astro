@@ -2,8 +2,14 @@
 import NextJS from "../icons/NextJs.astro"
 import Tailwind from "../icons/Tailwind.astro"
 import GitHub from "../icons/Github.astro"
+import Java from "../icons/Java.astro"
+import Gradle from "../icons/Gradle.astro"
+import Oracle from "../icons/Oracle.astro"
 import LinkButton from "./LinkButton.astro"
-import SocialPill from '@/icons/SocialPill.astro';
+import Sqlserver from '@/icons/Sqlserver.astro';
+import Groovy from '@/icons/Groovy.astro';
+import Spring from '@/icons/Spring.astro';
+import Xml from '@/icons/Xml.astro';
 import Link from "@/icons/Link.astro"
 
 const TAGS = {
@@ -17,16 +23,51 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  JAVA: {
+    name: "Java",
+    class: "bg-white text-black",
+    icon: Java,
+  },
+  GRADLE: {
+    name: "Gradle",
+    class: "bg-white text-black",
+    icon: Gradle,
+  },
+  ORACLE: {
+    name: "Oracle",
+    class: "bg-white text-black",
+    icon: Oracle,
+  },
+  SQL: {
+    name: "Sqlserver",
+    class: "bg-white text-black",
+    icon: Sqlserver,
+  },
+  GROOVY: {
+    name: "Groovy",
+    class: "bg-white text-black",
+    icon: Groovy,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-white text-black",
+    icon: Spring,
+  },
+  XML: {
+    name: "Xml",
+    class: "bg-white text-black",
+    icon: Xml,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL TEST - A beautiful library with SVG logos",
+    title: "Spring Batch processing on the JVM",
     description:
       "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
     link: "https://svgl.vercel.app/",
     github: "https://github.com/pheralb/svgl",
-    image: "/projects/test.jpg",
-    tags: [TAGS.NEXT, TAGS.TAILWIND]
+    image: "/projects/SPRING_BATCH.png",
+    tags: [TAGS.JAVA, TAGS.GRADLE, TAGS.ORACLE, TAGS.SQL, TAGS.GROOVY, TAGS.SPRING, TAGS.XML]
   },
   {
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
@@ -55,11 +96,13 @@ const PROJECTS = [
     </h3>
     <div class="flex flex-wrap mt-2">
 
-        <ul class="flex flex-row mb-2 gap-x-2">
+
+      <div class="mt-2 text-gray-700 dark:text-gray-400">
+        <ul class="flex flex-wrap mb-2 gap-x-2 gap-y-2">
             {tags.map((tag) => (
               <li>
                 <span
-                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 hover:scale-110 hover:bg-white/10`}
                 >
                   <tag.icon class="size-4" />
                   {tag.name}
@@ -67,7 +110,8 @@ const PROJECTS = [
               </li>
             ))}
         </ul>
-
+      </div>
+        
       <div class="mt-2 text-gray-700 dark:text-gray-400">
         {description}
       </div>

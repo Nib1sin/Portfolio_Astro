@@ -1,0 +1,32 @@
+---
+import LinkButton from "@/icons/LinkInline.astro"
+ import SchoolIcon from "@/icons/School.astro";
+
+interface Props {
+    title: string
+    school: string
+    description: string[]
+    link?: string
+    date: string
+}
+
+const { title, school, description, link, date } = Astro.props
+---
+
+
+<span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+<SchoolIcon/>
+</span>
+<h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
+<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{date}</time>
+<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+    {
+        description.map((paragraph) => (
+          <p class="mt-2 text-gray-700 dark:text-gray-400">
+            {paragraph}
+          </p>
+          )
+        )
+    }
+</p>
+

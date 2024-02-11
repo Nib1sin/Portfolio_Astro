@@ -83,9 +83,16 @@ document.addEventListener("astro:page-load", () => {
     });
 
     // Cleanup function
-    window.onunload = () => {
-      observer.disconnect();
-    };
+   document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect()
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section)
+        })
+      }
+    }
+
   });
 </script>
 

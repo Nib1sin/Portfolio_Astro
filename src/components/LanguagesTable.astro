@@ -1,0 +1,62 @@
+---
+import LanguagesTableItem from "./LanguagesTableItem.astro"
+const LANGUAGES = [
+    {
+        language: 'Español',
+        listening: 'Lengua madre',
+        speaking: 'Lengua madre',
+        writing: 'Lengua madre'
+    },
+    {
+        language: 'Inglés',
+        listening: 'C2',
+        speaking: 'C2',
+        writing: 'C1'
+    },
+    {
+        language: 'Italiano',
+        listening: 'C1',
+        speaking: 'C1',
+        writing: 'C1'
+    },
+    {
+        language: 'Alemán',
+        listening: 'A2',
+        speaking: 'A2',
+        writing: 'A2'
+    },
+]
+---
+
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Lengua
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Comprensión
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Hablado
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Escritura
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            {
+                LANGUAGES.map(languages=>(
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <LanguagesTableItem {...languages}/>
+                    </tr>
+                ))
+            }   
+          
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,59 @@
+---
+import StudyItem from "./StudyItem.astro"
+const STUDY = [
+    {
+        date: 'Septiembre 2022 - Ahora',
+        title: 'Ingeniería informática',
+        school: "Politecnico di Milano",
+        description: [
+            "• Analista desarrollador, evolución y mantenimiento de Laweb4. Aplicación web para el proceso de recuperación del crédito.", 
+            "• Desarrollo de Procesos Batch para el transferimiento de datos de diferentes tipos de Data bases (Spring Batch, SqlLoader).",
+            "• Responsable de la gestión y mantenimiento de servidores Linux (RedHat), en la cual se basa la aplicación."
+        ],
+        link: 'https://www.polimi.it'
+    },
+    {
+        date: 'Marzo 2018 - Junio 2018',
+        title: 'Certificación Oracle Java y Php',
+        school: "Pc Academy",
+        description: [
+            "• Desarrollador de software de gestión de clientes, control de actividades y de rédito. Desarrollado principalmente en c++.", 
+            "• Control, gestión y validación de los data bases de los clientes/proveedores (Sql server y MongoDB)",
+            "• Gestión de los servicios implementados en Windows server."
+        ],
+        link: 'https://www.pcacademy.it'
+    },
+    {
+        date: 'Marzo 2012 - Enero 2017',
+        title: 'Ingeniería de Software',
+        school: "Universidad Tecnológica del Perú",
+        description: [
+            "• Desarrollador de software de gestión de clientes, control de actividades y de rédito. Desarrollado principalmente en c++.", 
+            "• Control, gestión y validación de los data bases de los clientes/proveedores (Sql server y MongoDB)",
+            "• Gestión de los servicios implementados en Windows server."
+        ],
+        link: 'https://www.utp.edu.pe/web/'
+    },
+    {
+        date: 'Enero 2013 - Diciembre 2015',
+        title: 'Estudiante de Ingles',
+        school: "El Britanico",
+        description: [
+            "• Desarrollador de software de gestión de clientes, control de actividades y de rédito. Desarrollado principalmente en c++.", 
+            "• Control, gestión y validación de los data bases de los clientes/proveedores (Sql server y MongoDB)",
+            "• Gestión de los servicios implementados en Windows server."
+        ],
+        link: 'https://www.britanico.edu.pe'
+    },
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">  
+{
+    STUDY.map(study=>(
+        <li class="mb-10 ms-6">
+            <StudyItem {...study}/>
+        </li>
+    ))
+}     
+</ol>

@@ -1,0 +1,26 @@
+---
+import LinkButton from "@/icons/LinkInline.astro"
+import SchoolIcon from "@/icons/School.astro";
+
+interface Props {
+    language: string
+    listening: string
+    speaking: string
+    writing: string
+}
+
+const { language, listening, speaking, writing } = Astro.props
+---
+
+<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+    {language}
+</th>
+<td class="px-6 py-4">
+    {listening}
+</td>
+<td class="px-6 py-4">
+    {speaking}
+</td>
+<td class="px-6 py-4">
+    {writing}
+</td>

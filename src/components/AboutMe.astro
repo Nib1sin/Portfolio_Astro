@@ -1,5 +1,10 @@
 ---
- const personalImageAlt = "Pedro"
+
+const personalImageAlt = "Pedro"
+import SchoolIcon from "@/icons/School.astro";
+import Study from "./Study.astro"
+import LanguagesTable from "./LanguagesTable.astro"
+ 
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
@@ -10,8 +15,8 @@
       Soy Pedro y mi pasión por los videojuegos me han llevado a estudiar
       <strong><em class="italic">Ingeniería de Software</em></strong>, que eventualmente me permitió  
       trabajar en distintos países.
-      Conociendo el <strong>enfoque y audaz</strong> de diferentes colegas para afrontar los 
-      eventuales desafíos  en el campo de la informática.
+      Conociendo así, el <strong>enfoque y metodología</strong> para afrontar los 
+      eventuales desafíos  en el campo de la informática en diferentes maneras.
     </p>
 
     <p>
@@ -28,4 +33,21 @@
   </div>
 
   <img src="/public/me.jpg" class="rounded-full size-64 order-1 md:order-2" />
+
 </article>
+
+
+<br>
+<br>
+<LanguagesTable />
+<br>
+<br>
+
+
+
+
+<div class="px-10 py-10 md:py-15"> 
+    <Study />
+</div>
+
+
