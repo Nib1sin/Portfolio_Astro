@@ -1,4 +1,17 @@
 {
+  "index": {
+    "section_1" : "Experiencia Laboral",
+    "section_2" : "Proyectos",
+    "section_3" : "Sobre mí"
+  },
+  "aboutMe": {
+    "p_1" : "Soy Pedro y mi pasión por los videojuegos me han llevado a estudiar <0><1>Ingeniería de Software</1></0>, que eventualmente me permitió trabajar en distintos países. Conociendo así, el <2>enfoque y metodología</2> para afrontar los eventuales desafíos  en el campo de la informática en diferentes maneras.",
+    "p_2" : "Proyects",
+    "p_3" : "About Me"
+  },
+
+
+
     "site": {
       "title": "Mi grandioso sitio web!",
       "description": "Aqui hay una descripcion de Mi grandioso sitio web!"

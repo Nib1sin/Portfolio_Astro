@@ -1,5 +1,4 @@
 ---
-import { changeLanguage } from "i18next";
 import Layout from "@/layouts/Layout.astro";
 import Badge from "@/components/Badge.astro";
 import AboutMe from "@/components/AboutMe.astro";
@@ -14,6 +13,9 @@ import MailIcon from "@/icons/Mail.astro";
 import SocialPill from "@/icons/SocialPill.astro";
 import CodeIcon from "@/icons/Code.astro";
 import ProfileCheck from "@/icons/ProfileCheck.astro";
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 
 changeLanguage("en");
 ---
@@ -33,7 +35,7 @@ changeLanguage("en");
 			<SectionContainer id="experiencia">
 				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
 					<BriefcaseIcon class="size-8" />
-					Experiencia laboral
+					{t("index.section_1")}
 			  	</h2>
 			  	<Experience />
 			</SectionContainer>
@@ -41,7 +43,7 @@ changeLanguage("en");
 			<SectionContainer id="proyectos">
 			  	<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
 					<CodeIcon class="size-8" />
-					Proyectos
+					{t("index.section_2")}
 			  	</h2>
 			  	<Projects />
 			</SectionContainer>
@@ -49,7 +51,7 @@ changeLanguage("en");
 			<SectionContainer id="sobre-mi">
 			  	<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
 					<ProfileCheck class="size-8" />
-					Sobre mí
+					{t("index.section_3")}
 			  	</h2>
 			  	<AboutMe />
 			</SectionContainer>

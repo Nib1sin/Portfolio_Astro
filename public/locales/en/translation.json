@@ -1,4 +1,17 @@
 {
+  "index": {
+    "section_1" : "Work Experience",
+    "section_2" : "Proyects",
+    "section_3" : "About Me"
+  },
+  "aboutMe": {
+    "p_1" : "I am Pedro and my passion for video games has led me to study <0><1>Software Engineering</1></0>, which eventually allowed me to work in different countries. Thus knowing the <2>approach and methodology</2> to face possible challenges in the field of computing in different ways.",
+    "p_2" : "Proyects",
+    "p_3" : "About Me"
+  },
+
+
+
     "site": {
       "title": "My awesome website!",
       "description": "Here is the description of my awesome website!"

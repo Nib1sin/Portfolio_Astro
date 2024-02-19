@@ -1,11 +1,11 @@
 ---
-import { changeLanguage } from "i18next";
 import Layout from "@/layouts/Layout.astro";
 import Badge from "@/components/Badge.astro";
 import AboutMe from "@/components/AboutMe.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Experience from "@/components/Experience.astro";
 import Projects from "@/components/Projects.astro";
+import Me from "@/components/Me.astro";
 import LinkedInIcon from "@/icons/LinkedIn.astro";
 import GitHubIcon from "@/icons/Github.astro";
 import BriefcaseIcon from "@/icons/Briefcase.astro";
@@ -13,7 +13,9 @@ import MailIcon from "@/icons/Mail.astro";
 import SocialPill from "@/icons/SocialPill.astro";
 import CodeIcon from "@/icons/Code.astro";
 import ProfileCheck from "@/icons/ProfileCheck.astro";
-import CodeLogoIcon from "@/icons/CodeLogo.astro";
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 
 changeLanguage("es");
 ---
@@ -21,82 +23,40 @@ changeLanguage("es");
 <Layout 
 	title="PortFolgio Pedro - Software Developer & Software Engineer"
 	description="Contrata a Pedro para desarrollar, implementar y/o mejorar tu software"
-	>
+>
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-24">
-			<!--
-			<img
-				class="rounded-full size-12 nb-4"
-				src="/public/me.jpg" 
-				alt="nibi photo" />
-			-->
-			<img 
-					src="/public/me_logo.jpeg" 
-					class="rounded-full size-20"
-					alt="nibi photo"/>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-				Hey, soy Nibi <a
-				href=""
-				target="_blank"
-				rel="noopener"
-				class="flex justify-center items-center hover:scale-105 transition" >
-			  		<Badge>Contratame</Badge>
-				</a>
-			</h1>
-			<h2 class="text-2xl text-wrap">
-				<span>+10 anos de experiencia. Desarrollador de Lima, peru.</span>
-				<span class="text-yellow-200/90">
-					Especializado en crear soluciones de software.
-				</span>
-				<span class="opacity-70">
-					Front-End Engenier dasdasda sdasdsadas dsads
-				</span>
-			</h2>
-				<nav class="flex gap-4 mt-8 flex-wrap">
-					<SocialPill href="https://it.linkedin.com">
-						<LinkedInIcon class="size-4 md:size-6"></LinkedInIcon>
-						LinkedIn
-					</SocialPill>
-					<SocialPill href="https://github.com/">
-						<GitHubIcon class="size-4 md:size-6"></GitHubIcon>
-						Github
-					</SocialPill>
-					<SocialPill href="mailto:nibi.amdukia@gmail.com">
-						<MailIcon class="size-4 md:size-6"></MailIcon>
-						nibi.amdukia@gmail.com
-					</SocialPill>
-				</nav>
+		<SectionContainer class="py-16 md:py-32" id="contacto">
+			<Me>
+				</slot>
+			</Me>
 		</SectionContainer>
 
-		<SectionContainer id="experiencia">
-			<h2
-			  class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-			>
-			  <BriefcaseIcon class="size-7" />
-			  Experiencia laboral
-			</h2>
-			<Experience />
-		</SectionContainer>
-
-		<SectionContainer id="proyectos">
-			<h2
-			  class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-			>
-			  <CodeIcon class="size-7" />
-			   Proyectos
-			</h2>
-			<Projects />
-		</SectionContainer>
+		<div class="space-y-20">
+			<SectionContainer id="experiencia">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					<BriefcaseIcon class="size-8" />
+					{t("index.section_1")}
+			  	</h2>
+			  	<Experience />
+			</SectionContainer>
 		
-		<SectionContainer id="sobre-mi">
-			<h2
-			  class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-			>
-			  <ProfileCheck class="size-7" />
-			  Sobre mi
-			</h2>
-			<AboutMe />
-		  </SectionContainer>
+			<SectionContainer id="proyectos">
+			  	<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					<CodeIcon class="size-8" />
+					{t("index.section_2")}
+			  	</h2>
+			  	<Projects />
+			</SectionContainer>
+		
+			<SectionContainer id="sobre-mi">
+			  	<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					<ProfileCheck class="size-8" />
+					{t("index.section_3")}
+			  	</h2>
+			  	<AboutMe />
+			</SectionContainer>
+		</div>
+		
 
 	</main>
 </Layout>
