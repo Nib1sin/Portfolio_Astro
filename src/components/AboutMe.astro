@@ -1,14 +1,11 @@
 ---
 
-const personalImageAlt = "Pedro"
-import SchoolIcon from "@/icons/School.astro";
 import Study from "./Study.astro"
 import LanguagesTable from "./LanguagesTable.astro"
  
  //Translate
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "astro-i18next/components";
-
 
 ---
 
@@ -18,57 +15,34 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
   >
 
   <p>
-    
-    {t("aboutMe.p_1")}
+    {t("aboutMe.p_1_1")}
+    <strong><em class="italic">{t("aboutMe.p_1_2")}</em></strong>
+    {t("aboutMe.p_1_3")}
+    <strong>{t("aboutMe.p_1_4")}</strong>
+    {t("aboutMe.p_1_5")}
   </p>
 
   <p>
-    En este largo camino he tenido la oportunidad de llevar 
-    <strong>con éxito múltiples productos de 0 a 1.</strong> 
-    Formando parte de equipos de trabajo, que de manera efectiva y eficiente, hemos garantizado
-    <strong>un resultado óptimo  y eficiente.</strong>
+    {t("aboutMe.p_2_1")}
+    <strong>{t("aboutMe.p_2_2")}</strong>
+    {t("aboutMe.p_2_3")}
+    <strong>{t("aboutMe.p_2_4")}</strong>
   </p>
 
   <p>
-    Actualmente trabajo en el sector <strong><em class="italic">banking</em></strong>, 
-    utilizando principalmente tecnologías como <strong>Java, groovy, AngularJs, base de datos (sql y nosql), Hibernate, etc.</strong>
+    {t("aboutMe.p_3_1")}
+    <strong><em class="italic">{t("aboutMe.p_3_2")}</em></strong>
+    {t("aboutMe.p_3_3")}
+    <strong>{t("aboutMe.p_3_4")}</strong>
   </p>
-  <!--
-    <p>
-      Soy Pedro y mi pasión por los videojuegos me han llevado a estudiar
-      <strong><em class="italic">Ingeniería de Software</em></strong>, que eventualmente me permitió  
-      trabajar en distintos países.
-      Conociendo así, el <strong>enfoque y metodología</strong> para afrontar los 
-      eventuales desafíos  en el campo de la informática en diferentes maneras.
-    </p>
 
-    <p>
-      En este largo camino he tenido la oportunidad de llevar 
-      <strong>con éxito múltiples productos de 0 a 1.</strong> 
-      Formando parte de equipos de trabajo, que de manera efectiva y eficiente, hemos garantizado
-      <strong>un resultado óptimo  y eficiente.</strong>
-    </p>
-
-    <p>
-      Actualmente trabajo en el sector <strong><em class="italic">banking</em></strong>, 
-      utilizando principalmente tecnologías como <strong>Java, groovy, AngularJs, base de datos (sql y nosql), Hibernate, etc.</strong>
-    </p>
-  -->
   </div>
-
-  <img src="/public/me.jpg" class="rounded-full size-64 order-1 md:order-2" />
-
+  <img src="/projects/me.jpg" class="rounded-full size-64 order-1 md:order-2" />
 </article>
 
-
-<br>
-<br>
+<br><br>
 <LanguagesTable />
-<br>
-<br>
-
-
-
+<br><br>
 
 <div class="px-10 py-10 md:py-15"> 
     <Study />

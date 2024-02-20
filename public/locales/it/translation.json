@@ -5,19 +5,26 @@
     "section_3" : "Su di Me"
   },
   "aboutMe": {
-    "p_1" : "Sono Pedro e la mia passione per i videogiochi mi ha portato a studiare <0><1>Ingegneria di software</1></0>, che alla fine mi ha permesso di lavorare in diversi paesi. Conoscere così <2>l'approccio e la metodologia</2> per affrontare possibili sfide nel campo dell'informatica in diversi modi.",
-    "p_2" : "Proyects",
-    "p_3" : "About Me"
+    "p_1_1" : "Sono Pedro e la mia passione per i videogiochi mi ha portato a studiare ",
+    "p_1_2" : "Ingegneria di software",
+    "p_1_3" : ", che alla fine mi ha permesso di lavorare in diversi paesi. Conoscere così ",
+    "p_1_4" : "l'approccio e la metodologia",
+    "p_1_5" : " per affrontare possibili sfide nel campo dell'informatica in diversi modi.",
+
+    "p_2_1" : "In questa lunga strada, ho avuto l'opportunità di portare ",
+    "p_2_2" : "con esito positivo multipli prodotti da 0 a 1.",
+    "p_2_3" : " Formando parte di diversi Teams di lavoro, che in maniera effettiva ed efficiente , abbiamo garantito ",
+    "p_2_4" : "un risultato ottimale ed efficiente.",
+
+    "p_3_1" : "Attualmente lavoro nel settore ",
+    "p_3_2" : "banking",
+    "p_3_3" : ", utilizzando principalmente tecnologie come ",
+    "p_3_4" : "Java, groovy, AngularJs, database (sql e nosql), Hibernate, ecc."
   },
-
-
-
-    "site": {
-      "title": "Il mio grandioso sito web!",
-      "description": "Aqui hay una descripcion de Mi grandioso sitio web!"
-    },
-    "home": {
-      "title": "Benvenuti al mio grandioso sito web!",
-      "subtitle": "Este es un <0>mas complejo</0> string a traducir, combinado con <1>html elements</1>, como es un <2>a cool link</2>!"
-    }
+  "experience": {
+    "item_1_date" : "Agosto 2018 - Adesso",
+    "section_2" : "Proyects",
+    "section_3" : "About Me"
   }
+
+ }

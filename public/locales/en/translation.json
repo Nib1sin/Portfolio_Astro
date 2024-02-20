@@ -5,19 +5,26 @@
     "section_3" : "About Me"
   },
   "aboutMe": {
-    "p_1" : "I am Pedro and my passion for video games has led me to study <0><1>Software Engineering</1></0>, which eventually allowed me to work in different countries. Thus knowing the <2>approach and methodology</2> to face possible challenges in the field of computing in different ways.",
-    "p_2" : "Proyects",
-    "p_3" : "About Me"
+    "p_1_1" : "I am Pedro and my passion for video games has led me to study ",
+    "p_1_2" : "Software Engineering",
+    "p_1_3" : ", which eventually allowed me to work in different countries. Thus knowing the ",
+    "p_1_4" : "approach and methodology",
+    "p_1_5" : " to face possible challenges in the field of computing in different ways.",
+
+    "p_2_1" : "On this long road, I have had the opportunity to take ",
+    "p_2_2" : "successfully multiple products from 0 to 1.",
+    "p_2_3" : " Being part of differents work teams, which in an effective and efficient way, we have guaranteed",
+    "p_2_4" : "an optimal and efficient result.",
+
+    "p_3_1" : "I currently work in the ",
+    "p_3_2" : "banking",
+    "p_3_3" : " sector, mainly using technologies such as ",
+    "p_3_4" : "Java, groovy, AngularJs, database (sql and nosql), Hibernate, etc."
   },
-
-
-
-    "site": {
-      "title": "My awesome website!",
-      "description": "Here is the description of my awesome website!"
-    },
-    "home": {
-      "title": "Welcome to my awesome website!",
-      "subtitle": "This is a <0>more complex</0> string to translate, mixed with <1>html elements</1>, such as a <2>a cool link</2>!"
-    }
+  "experience": {
+    "item_1_date" : "August 2018 - Now",
+    "section_2" : "Proyects",
+    "section_3" : "About Me"
   }
+
+}
