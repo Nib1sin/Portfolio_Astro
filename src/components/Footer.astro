@@ -1,5 +1,9 @@
 ---
 const currentYear = new Date().getFullYear()
+
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 ---
 
 <footer
@@ -13,7 +17,7 @@ const currentYear = new Date().getFullYear()
       >© {currentYear}
       <a 
         class="hover:underline">
-        Portfolio de Pedro
+        {t("footer.section_1")}
       </a>
     </span>
     <ul
@@ -23,10 +27,10 @@ const currentYear = new Date().getFullYear()
         <a href="https://www.linkedin.com/in/pjaimer/"
         target="_blank"
         rel="noopener"
-        class="hover:underline me-4 md:me-6">Sobre mí</a>
+        class="hover:underline me-4 md:me-6">{t("footer.section_2")}</a>
       </li>
       <li>
-        <a href="mailto:nibi.amdukia@gmail.com" class="hover:underline">Contacto</a>
+        <a href="mailto:nibi.amdukia@gmail.com" class="hover:underline">{t("footer.section_3")}</a>
       </li>
     </ul>
   </div>

@@ -23,8 +23,33 @@
   },
   "experience": {
     "item_1_date" : "Agosto 2018 - Ahora",
-    "section_2" : "Proyects",
-    "section_3" : "About Me"
+    "item_1_title" : "Full Stack Software Developer",
+    "item_1_company" : "Sydema",
+    "item_1_description_1" : "• Analista de datos, desarrollador, evolución y mantenimiento de Laweb4. Aplicación web para el proceso de recuperación del crédito.",
+    "item_1_description_2" : "• Desarrollo de aplicaciones web utilizando tecnologías como JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql y No-Sql), Gradle y Git.",
+    "item_1_description_3" : "• Desarrollo de Procesos Batch para el transferimiento de datos de diferentes tipos de Data bases (Spring Batch, SqlLoader).",
+    "item_1_description_4" : "• Responsable de la gestión y mantenimiento de servidores Linux (RedHat), en la cual se basa las aplicaciones.",
+
+    "item_2_date" : "Enero 2017 - Enero 2018",
+    "item_2_title" : "Junior Software Developer",
+    "item_2_company" : "Movistar",
+    "item_2_description_1" : "• Desarrollador de software de gestión de clientes, control de actividades y de rédito. Desarrollado principalmente en c++.",
+    "item_2_description_2" : "• Control, gestión y validación de los data bases de los clientes/proveedores (Sql server y MongoDB).",
+    "item_2_description_3" : "• Desarrollo e implementación de un software estadístico y probabilístico que genera ofertas a los posibles clientes. (Scripts dinámicos con Python).",
+    "item_2_description_4" : "• Gestión de los servicios implementados en Windows server.",
+    "item_2_description_5" : "• Producción de reportes semanales que indicaban los posibles targets a los cuales se ofrecerían los distintos servicios. (Generados con JasperReport).",
+
+    "item_3_date" : "Junio 2016 - Diciembre 2016",
+    "item_3_title" : "Practicante IT",
+    "item_3_company" : "SUNAT",
+    "item_3_description_1" : "• Gestión de los ingresos tributarios recaudados en el periodo 2016-II.",
+    "item_3_description_2" : "• Durante mi estancia en SUNAT he aprendido las bases de la organización de proyectos y aplicarlos a diferentes niveles en la lógica de algoritmos.",
+    "item_3_description_3" : "• Redacción de reportes utilizando querys para obtener el resultado deseado para el usuario final."
+  },
+  "footer": {
+    "section_1" : "Portfolio de Pedro",
+    "section_2" : "Sobre mí",
+    "section_3" : "Contactame"
   }
 
 }

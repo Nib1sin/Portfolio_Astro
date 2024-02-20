@@ -23,8 +23,33 @@
   },
   "experience": {
     "item_1_date" : "August 2018 - Now",
-    "section_2" : "Proyects",
-    "section_3" : "About Me"
+    "item_1_title" : "Full Stack Software Developer",
+    "item_1_company" : "Sydema",
+    "item_1_description_1" : "• Data analyst, developer, evolution and maintenance of Laweb4. Web application for the credit recovery process.",
+    "item_1_description_2" : "• Development of web applications using technologies such as JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql and No-Sql), Gradle and Git.",
+    "item_1_description_3" : "• Development of Batch Processes for data transfer from different types of Data bases (Spring Batch, SqlLoader).",
+    "item_1_description_4" : "• Responsible for the management and maintenance of Linux servers (RedHat), on which the applications are based.",
+
+    "item_2_date" : "January 2017 - January 2018",
+    "item_2_title" : "Junior Software Developer",
+    "item_2_company" : "Movistar",
+    "item_2_description_1" : "• Developer of customer management, activity and revenue control software. Mainly developed in c++.",
+    "item_2_description_2" : "• Control, management and validation of client/supplier databases (Sql server and MongoDB).",
+    "item_2_description_3" : "• Development and implementation of statistical and probabilistic software that generates offers to potential clients. (Dynamic scripts with Python).",
+    "item_2_description_4" : "• Management of services implemented on Windows server.",
+    "item_2_description_5" : "• Production of weekly reports that indicated the possible targets to which the different services would be offered. (Generated with JasperReport).",
+
+    "item_3_date" : "June 2016 - December 2016",
+    "item_3_title" : "IT Intern",
+    "item_3_company" : "SUNAT",
+    "item_3_description_1" : "• Management of tax revenues collected in the 2016-II period.",
+    "item_3_description_2" : "• During my stay at SUNAT I have learned the basics of project organization and applying them at different levels in algorithm logic.",
+    "item_3_description_3" : "• Writing reports using queries to obtain the desired result for the end user."
+  },
+  "footer": {
+    "section_1" : "Pedro's Portfolio",
+    "section_2" : "About me",
+    "section_3" : "Contact me"
   }
 
 }
