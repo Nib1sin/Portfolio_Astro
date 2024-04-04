@@ -1,26 +1,31 @@
 ---
 import LanguagesTableItem from "./LanguagesTableItem.astro"
+
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
 const LANGUAGES = [
     {
-        language: 'Español',
-        listening: 'Lengua madre',
-        speaking: 'Lengua madre',
-        writing: 'Lengua madre'
+        language: t("LanguagesTable.language_es"),
+        listening: t("LanguagesTable.language_lvl"),
+        speaking: t("LanguagesTable.language_lvl"),
+        writing: t("LanguagesTable.language_lvl")
     },
     {
-        language: 'Inglés',
+        language: t("LanguagesTable.language_en"),
         listening: 'C2',
         speaking: 'C2',
         writing: 'C1'
     },
     {
-        language: 'Italiano',
+        language: t("LanguagesTable.language_it"),
         listening: 'C1',
         speaking: 'C1',
         writing: 'C1'
     },
     {
-        language: 'Alemán',
+        language: t("LanguagesTable.language_de"),
         listening: 'A2',
         speaking: 'A2',
         writing: 'A2'
@@ -34,16 +39,16 @@ const LANGUAGES = [
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Lengua
+                    {t("LanguagesTable.language_language")}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Comprensión
+                    {t("LanguagesTable.language_listening")}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Hablado
+                    {t("LanguagesTable.language_speaking")}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Escritura
+                    {t("LanguagesTable.language_writing")}
                 </th>
             </tr>
         </thead>

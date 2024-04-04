@@ -50,6 +50,66 @@
     "section_1" : "Portfolio de Pedro",
     "section_2" : "Sobre mí",
     "section_3" : "Contactame"
+  },
+  "header": {
+    "element_1_tittle" : "Experiencia",
+    "element_1_url" : "/en/#experiencia",
+
+    "element_2_tittle" : "Proyectos",
+    "element_2_url" : "/en/#proyectos",
+
+    "element_3_tittle" : "Sobre mí",
+    "element_3_url" : "/en/#sobre-mi",
+    
+    "element_4_tittle" : "Contacto",
+    "element_4_url" : "/en/#contacto"
+  },
+  "LanguagesTable": {
+    "language_es" : "Español",
+    "language_en" : "Inglés",
+    "language_it" : "Italiano",
+    "language_de" : "Alemán",
+    "language_lvl" : "Lengua madre",
+
+    "language_language" : "Idioma",
+    "language_listening" : "Comprensión",
+    "language_speaking" : "Hablado",
+    "language_writing" : "Escritura"
+  },
+  "study": {
+    "item_1_date" : "Marzo 2012 - Enero 2017",
+    "item_1_title" : "Ingeniería de Software",
+    "item_1_company" : "Universidad Tecnológica del Perú (UTP)",
+    "item_1_description_1" : "• Control y gestión de datos informáticos y balance industrial.",
+    "item_1_description_2" : "• Especialización en la creación de algoritmos.",
+    "item_1_description_3" : "• Introducción al proceso lógico, habilidades y conocimientos para escribir software.",
+    "item_1_description_4" : "• Conocimiento de los procesos físicos, matemáticos y lógicos que permitan la simplificación de algunos procesos.",
+
+    "item_2_date" : "Enero 2013 - Diciembre 2015",
+    "item_2_title" : "Estudiante de Ingles",
+    "item_2_company" : "El Britanico",
+    "item_2_description_1" : "• Conocimiento profundo del idioma inglés con conocimiento apropiado de términos técnicos.",
+    "item_2_description_2" : "• Lenguaje fluido y claro.",
+    "item_2_description_3" : "• Desarrollo e implementación de un software estadístico y probabilístico que genera ofertas a los posibles clientes. (Scripts dinámicos con Python).",
+    "item_2_description_4" : "• En particular, durante el desarrollo de mis trabajos, siempre he tenido que tratar con hablantes nativos de inglés.",
+
+    "item_3_date" : "Marzo 2018 - Junio 2018",
+    "item_3_title" : "Certificación Oracle Java y Php",
+    "item_3_company" : "Pc Academy",
+    "item_3_description_1" : "Profundización y conocimiento del idioma en los detalles más específicos con el fin de actualizar mis conocimientos actuales.",
+
+    "item_4_date" : "Septiembre 2021 - Ahora",
+    "item_4_title" : "Ingeniería Informática",
+    "item_4_company" : "Politecnico di Milano",
+    "item_4_description_1" : "• Amplia gestión e infraestructura de base de datos.",
+    "item_4_description_2" : "• Especialización en desarrollo de software en lenguajes de bajo y alto nivel (Arquitectura de calculadoras y Sistemas operativos).",
+    "item_4_description_3" : "• Introducción al proceso lógico, habilidades y conocimientos para escribir software (Algoritmos y principios de la Informática).",
+    "item_4_description_4" : "• Economía y Organización Corporativa, desarrollo de cálculosprobabilísticos y estadística."
+  },
+  "me": {
+    "me_hire" : "Contratame",
+    "me_intro_1" : "Enfocado en actualizar, desarrollar e implementar productos con extra atención en los detalles.",
+    "me_intro_2" : "Especializado en soluciones de proyectos en aplicaciones únicas"
   }
 
 }

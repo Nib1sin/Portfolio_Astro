@@ -27,6 +27,7 @@ const THEMES = ['Light', 'Dark', 'System']
 
 <style>
   #themes-menu.open {
+    display: inline;
     animation: scale-up-center .15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
@@ -60,6 +61,7 @@ const THEMES = ['Light', 'Dark', 'System']
     })
   }
 
+  /*
   const updateTheme = () => {
     if (remove != null) {
       remove()
@@ -75,6 +77,34 @@ const THEMES = ['Light', 'Dark', 'System']
     updateIcon(themePreference)
     document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
   }
+  */
+
+  const updateTheme = () => {
+    const currentPath = window.location.pathname;
+    const themePreference = getThemePreference();
+    const isDark = themePreference === 'dark' || (themePreference === 'system' && matchMedia.matches);
+
+    updateIcon(themePreference);
+    document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+
+    if (currentPath === '/en' || currentPath === '/es' || currentPath === '/it') {
+        console.log("change - /" + currentPath);
+        updateIcon(getThemePreference());
+        document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+    } else {
+        // Aplicar tema general para otras rutas
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            applyTheme(storedTheme);
+        } else {
+            applyTheme(themePreference);
+        }
+    }
+  }
+  
+  const applyTheme = (theme) => {
+    document.documentElement.classList.add(theme);
+  };
 
   updateTheme()
 
@@ -86,10 +116,20 @@ const THEMES = ['Light', 'Dark', 'System']
     themesMenu.classList[isClosed ? 'add' : 'remove']('open')
   })
 
+
+
+
+
   document.querySelectorAll('.themes-menu-option').forEach((element) => {
     element.addEventListener('click', e => {
       localStorage.setItem('theme', e.target.innerText.toLowerCase().trim())
       updateTheme()
     })
   })
+
+  window.addEventListener('popstate', function(event) {
+    console.log("change - ");
+    updateTheme();
+  });
+
 </script>

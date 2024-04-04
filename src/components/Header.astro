@@ -1,26 +1,32 @@
 ---
 import ThemeToggle from './ThemeToggle.astro'
+import LanguageSelector from "./LanguageSelector.astro"
+import Toggle from "./Toggle_Theme_Language.astro"
+
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 
 const navItems = [
   {
-    title: "Experiencia",
+    title: t("header.element_1_tittle"),
     label: "experiencia",
-    url: "/#experiencia",
+    url: t("header.element_1_url"),
   },
   {
-    title: "Proyectos",
+    title: t("header.element_2_tittle"),
     label: "proyectos",
-    url: "/#proyectos",
+    url: t("header.element_2_url"),
   },
   {
-    title: "Sobre mí",
+    title: t("header.element_3_tittle"),
     label: "sobre-mi",
-    url: "/#sobre-mi",
+    url: t("header.element_3_url"),
   },
   {
-    title: "Contacto",
+    title: t("header.element_4_tittle"),
     label: "contacto",
-    url: "/#contacto",
+    url: t("header.element_4_url")
   }
 ];
 ---
@@ -48,16 +54,21 @@ const navItems = [
             </a>
             ))
         }
-
+        <nav class="size-10"></nav>
+        <!--
         <ThemeToggle />
+        <LanguageSelector/>
+        -->
+        <Toggle/>
+        
     </nav>
 </header>
 
-<script>
-document.addEventListener("astro:page-load", () => {
+<script >
+  document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("header nav a");
-
+    
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -94,6 +105,7 @@ document.addEventListener("astro:page-load", () => {
     }
 
   });
+  
 </script>
 
 <style>

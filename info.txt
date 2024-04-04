@@ -1,0 +1,13 @@
+
+##Run en local
+pnpm dev run
+
+#Update Astro
+pnpm update astro
+
+###Build
+##Astro i18next
+https://www.npmjs.com/package/astro-i18next
+
+#Generate pages
+npx astro-i18next generate

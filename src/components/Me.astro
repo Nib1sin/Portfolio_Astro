@@ -5,6 +5,10 @@ import LinkedInIcon from "@/icons/LinkedIn.astro"
 import MailIcon from "@/icons/Mail.astro"
 import SocialPill from "@/icons/SocialPill.astro"
 import GitHubIcon from "@/icons/Github.astro";
+
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 ---
 
 
@@ -14,13 +18,13 @@ import GitHubIcon from "@/icons/Github.astro";
         <img 
             src="/projects/me_logo.jpeg" 
             class="rounded-full shadow-lg size-24"
-            alt="nibi photo"/>
+            alt="nibi photo"/> 
         <a
             href="https://www.linkedin.com/in/pjaimer/"
             target="_blank"
             rel="noopener"
             class="flex justify-center items-center hover:scale-105 transition" >
-            <Badge>Contratame</Badge>
+            <Badge>{t("me.me_hire")}</Badge>
         </a>
     </div>
     <h1 class="p-hidden text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 ">
@@ -29,10 +33,10 @@ import GitHubIcon from "@/icons/Github.astro";
     <h2 class="text-2xl lg:text-2xl text-balance max-w-[1000px] text-red-800 dark:text-red-400 pt-6 lg:pt-10">
         <strong>Full Stack Software Engineer ☕ .</strong>
         <span class="mt-6 text-2xl text-gray-900 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-        Enfocado en actualizar, desarrollar e implementar productos con extra atención en los detalles.
+            {t("me.me_intro_1")}
         </span>
         <span class="text-red-800 dark:text-red-400">
-        Especializado en soluciones de proyectos en aplicaciones únicas 💻.
+            {t("me.me_intro_2")} 💻.
         </span>
     </h2>
 

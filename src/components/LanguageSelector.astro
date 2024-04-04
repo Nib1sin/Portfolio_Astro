@@ -1,0 +1,117 @@
+---
+import SpainFlag from "@/icons/SpainFlag.astro";
+import USAFlag from "@/icons/UsaFlag.astro";
+import ItalianFlag from "@/icons/ItalianFlag.astro";
+import ChevronIcon from "@/icons/chevron.astro"
+
+const { currentLocale = "es" } = Astro
+const LOCALES: Record<
+  string,
+  { code: string; name: string; href: string; flag: typeof SpainFlag }
+> = {
+  en: {
+    code: "en",
+    href: "/en",
+    name: "English",
+    flag: USAFlag,
+  },
+  es: {
+    code: "es",
+    href: "/es",
+    name: "Español",
+    flag: SpainFlag,
+  },
+  it: {
+    code: "it",
+    href: "/it",
+    name: "Italiano",
+    flag: ItalianFlag,
+  },
+}
+const currentLocaleData = LOCALES[currentLocale]
+const otherLocales = Object.values(LOCALES).filter(
+  (locale) => locale.code !== currentLocale
+)
+---
+
+<div class="relative inline-block text-left">
+  <div
+    class="group text-white rounded-md text-xs font-semibold bg-black/10 hover:bg-black/70 transition-all"
+  >
+    <button
+      type="button"
+      class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+      id="menu-button"
+      aria-expanded="true"
+      aria-haspopup="true"
+    >
+      <currentLocaleData.flag />
+      {currentLocaleData.name}
+      <ChevronIcon />
+    </button>
+    <ul
+      class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
+    >
+      {
+        otherLocales.map((locale) => (
+          <li class="">
+            <a
+              class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+              href={locale.href}
+              id={locale.code}
+            >
+              <locale.flag />
+              {locale.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+
+
+<script>
+  const pushBtn = document.getElementById('menu-button');
+  pushBtn?.addEventListener('click', () => {
+      history.pushState({ page: 'page1' }, 'Page 1', '/page1');
+      console.log('State pushed: Page 1');
+  });
+
+
+  /*
+  document.querySelectorAll('.lang-menu').forEach((element) => {
+    element.addEventListener('click', (e) => {
+      console.log("TEST");
+      window.location.reload();
+    });
+  });
+*/
+  /*
+  document.getElementById('es')?.addEventListener('click', (e) => {
+    console.log("TEST - es");
+    //const currentPath = window.location.pathname;
+    //window.location.href = currentPath;
+    //window.location.reload();
+    window.location.href;
+  })
+
+  document.getElementById('en')?.addEventListener('click', (e) => {
+    console.log("TEST - en");
+    //const currentPath = window.location.pathname;
+    //window.location.href = currentPath;
+    //window.location.reload();
+    window.location.href;
+  })
+
+  document.getElementById('it')?.addEventListener('click', (e) => {
+    console.log("TEST - it");
+    //const currentPath = window.location.pathname;
+    //window.location.href = currentPath;
+    //window.location.reload();
+    window.location.href;
+  })
+*/
+
+</script>

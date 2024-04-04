@@ -50,6 +50,66 @@
     "section_1" : "Pedro's Portfolio",
     "section_2" : "About me",
     "section_3" : "Contact me"
+  },
+  "header": {
+    "element_1_tittle" : "Experience",
+    "element_1_url" : "/en/#experiencia",
+
+    "element_2_tittle" : "Projects",
+    "element_2_url" : "/en/#proyectos",
+
+    "element_3_tittle" : "About me",
+    "element_3_url" : "/en/#sobre-mi",
+    
+    "element_4_tittle" : "Contact",
+    "element_4_url" : "/en/#contacto"
+  },
+  "LanguagesTable": {
+    "language_es" : "Spanish",
+    "language_en" : "English",
+    "language_it" : "Italian",
+    "language_de" : "German",
+    "language_lvl" : "Native Speaker",
+
+    "language_language" : "Language",
+    "language_listening" : "Listening",
+    "language_speaking" : "Speaking",
+    "language_writing" : "Writing"
+  },
+  "study": {
+    "item_1_date" : "March 2012 - January 2017",
+    "item_1_title" : "Software Engineering",
+    "item_1_company" : "Universidad Tecnológica del Perú (UTP)",
+    "item_1_description_1" : "• Control and management of computer data and industrial balance.",
+    "item_1_description_2" : "• Specialization in algorithm creation.",
+    "item_1_description_3" : "• Introduction to the logical process, skills, and knowledge for writing software.",
+    "item_1_description_4" : "• Understanding of physical, mathematical, and logical processes that allow the simplification of some processes.",
+
+    "item_2_date" : "January 2013 - December 2015",
+    "item_2_title" : "English Student",
+    "item_2_company" : "El Britanico",
+    "item_2_description_1" : "• Deep knowledge of the English language with appropriate understanding of technical terms.",
+    "item_2_description_2" : "• Fluent and clear language.",
+    "item_2_description_3" : "• Development and implementation of statistical and probabilistic software that generates offers to potential clients. (Dynamic scripts with Python).",
+    "item_2_description_4" : "• In particular, during the development of my work, I have always had to deal with native English speakers.",
+
+    "item_3_date" : "March 2018 - June 2018",
+    "item_3_title" : "Oracle Java and Php Certification",
+    "item_3_company" : "Pc Academy",
+    "item_3_description_1" : "Deepening and knowledge of the language in the most specific details in order to update my current knowledge.",
+
+    "item_4_date" : "September 2021 - Present",
+    "item_4_title" : "Computer Engineering",
+    "item_4_company" : "Politecnico di Milano",
+    "item_4_description_1" : "• Extensive management and database infrastructure.",
+    "item_4_description_2" : "• Specialization in software development in low and high-level languages (Calculator architecture and Operating Systems).",
+    "item_4_description_3" : "• Introduction to the logical process, skills, and knowledge for writing software (Algorithms and Computer Science principles).",
+    "item_4_description_4" : "• Economics and Corporate Organization, development of probabilistic calculations and statistics."
+  },
+  "me": {
+    "me_hire" : "Hire me",
+    "me_intro_1" : "Focused on updating, developing, and implementing products with extra attention to detail.",
+    "me_intro_2" : "Specialized in project solutions in unique applications."
   }
 
 }
