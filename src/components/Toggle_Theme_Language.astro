@@ -3,13 +3,14 @@ import SpainFlag from "@/icons/SpainFlag.astro";
 import USAFlag from "@/icons/UsaFlag.astro";
 import ItalianFlag from "@/icons/ItalianFlag.astro";
 import ChevronIcon from "@/icons/chevron.astro"
+import EuIcon from "@/icons/Eu.astro"
 
 import SunIcon from '../icons/Sun.astro'
 import MoonIcon from '../icons/Moon.astro'
 import SystemIcon from '../icons/System.astro'
 const THEMES = ['Light', 'Dark', 'System']
 
-const { currentLocale = "it" } = Astro
+const { currentLocale = "eu" } = Astro
 const LOCALES: Record<
   string,
   { code: string; name: string; href: string; flag: typeof SpainFlag }
@@ -32,7 +33,14 @@ const LOCALES: Record<
     name: "Italiano",
     flag: ItalianFlag,
   },
+  eu: {
+    code: "eu",
+    href: "/",
+    name: "Europe",
+    flag: EuIcon,
+  }
 }
+
 const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(
   (locale) => locale.code !== currentLocale
