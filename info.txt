@@ -11,3 +11,14 @@ https://www.npmjs.com/package/astro-i18next
 
 #Generate pages
 npx astro-i18next generate
+
+##build
+npm run build
+
+##deploy
+#Arrastrar la carpeta dist generada
+
+
+##packages
+npm install astro-robots-txt
+npm install astro-i18next 
