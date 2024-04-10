@@ -17,6 +17,11 @@ import _Astr from "@/icons/_Astr.astro"
 import JavaScript from "@/icons/JavaScript.astro"
 import OpenAI from "@/icons/OpenAI.astro"
 
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
+//TODO: mejorar el background de los tags
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -25,7 +30,8 @@ const TAGS = {
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    //class: "bg-[#003159] text-white",
+    class: "bg-white text-black",
     icon: Tailwind,
   },
   JAVA: {
@@ -93,20 +99,19 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "Spring Batch processing on the JVM",
-    description:
-      "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+    description: t("projects.item_1_description_1"),
+    link: "https://spring.io/batch",
+    github: "https://github.com/spring-projects/spring-batch",
     image: "/projects/SPRING_BATCH.png",
     tags: [TAGS.JAVA, TAGS.GRADLE, TAGS.ORACLE, TAGS.SQL, TAGS.GROOVY, TAGS.SPRING, TAGS.XML]
   },
   {
     title: "ChatPDF - Chat with your pdf file",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
+    description:t("projects.item_2_description_1"), 
+    link: "https://askyourpdf.com/",
+    github: "https://github.com/Nib1sin/ChatPDF",
     image: "/projects/CHAT_PDF.png",
-    tags: [TAGS.TYPESCRIPT, TAGS.SVELTE, TAGS.JAVASCRIPT, TAGS.OPENAI, TAGS._Astr]
+    tags: [TAGS.TYPESCRIPT, TAGS.SVELTE, TAGS.JAVASCRIPT, TAGS.OPENAI, TAGS._Astr, TAGS.TAILWIND]
   },
 ]
 ---
@@ -122,7 +127,7 @@ const PROJECTS = [
     </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 duration-500 hover:scale-110 origin-left">
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
@@ -143,7 +148,7 @@ const PROJECTS = [
         </ul>
       </div>
         
-      <div class="mt-2 text-gray-700 dark:text-gray-400">
+      <div class="mt-2 text-gray-700 dark:text-gray-400 dark:hover:text-gray-100 hover:text-gray-800">
         {description}
       </div>
 

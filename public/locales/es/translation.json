@@ -110,6 +110,11 @@
     "me_hire" : "Contratame",
     "me_intro_1" : "Enfocado en actualizar, desarrollar e implementar productos con extra atención en los detalles.",
     "me_intro_2" : "Especializado en soluciones de proyectos en aplicaciones únicas"
+  },
+  "projects": {
+    "item_1_description_1" : "Spring Batch es el estándar de facto para el procesamiento por lotes en JVM. Su implementación de patrones por lotes comunes, como el procesamiento y la partición basados en fragmentos, me permite crear aplicaciones por lotes escalables y de alto rendimiento que son lo suficientemente resistentes para sus procesos más críticos. De este modo, es posible popular un data base por medio de un archivo en entrada o gestionar tambien un reporte de una base de datos con una gran cantidad de información en ella.",
+    
+    "item_2_description_1" : "Aplicacion que permite extraer información y responder preguntas de archivos PDF de gran tamaño, como manuales, ensayos y libros. ChatPDF analiza el PDF y la IA utilizará párrafos relevantes para darle una respuesta."
   }
 
 }

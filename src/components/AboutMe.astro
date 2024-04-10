@@ -14,7 +14,7 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
     class="[&>p]:mb-6 [&>p>strong]:text-red-600 dark:[&>p>strong]:text-red-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
 
-  <p>
+  <p class="dark:hover:text-gray-100 hover:text-gray-800">
     {t("aboutMe.p_1_1")}
     <strong><em class="italic">{t("aboutMe.p_1_2")}</em></strong>
     {t("aboutMe.p_1_3")}
@@ -22,14 +22,14 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
     {t("aboutMe.p_1_5")}
   </p>
 
-  <p>
+  <p class="dark:hover:text-gray-100 hover:text-gray-800">
     {t("aboutMe.p_2_1")}
     <strong>{t("aboutMe.p_2_2")}</strong>
     {t("aboutMe.p_2_3")}
     <strong>{t("aboutMe.p_2_4")}</strong>
   </p>
 
-  <p>
+  <p class="dark:hover:text-gray-100 hover:text-gray-800">
     {t("aboutMe.p_3_1")}
     <strong><em class="italic">{t("aboutMe.p_3_2")}</em></strong>
     {t("aboutMe.p_3_3")}
@@ -37,7 +37,6 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
   </p>
 
   </div>
-  <!--<img src="/projects/me.jpg" class="rounded-full size-64 order-1 md:order-2 hover:scale-110" alt="nibi photo"/>-->
   <img class="rounded-full size-64 order-1 md:order-2 transition duration-500 hover:scale-105" loading="lazy" src="/projects/me.jpg" />
 </article>
 

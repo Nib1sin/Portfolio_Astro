@@ -110,6 +110,11 @@
     "me_hire" : "Hire me",
     "me_intro_1" : "Focused on updating, developing, and implementing products with extra attention to detail.",
     "me_intro_2" : "Specialized in project solutions in unique applications."
+  },
+  "projects": {
+    "item_1_description_1" : "Spring Batch is the de facto standard for batch processing on the JVM. Its implementation of common batch patterns, such as chunk-based processing and partitioning, allows me to create scalable, high-performance batch applications that are resilient enough for your most critical processes. This makes it possible to populate a database from an input file or manage a report from a database with a large amount of information in it.",
+
+    "item_2_description_1" : "Application that allows extracting information and answering questions from large PDF files, such as manuals, essays, and books. ChatPDF analyzes the PDF and the AI will use relevant paragraphs to provide you with an answer."
   }
 
 }
