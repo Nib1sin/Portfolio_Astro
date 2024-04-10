@@ -11,6 +11,11 @@ import Groovy from '@/icons/Groovy.astro';
 import Spring from '@/icons/Spring.astro';
 import Xml from '@/icons/Xml.astro';
 import Link from "@/icons/Link.astro"
+import TypeScript from "@/icons/TypeScript.astro"
+import Svelte from "@/icons/Svelte.astro"
+import _Astr from "@/icons/_Astr.astro"
+import JavaScript from "@/icons/JavaScript.astro"
+import OpenAI from "@/icons/OpenAI.astro"
 
 const TAGS = {
   NEXT: {
@@ -58,6 +63,32 @@ const TAGS = {
     class: "bg-white text-black",
     icon: Xml,
   },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-white text-black",
+    icon: TypeScript,
+  },
+  SVELTE: {
+    name: "Svelte",
+    class: "bg-white text-black",
+    icon: Svelte,
+  },
+  _Astr: {
+    name: "Astro",
+    class: "bg-white text-black",
+    icon: _Astr,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-white text-black",
+    icon: JavaScript,
+  },
+  OPENAI: {
+    name: "OpenAI",
+    class: "bg-white text-black",
+    icon: OpenAI,
+  },
+  
 }
 const PROJECTS = [
   {
@@ -70,12 +101,12 @@ const PROJECTS = [
     tags: [TAGS.JAVA, TAGS.GRADLE, TAGS.ORACLE, TAGS.SQL, TAGS.GROOVY, TAGS.SPRING, TAGS.XML]
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "ChatPDF - Chat with your pdf file",
     description:
       "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
     link: "https://adventjs.dev",
-    image: "/projects/test2.jpg",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/projects/CHAT_PDF.png",
+    tags: [TAGS.TYPESCRIPT, TAGS.SVELTE, TAGS.JAVASCRIPT, TAGS.OPENAI, TAGS._Astr]
   },
 ]
 ---
@@ -104,8 +135,8 @@ const PROJECTS = [
                 <span
                   class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 hover:scale-110 hover:bg-white/10`}
                 >
-                  <tag.icon class="size-4" />
-                  {tag.name}
+                  <tag.icon class="size-4"/>
+                  <p class="hover:text-white">{tag.name}</p>
                 </span>
               </li>
             ))}
