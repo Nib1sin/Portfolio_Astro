@@ -2,7 +2,8 @@
   "index": {
     "section_1" : "Work Experience",
     "section_2" : "Proyects",
-    "section_3" : "About Me"
+    "section_3" : "About Me",
+    "section_4" : "Skills"
   },
   "aboutMe": {
     "p_1_1" : "I am Pedro and my passion for video games has led me to study ",
@@ -62,7 +63,10 @@
     "element_3_url" : "/en/#sobre-mi",
     
     "element_4_tittle" : "Contact",
-    "element_4_url" : "/en/#contacto"
+    "element_4_url" : "/en/#contacto",
+
+    "element_5_tittle" : "Skills",
+    "element_5_url" : "/en/#skills"
   },
   "LanguagesTable": {
     "language_es" : "Spanish",

@@ -9,6 +9,11 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
 
 const navItems = [
   {
+    title: t("header.element_4_tittle"),
+    label: "contacto",
+    url: t("header.element_4_url")
+  },
+  {
     title: t("header.element_1_tittle"),
     label: "experiencia",
     url: t("header.element_1_url"),
@@ -24,9 +29,9 @@ const navItems = [
     url: t("header.element_3_url"),
   },
   {
-    title: t("header.element_4_tittle"),
-    label: "contacto",
-    url: t("header.element_4_url")
+    title: t("header.element_5_tittle"),
+    label: "skills",
+    url: t("header.element_5_url")
   }
 ];
 ---
@@ -55,10 +60,6 @@ const navItems = [
             ))
         }
         <nav class="size-10"></nav>
-        <!--
-        <ThemeToggle />
-        <LanguageSelector/>
-        -->
         <Toggle/>
         
     </nav>
@@ -93,7 +94,7 @@ const navItems = [
       observer.observe(section);
     });
 
-    // Cleanup function
+    //Cleanup function
    document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
         observer.disconnect()

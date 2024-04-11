@@ -1,0 +1,224 @@
+---
+import NextJS from "../icons/NextJs.astro"
+import Tailwind from "../icons/Tailwind.astro"
+import GitHub from "../icons/Github.astro"
+import Java from "../icons/Java.astro"
+import Gradle from "../icons/Gradle.astro"
+import Oracle from "../icons/Oracle.astro"
+import Python from "../icons/Python.astro"
+import Sqlserver from '@/icons/Sqlserver.astro'
+import Groovy from '@/icons/Groovy.astro'
+import Spring from '@/icons/Spring.astro'
+import Xml from '@/icons/Xml.astro'
+import TypeScript from "@/icons/TypeScript.astro"
+import Svelte from "@/icons/Svelte.astro"
+import _Astr from "@/icons/_Astr.astro"
+import JavaScript from "@/icons/JavaScript.astro"
+import OpenAI from "@/icons/OpenAI.astro"
+import Html from "@/icons/HTML.astro"
+import C__ from "../icons/C++.astro"
+import Lua from "../icons/Lua.astro"
+import React from "../icons/React.astro"
+import Angular from "../icons/Angular.astro"
+import AngularJs from "../icons/AngularJs.astro"
+import Nodejs from "../icons/Nodejs.astro"
+import MySql from "../icons/MySql.astro"
+import Solr from "../icons/Solr.astro"
+import MongoDb from "../icons/MongoDb.astro"
+import Redis from "../icons/Redis.astro"
+import SpringBatch from "../icons/SpringBatch.astro"
+import SpringSecurity from "../icons/SpringSecurity.astro"
+import Git from "../icons/Git.astro"
+import Docker from "../icons/Docker.astro"
+
+
+//TODO: Gestionar el background
+const STACK = [
+  //BackEnd
+  {
+    name: 'Java',
+    iconItem_: Java,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Python',
+    iconItem_: Python,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Groovy',
+    iconItem_: Groovy,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'C++',
+    iconItem_: C__,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Lua',
+    iconItem_: Lua,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+
+  
+  //FrontEnd
+  {
+    name: 'JavaScript',
+    iconItem_: JavaScript,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'NextJS',
+    iconItem_: NextJS ,      
+    className: '[&>svg]:hover:fill-white'
+  },
+  /*
+  {
+    name: 'Svelte',
+    iconItem_: Svelte,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  */
+  {
+    name: 'React',
+    iconItem_: React,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Angular',
+    iconItem_: Angular,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'AngularJs',
+    iconItem_: AngularJs,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Nodejs',
+    iconItem_: Nodejs,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Astro',
+    iconItem_: _Astr,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'TypeScript',
+    iconItem_: TypeScript,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Tailwind',
+    iconItem_: Tailwind,      
+    className: '[&>svg]:hover:fill-[#06B6D4]'
+  },
+  {
+    name: 'Html',
+    iconItem_: Html,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+
+
+  //Sql && NoSql
+  {
+    name: 'Sqlserver',
+    iconItem_: Sqlserver,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Oracle',
+    iconItem_: Oracle,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'MySql',
+    iconItem_: MySql,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Solr',
+    iconItem_: Solr,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'MongoDb',
+    iconItem_: MongoDb,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Redis',
+    iconItem_: Redis,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  
+
+  //Frameworks BackEnd
+  {
+    name: 'Spring Boot',
+    iconItem_: Spring,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Spring Batch',
+    iconItem_: SpringBatch,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Spring Batch',
+    iconItem_: SpringSecurity,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Gradle',
+    iconItem_: Gradle,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Xml',
+    iconItem_: Xml,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Git',
+    iconItem_: Git,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'GitHub',
+    iconItem_: GitHub,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'Docker',
+    iconItem_: Docker,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  },
+  {
+    name: 'OpenAI',
+    iconItem_: OpenAI,      
+    className: '[&>svg]:hover:fill-[#007ACC]'
+  }
+
+  
+]
+//<iconItem_ class="size-16" height='70' width='70'/>
+//<skill.iconItem_ class={`size-16 flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125 ${skill.className} [&>svg]:fill-white`}/>
+---
+
+
+
+<section id='skills' class='w-full mx-auto container lg:max-w-4xl md:max-w-2xl'>
+    <ul class='my-10 flex grid-cols-5 flex-wrap justify-center gap-4 sm:grid'>
+        {STACK.map((skill) => (
+            <li id={skill.name}
+                class={`flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125 ${skill.className} [&>svg]:fill-white`}
+            >
+                <skill.iconItem_ class={`size-16 flex flex-col items-center gap-2 transition-all duration-100 ${skill.className} [&>svg]:fill-white`}/>
+                    <span class='text-l text-primary-300'>{skill.name}</span>
+            </li>
+        ))}
+    </ul>
+</section>

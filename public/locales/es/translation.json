@@ -2,7 +2,8 @@
   "index": {
     "section_1" : "Experiencia Laboral",
     "section_2" : "Proyectos",
-    "section_3" : "Sobre mí"
+    "section_3" : "Sobre mí",
+    "section_4" : "Habilidades"
   },
   "aboutMe": {
     "p_1_1" : "Soy Pedro y mi pasión por los videojuegos me han llevado a estudiar ",
@@ -62,7 +63,10 @@
     "element_3_url" : "/en/#sobre-mi",
     
     "element_4_tittle" : "Contacto",
-    "element_4_url" : "/en/#contacto"
+    "element_4_url" : "/en/#contacto",
+
+    "element_5_tittle" : "Habilidades",
+    "element_5_url" : "/en/#skills"
   },
   "LanguagesTable": {
     "language_es" : "Español",

@@ -13,6 +13,8 @@ import MailIcon from "@/icons/Mail.astro";
 import SocialPill from "@/icons/SocialPill.astro";
 import CodeIcon from "@/icons/Code.astro";
 import ProfileCheck from "@/icons/ProfileCheck.astro";
+import SkillsIcon from "@/icons/SkillsIcon.astro";
+import Skills from "@/components/Skills.astro";
 //Translate
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "astro-i18next/components";
@@ -56,6 +58,14 @@ changeLanguage("es");
 			  	</h2>
 			  	<AboutMe />
 			</SectionContainer>
+
+			<SectionContainer id="skills">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+				  <SkillsIcon class="size-8" />
+				  {t("index.section_4")}
+				</h2>
+				<Skills />
+		  </SectionContainer>
 		</div>
 		
 	</main>
