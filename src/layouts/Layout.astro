@@ -53,6 +53,8 @@ const { description, title } = Astro.props;
 <style is:global>
 	:root {
 		color-scheme: light dark;
+		--scrollbar-color-light: #666666;
+		--scrollbar-color-dark: #CCCCCC;
 	}
 
 	html {
@@ -73,6 +75,7 @@ const { description, title } = Astro.props;
 			scroll-behavior: auto;
 		}
 	}
+
 
 	@media (prefers-color-scheme: dark) {
 		body {
@@ -151,7 +154,7 @@ const { description, title } = Astro.props;
 	}
 
 	.link-active {
-        @apply bg-transparent/90 font-semibold dark:bg-transparent/10 shadow-lg shadow-white/10 backdrop-blur-sm;
+        @apply bg-transparent/10 font-semibold dark:bg-transparent/10 shadow-lg shadow-white/10 backdrop-blur-sm;
     }
 	
 </style>

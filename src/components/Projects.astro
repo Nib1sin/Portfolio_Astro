@@ -138,17 +138,17 @@ const PROJECTS = [
                 {tags.map((tag) => (
                   <li>
                     <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 hover:scale-110 hover:bg-white/10`}
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 bg-gray-300 hover:scale-110 hover:bg-gray-400 dark:hover:bg-white/10`}
                     >
                       <tag.icon class="size-4"/>
-                      <p class="hover:text-white">{tag.name}</p>
+                      <p class="hover:text-black dark:hover:text-white">{tag.name}</p>
                     </span>
                   </li>
                 ))}
             </ul>
           </div>
             
-          <div class="mt-2 text-gray-700 dark:text-gray-400 dark:hover:text-gray-100 hover:text-gray-800">
+          <div class="mt-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-100">
             {description}
           </div>
 
@@ -173,3 +173,13 @@ const PROJECTS = [
     ))
   }
 </div>
+
+
+<style>
+  .custom-border {
+    border: 2px solid #4B5563; /* Color gris oscuro */
+    border-radius: 8px; /* Ajusta el radio de las esquinas del borde según necesites */
+    padding: 4px; /* Agrega un espacio dentro del borde para que no se superponga con el SVG */
+    display: inline-block; /* Para que el contenedor se ajuste al contenido */
+  }
+</style>

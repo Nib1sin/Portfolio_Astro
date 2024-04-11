@@ -38,27 +38,27 @@ const STACK = [
   {
     name: 'Java',
     iconItem_: Java,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Python',
     iconItem_: Python,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Groovy',
     iconItem_: Groovy,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'C++',
     iconItem_: C__,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Lua',
     iconItem_: Lua,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
 
   
@@ -66,59 +66,59 @@ const STACK = [
   {
     name: 'JavaScript',
     iconItem_: JavaScript,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'NextJS',
     iconItem_: NextJS ,      
-    className: '[&>svg]:hover:fill-white'
+    className: 'bg-slate-100'
   },
   /*
   {
     name: 'Svelte',
     iconItem_: Svelte,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-indigo-bg-slate-100'
   },
   */
   {
     name: 'React',
     iconItem_: React,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Angular',
     iconItem_: Angular,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'AngularJs',
     iconItem_: AngularJs,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Nodejs',
     iconItem_: Nodejs,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Astro',
     iconItem_: _Astr,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'TypeScript',
     iconItem_: TypeScript,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Tailwind',
     iconItem_: Tailwind,      
-    className: '[&>svg]:hover:fill-[#06B6D4]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Html',
     iconItem_: Html,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
 
 
@@ -126,32 +126,32 @@ const STACK = [
   {
     name: 'Sqlserver',
     iconItem_: Sqlserver,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Oracle',
     iconItem_: Oracle,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'MySql',
     iconItem_: MySql,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Solr',
     iconItem_: Solr,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'MongoDb',
     iconItem_: MongoDb,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Redis',
     iconItem_: Redis,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   
 
@@ -159,47 +159,47 @@ const STACK = [
   {
     name: 'Spring Boot',
     iconItem_: Spring,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Spring Batch',
     iconItem_: SpringBatch,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
-    name: 'Spring Batch',
+    name: 'Spring Security',
     iconItem_: SpringSecurity,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Gradle',
     iconItem_: Gradle,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Xml',
     iconItem_: Xml,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Git',
     iconItem_: Git,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'GitHub',
     iconItem_: GitHub,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'Docker',
     iconItem_: Docker,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   },
   {
     name: 'OpenAI',
     iconItem_: OpenAI,      
-    className: '[&>svg]:hover:fill-[#007ACC]'
+    className: 'bg-slate-100'
   }
 
   
@@ -214,9 +214,9 @@ const STACK = [
     <ul class='my-10 flex grid-cols-5 flex-wrap justify-center gap-4 sm:grid'>
         {STACK.map((skill) => (
             <li id={skill.name}
-                class={`flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125 ${skill.className} [&>svg]:fill-white`}
+                class={`dark:bg-transparent flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125 ${skill.className} [&>svg]:fill-white`}
             >
-                <skill.iconItem_ class={`size-16 flex flex-col items-center gap-2 transition-all duration-100 ${skill.className} [&>svg]:fill-white`}/>
+                <skill.iconItem_ class={`dark:bg-transparent size-16 flex flex-col items-center gap-2 transition-all duration-100 ${skill.className} [&>svg]:fill-white`}/>
                     <span class='text-l text-primary-300'>{skill.name}</span>
             </li>
         ))}
