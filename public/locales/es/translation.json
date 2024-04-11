@@ -54,19 +54,19 @@
   },
   "header": {
     "element_1_tittle" : "Experiencia",
-    "element_1_url" : "/en/#experiencia",
+    "element_1_url" : "/es/#experiencia",
 
     "element_2_tittle" : "Proyectos",
-    "element_2_url" : "/en/#proyectos",
+    "element_2_url" : "/es/#proyectos",
 
     "element_3_tittle" : "Sobre mí",
-    "element_3_url" : "/en/#sobre-mi",
+    "element_3_url" : "/es/#sobre-mi",
     
     "element_4_tittle" : "Contacto",
-    "element_4_url" : "/en/#contacto",
+    "element_4_url" : "/es/#contacto",
 
     "element_5_tittle" : "Habilidades",
-    "element_5_url" : "/en/#skills"
+    "element_5_url" : "/es/#skills"
   },
   "LanguagesTable": {
     "language_es" : "Español",
