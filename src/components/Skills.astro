@@ -33,6 +33,13 @@ import Docker from "../icons/Docker.astro"
 import Dart from "../icons/Dart.astro"
 import Flutter from "../icons/Flutter.astro"
 import Hibernate from "../icons/Hibernate.astro"
+import PostgreSQL from "../icons/PostgreSQL.astro"
+import Postman from "../icons/Postman.astro"
+import ApacheMaven from "../icons/ApacheMaven.astro"
+import AmazonWebServices from "../icons/AmazonWebServices.astro"
+import SAPHana from "../icons/SAPHana.astro"
+import Yaml from "../icons/Yaml.astro"
+
 
 //TODO: Gestionar el background
 const STACK = [
@@ -50,7 +57,7 @@ const STACK = [
   {
     name: 'Groovy',
     iconItem_: Groovy,      
-    className: 'bg-slate-100'
+    className: 'bg-slate-100',
   },
   {
     name: 'C++',
@@ -151,6 +158,11 @@ const STACK = [
     className: 'bg-slate-100'
   },
   {
+    name: 'PostgreSQL',
+    iconItem_: PostgreSQL,      
+    className: 'bg-slate-100'
+  },
+  {
     name: 'Solr',
     iconItem_: Solr,      
     className: 'bg-slate-100'
@@ -188,6 +200,14 @@ const STACK = [
     iconItem_: Hibernate,      
     className: 'bg-slate-100'
   },
+
+
+  //Tools
+  {
+    name: 'Postman',
+    iconItem_: Postman,      
+    className: 'bg-slate-100'
+  },
   {
     name: 'Gradle',
     iconItem_: Gradle,      
@@ -196,6 +216,16 @@ const STACK = [
   {
     name: 'Xml',
     iconItem_: Xml,      
+    className: 'bg-slate-100'
+  },
+  {
+    name: 'Maven',
+    iconItem_: ApacheMaven,      
+    className: 'bg-slate-100'
+  },
+  {
+    name: 'Yaml',
+    iconItem_: Yaml,      
     className: 'bg-slate-100'
   },
   {
@@ -214,6 +244,16 @@ const STACK = [
     className: 'bg-slate-100'
   },
   {
+    name: 'AWS',
+    iconItem_: AmazonWebServices,      
+    className: 'bg-slate-100'
+  },
+  {
+    name: 'SAP Hana',
+    iconItem_: SAPHana,      
+    className: 'bg-slate-100'
+  },
+  {
     name: 'OpenAI',
     iconItem_: OpenAI,      
     className: 'bg-slate-100'
@@ -228,12 +268,12 @@ const STACK = [
 
 
 <section id='skill' class='w-full mx-auto container lg:max-w-4xl md:max-w-2xl'>
-    <ul class='my-10 flex grid-cols-5 flex-wrap justify-center gap-4 sm:grid'>
+    <ul class='my-10 flex grid-cols-6 flex-wrap justify-center gap-4 sm:grid'>
         {STACK.map((skill) => (
             <li id={skill.name}
-                class={`dark:bg-transparent flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125 ${skill.className} [&>svg]:fill-white`}
+                class={`dark:bg-transparent flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125 ${skill.className} `}
             >
-                <skill.iconItem_ class={`dark:bg-transparent size-16 flex flex-col items-center gap-2 transition-all duration-100 ${skill.className} [&>svg]:fill-white`}/>
+                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white size-16 flex flex-col items-center gap-2 transition-all duration-100 ${skill.className} [&>svg]:fill-white`}/>
                     <span class='text-l text-primary-300'>{skill.name}</span>
             </li>
         ))}
