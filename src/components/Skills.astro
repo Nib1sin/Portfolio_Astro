@@ -39,6 +39,8 @@ import ApacheMaven from "../icons/ApacheMaven.astro"
 import AmazonWebServices from "../icons/AmazonWebServices.astro"
 import SAPHana from "../icons/SAPHana.astro"
 import Yaml from "../icons/Yaml.astro"
+import SpringBoot from "../icons/SpringBoot.astro"
+import SpringData from "../icons/SpringData.astro"
 
 
 //TODO: Gestionar el background
@@ -181,8 +183,13 @@ const STACK = [
 
   //Frameworks BackEnd
   {
-    name: 'Spring Boot',
+    name: 'Spring',
     iconItem_: Spring,      
+    className: 'bg-slate-100'
+  },
+  {
+    name: 'Spring Boot',
+    iconItem_: SpringBoot,      
     className: 'bg-slate-100'
   },
   {
@@ -193,6 +200,11 @@ const STACK = [
   {
     name: 'Spring Security',
     iconItem_: SpringSecurity,      
+    className: 'bg-slate-100'
+  },
+  {
+    name: 'Spring Data',
+    iconItem_: SpringData,      
     className: 'bg-slate-100'
   },
   {
@@ -273,7 +285,7 @@ const STACK = [
             <li id={skill.name}
                 class={`dark:bg-transparent flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125 ${skill.className} `}
             >
-                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white size-16 flex flex-col items-center gap-2 transition-all duration-100 ${skill.className} [&>svg]:fill-white`}/>
+                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 ${skill.className} [&>svg]:fill-white`}/>
                     <span class='text-l text-primary-300'>{skill.name}</span>
             </li>
         ))}
