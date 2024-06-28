@@ -17,6 +17,8 @@ import _Astr from "@/icons/_Astr.astro"
 import JavaScript from "@/icons/JavaScript.astro"
 import OpenAI from "@/icons/OpenAI.astro"
 
+import ReadMore from "@/react/ReadMore"
+
 //Translate
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "astro-i18next/components";
@@ -98,11 +100,19 @@ const TAGS = {
 }
 const PROJECTS = [
   {
+    title: "Spring Boot 3 Microservices with Maven",
+    description: t("projects.item_3_description_1.description")  + " " + t("projects.item_3_description_1.microservices"),
+    link: "https://spring.io/batch",
+    github: "https://github.com/Nib1sin/ETL_Spring_1_J8",
+    image: "images/MICROSERVICES_SPRING3.webp",
+    tags: [TAGS.JAVA, TAGS.GRADLE, TAGS.ORACLE, TAGS.SQL, TAGS.GROOVY, TAGS.SPRING, TAGS.XML]
+  },
+  {
     title: "Spring Batch processing on the JVM",
     description: t("projects.item_1_description_1"),
     link: "https://spring.io/batch",
     github: "https://github.com/Nib1sin/ETL_Spring_1_J8",
-    image: "/projects/SPRING_BATCH.png",
+    image: "images/SPRING_BATCH.webp",
     tags: [TAGS.JAVA, TAGS.GRADLE, TAGS.ORACLE, TAGS.SQL, TAGS.GROOVY, TAGS.SPRING, TAGS.XML]
   },
   {
@@ -110,7 +120,7 @@ const PROJECTS = [
     description:t("projects.item_2_description_1"), 
     link: "https://askyourpdf.com/",
     github: "https://github.com/Nib1sin/ChatPDF",
-    image: "/projects/CHAT_PDF.png",
+    image: "images/CHAT_PDF.webp",
     tags: [TAGS.TYPESCRIPT, TAGS.SVELTE, TAGS.JAVASCRIPT, TAGS.OPENAI, TAGS._Astr, TAGS.TAILWIND]
   },
 ]

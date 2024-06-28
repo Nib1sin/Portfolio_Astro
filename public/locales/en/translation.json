@@ -118,7 +118,17 @@
   "projects": {
     "item_1_description_1" : "Spring Batch is the de facto standard for batch processing on the JVM. Its implementation of common batch patterns, such as chunk-based processing and partitioning, allows me to create scalable, high-performance batch applications that are resilient enough for your most critical processes. This makes it possible to populate a database from an input file or manage a report from a database with a large amount of information in it.",
 
-    "item_2_description_1" : "Application that allows extracting information and answering questions from large PDF files, such as manuals, essays, and books. ChatPDF analyzes the PDF and the AI will use relevant paragraphs to provide you with an answer."
+    "item_2_description_1" : "Application that allows extracting information and answering questions from large PDF files, such as manuals, essays, and books. ChatPDF analyzes the PDF and the AI will use relevant paragraphs to provide you with an answer.",
+
+    "item_3_description_1" : {
+      "description" : "In this project, 5 microservices are defined that communicate via OpenFeign. The Spring Framework version used is 3.3.1, java17 LTS, Spring Data JPA, Spring Web, Spring Boot Actuator, Eureka, Mysql Driver, PostgreSQL Driver. The microservices are: ",
+      "microservices": "microservice-gateway, microservice-config, microservice-course, microservice-student, microservice-eureka",
+      "item_1" : "• microservice-gateway: Responsible for mapping and subsequently exposing the endpoints defined in the course & student microservices (spring-cloud-starter-gateway)",
+      "item_2" : "• microservice-config : microservice that allows the configuration of properties for each microservice (spring-cloud-config-server)",
+      "item_3" : "• microservice-course: microservice that materializes data from a Mysql database, communicates with the student microservice via a REST call (spring-cloud-starter-openfeign)",
+      "item_4" : "• microservice-student: microservice that materializes data from a PostgreSQL database, communicates with the course microservice via a REST call (spring-cloud-starter-openfeign)",
+      "item_5" : "• microservice-eureka: microservice that allows the registration and discovery of microservices (spring-cloud-starter-netflix-eureka-server)"
+    }
   }
 
 }
