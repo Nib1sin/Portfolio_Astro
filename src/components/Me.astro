@@ -5,6 +5,7 @@ import LinkedInIcon from "@/icons/LinkedIn.astro"
 import MailIcon from "@/icons/Mail.astro"
 import SocialPill from "@/icons/SocialPill.astro"
 import GitHubIcon from "@/icons/Github.astro";
+import CvIcon from "@/icons/Cv.astro";
 
 //Translate
 import i18next, { t, changeLanguage } from "i18next";
@@ -41,9 +42,14 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
     </h2>
 
     <nav class="flex gap-4 mt-8 flex-wrap">
+
         <SocialPill href="https://www.linkedin.com/in/pjaimer/">
             <LinkedInIcon class="size-4 md:size-6"></LinkedInIcon>
             LinkedIn
+        </SocialPill>
+        <SocialPill href="https://drive.google.com/file/d/1tNhecRKMrslu_8xLFIY5HG5fnam5b8JW/view?usp=sharing">
+            <CvIcon class="size-4 md:size-6"></CvIcon>
+            CV
         </SocialPill>
         <SocialPill href="https://github.com/Nib1sin">
             <GitHubIcon class="size-4 md:size-6"></GitHubIcon>
@@ -53,6 +59,7 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
             <MailIcon class="size-4 md:size-6"></MailIcon>
             nibi.amdukia@gmail.com
         </SocialPill>
+        
     </nav>
 
 </div>
