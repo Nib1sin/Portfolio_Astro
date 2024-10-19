@@ -23,13 +23,18 @@
     "p_3_4" : "Java, groovy, AngularJs, database (sql e nosql), Hibernate, ecc."
   },
   "experience": {
-    "item_1_date" : "Agosto 2018 - Adesso",
-    "item_1_title" : "Full Stack Software Developer",
-    "item_1_company" : "Sydema",
-    "item_1_description_1" : "• Analista dati, sviluppatore, evoluzione e manutenzione di Laweb4. Applicazione web per il processo di recupero credito.",
-    "item_1_description_2" : "• Sviluppo di applicazioni web utilizzando tecnologie come JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql e No-Sql), Gradle e Git.",
-    "item_1_description_3" : "• Sviluppo di Processi Batch per il trasferimento di dati da diverse tipologie di Data Base (Spring Batch, SqlLoader).",
-    "item_1_description_4" : "• Responsabile della gestione e manutenzione dei server Linux (RedHat), su cui è basata le applicazioni.",
+    "item_4_date" : "Agosto 2024 - Adesso",
+    "item_4_title" : "Full Stack Software Developer",
+    "item_4_company" : "AndXor",
+    "item_4_description_1" : "• Responsabile dell'evoluzione e del refactoring dell'applicazione web Cloud2Sign, utilizzando tecnologie come Spring Boot Framework e altri moduli Spring Core, DataBase (Sql e No-Sql), Gradle e SVN.",
+
+    "item_3_date" : "Agosto 2018 - Luglio 2018",
+    "item_3_title" : "Full Stack Software Developer",
+    "item_3_company" : "Sydema",
+    "item_3_description_1" : "• Analista dati, sviluppatore, evoluzione e manutenzione di Laweb4. Applicazione web per il processo di recupero credito.",
+    "item_3_description_2" : "• Sviluppo di applicazioni web utilizzando tecnologie come JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql e No-Sql), Gradle e Git.",
+    "item_3_description_3" : "• Sviluppo di Processi Batch per il trasferimento di dati da diverse tipologie di Data Base (Spring Batch, SqlLoader).",
+    "item_3_description_4" : "• Responsabile della gestione e manutenzione dei server Linux (RedHat), per il deploy delle applicazioni.",
 
     "item_2_date" : "Gennaio 2017 - gennaio 2018",
     "item_2_title" : "Junior Software Developer",
@@ -40,12 +45,12 @@
     "item_2_description_4" : "• Gestione dei servizi implementati su server Windows.",
     "item_2_description_5" : "• Produzione di report settimanali che indicassero i possibili target a cui sarebbero stati offerti i diversi servizi. (Generato con JasperReport).",
 
-    "item_3_date" : "Giugno 2016 - dicembre 2016",
-    "item_3_title" : "Stagista informatico",
-    "item_3_company" : "SUNAT",
-    "item_3_description_1" : "• Gestione delle entrate tributarie incassate nel periodo 2016-II.",
-    "item_3_description_2" : "• Durante la mia permanenza in SUNAT ho appreso le basi dell'organizzazione dei progetti e delle loro applicazioni a diversi livelli nella logica degli algoritmi.",
-    "item_3_description_3" : "• Scrivere report utilizzando query per ottenere il risultato desiderato per l'utente finale."
+    "item_1_date" : "Giugno 2016 - dicembre 2016",
+    "item_1_title" : "Stagista informatico",
+    "item_1_company" : "SUNAT",
+    "item_1_description_1" : "• Gestione delle entrate tributarie incassate nel periodo 2016-II.",
+    "item_1_description_2" : "• Durante la mia permanenza in SUNAT ho appreso le basi dell'organizzazione dei progetti e delle loro applicazioni a diversi livelli nella logica degli algoritmi.",
+    "item_1_description_3" : "• Scrivere report utilizzando query per ottenere il risultato desiderato per l'utente finale."
   },
   "footer": {
     "section_1" : "Portafoglio di Pedro",
