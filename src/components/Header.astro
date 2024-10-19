@@ -89,7 +89,7 @@ const navItems = [
     
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
-        console.log(`Section: ${entry.target.id}, IntersectionRatio: ${entry.intersectionRatio}, IsIntersecting: ${entry.isIntersecting}`);
+        //console.log(`Section: ${entry.target.id}, IntersectionRatio: ${entry.intersectionRatio}, IsIntersecting: ${entry.isIntersecting}`);
         if (entry.isIntersecting)
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
