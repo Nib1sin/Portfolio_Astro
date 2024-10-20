@@ -1,0 +1,190 @@
+---
+import NextJS from "../icons/NextJs.astro"
+import Tailwind from "../icons/Tailwind.astro"
+import GitHub from "../icons/Github.astro"
+import Java from "../icons/Java.astro"
+import Gradle from "../icons/Gradle.astro"
+import Oracle from "../icons/Oracle.astro"
+import Python from "../icons/Python.astro"
+import Sqlserver from '@/icons/Sqlserver.astro'
+import Groovy from '@/icons/Groovy.astro'
+import Spring from '@/icons/Spring.astro'
+import Xml from '@/icons/Xml.astro'
+import TypeScript from "@/icons/TypeScript.astro"
+import Svelte from "@/icons/Svelte.astro"
+import _Astr from "@/icons/_Astr.astro"
+import JavaScript from "@/icons/JavaScript.astro"
+import OpenAI from "@/icons/OpenAI.astro"
+import Html from "@/icons/HTML.astro"
+import C__ from "../icons/C++.astro"
+import Lua from "../icons/Lua.astro"
+import React from "../icons/React.astro"
+import Angular from "../icons/Angular.astro"
+import AngularJs from "../icons/AngularJs.astro"
+import Nodejs from "../icons/Nodejs.astro"
+import MySql from "../icons/MySql.astro"
+import Solr from "../icons/Solr.astro"
+import MongoDb from "../icons/MongoDb.astro"
+import Redis from "../icons/Redis.astro"
+import SpringBatch from "../icons/SpringBatch.astro"
+import SpringSecurity from "../icons/SpringSecurity.astro"
+import Git from "../icons/Git.astro"
+import Docker from "../icons/Docker.astro"
+import Dart from "../icons/Dart.astro"
+import Flutter from "../icons/Flutter.astro"
+import Hibernate from "../icons/Hibernate.astro"
+import PostgreSQL from "../icons/PostgreSQL.astro"
+import Postman from "../icons/Postman.astro"
+import ApacheMaven from "../icons/ApacheMaven.astro"
+import AmazonWebServices from "../icons/AmazonWebServices.astro"
+import SAPHana from "../icons/SAPHana.astro"
+import Yaml from "../icons/Yaml.astro"
+import SpringBoot from "../icons/SpringBoot.astro"
+import SpringData from "../icons/SpringData.astro"
+
+// Dividir los skills en diferentes categorías
+const backendSkills = [
+  { name: 'Java', iconItem_: Java },
+  { name: 'Python', iconItem_: Python },
+  { name: 'Groovy', iconItem_: Groovy },
+  { name: 'C++', iconItem_: C__ },
+  { name: 'Lua', iconItem_: Lua },
+  { name: 'Dart', iconItem_: Dart },
+];
+
+const frontendSkills = [
+  { name: 'JavaScript', iconItem_: JavaScript },
+  { name: 'NextJS', iconItem_: NextJS },
+  { name: 'React', iconItem_: React },
+  { name: 'Angular', iconItem_: Angular },
+  { name: 'AngularJs', iconItem_: AngularJs },
+  { name: 'Nodejs', iconItem_: Nodejs },
+  { name: 'Astro', iconItem_: _Astr },
+  { name: 'TypeScript', iconItem_: TypeScript },
+  { name: 'Tailwind', iconItem_: Tailwind },
+  { name: 'Html', iconItem_: Html },
+];
+
+const databaseSkills = [
+  { name: 'Sqlserver', iconItem_: Sqlserver },
+  { name: 'Oracle', iconItem_: Oracle },
+  { name: 'MySql', iconItem_: MySql },
+  { name: 'PostgreSQL', iconItem_: PostgreSQL },
+  { name: 'Solr', iconItem_: Solr },
+  { name: 'MongoDb', iconItem_: MongoDb },
+  { name: 'Redis', iconItem_: Redis },
+];
+
+const backendFrameworks = [
+  { name: 'Spring', iconItem_: Spring },
+  { name: 'Spring Boot', iconItem_: SpringBoot },
+  { name: 'Spring Batch', iconItem_: SpringBatch },
+  { name: 'Spring Security', iconItem_: SpringSecurity },
+  { name: 'Spring Data', iconItem_: SpringData },
+  { name: 'Hibernate', iconItem_: Hibernate },
+  { name: 'Flutter', iconItem_: Flutter },
+];
+
+const tools = [
+  { name: 'Postman', iconItem_: Postman },
+  { name: 'Gradle', iconItem_: Gradle },
+  { name: 'Xml', iconItem_: Xml },
+  { name: 'Maven', iconItem_: ApacheMaven },
+  { name: 'Yaml', iconItem_: Yaml },
+  { name: 'Git', iconItem_: Git },
+  { name: 'GitHub', iconItem_: GitHub },
+  { name: 'Docker', iconItem_: Docker },
+  { name: 'AWS', iconItem_: AmazonWebServices },
+  { name: 'SAP Hana', iconItem_: SAPHana },
+  { name: 'OpenAI', iconItem_: OpenAI },
+];
+---
+
+<div class="scroll-container relative grid h-16 w-full overflow-hidden whitespace-nowrap">
+    <div data-first class="scroll flex h-16 w-full items-center justify-around gap-8 whitespace-nowrap px-4 lg:!animate-none">
+      <div class="h-16 w-32 bg-red-500"></div>
+      <div class="h-16 w-32 bg-blue-500"></div>
+      <div class="h-16 w-32 bg-teal-500"></div>
+      <div class="h-16 w-32 bg-yellow-500"></div>
+      <div class="h-16 w-32 bg-pink-500"></div>
+    </div>
+    <div class="scroll flex h-16 w-full items-center justify-around gap-8 whitespace-nowrap px-4 lg:hidden lg:animate-none">
+      <div class="h-16 w-32 bg-red-500"></div>
+      <div class="h-16 w-32 bg-blue-500"></div>
+      <div class="h-16 w-32 bg-teal-500"></div>
+      <div class="h-16 w-32 bg-yellow-500"></div>
+      <div class="h-16 w-32 bg-pink-500"></div>
+    </div>
+    <div data-last class="scroll flex h-16 w-full items-center justify-around gap-8 whitespace-nowrap px-4 lg:hidden lg:animate-none">
+      <div class="h-16 w-32 bg-red-500"></div>
+      <div class="h-16 w-32 bg-blue-500"></div>
+      <div class="h-16 w-32 bg-teal-500"></div>
+      <div class="h-16 w-32 bg-yellow-500"></div>
+      <div class="h-16 w-32 bg-pink-500"></div>
+    </div>
+    <div class="fade pointer-events-none absolute inset-0 lg:hidden"></div>
+  </div>
+  
+
+
+<style>
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  @keyframes first-loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+  @keyframes loop {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .scroll-container {
+    --time: 30s;
+    --half-time: 15s;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'scroll-area';
+  }
+
+  .scroll {
+    grid-area: scroll-area;
+    animation: loop var(--time) linear infinite;
+    transform: translateX(100%);
+
+    &[data-first] {
+      animation: first-loop var(--time) linear forwards;
+      transform: translateX(0);
+    }
+
+    &[data-last] {
+      animation-delay: var(--half-time);
+    }
+  }
+
+  .fade {
+    background: linear-gradient(
+      90deg,
+      #fff,
+      transparent 30%,
+      transparent 70%,
+      #fff
+    );
+  }
+}
+
+</style>
