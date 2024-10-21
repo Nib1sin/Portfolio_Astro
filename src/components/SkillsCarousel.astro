@@ -46,7 +46,19 @@ import Css from "../icons/Css.astro"
 import VueJs from "../icons/VueJs.astro"
 import Preact from "../icons/Preact.astro"
 import Htmx from "../icons/Htmx.astro"
+import Ollama from "../icons/Ollama.astro"
+import Kubernetes from "../icons/Kubernetes_.astro"
+import Azure from "../icons/Azure_.astro"
+import RedHat from "../icons/RedHat.astro"
 import SkillsCarouselItem from '../components/SkillsCarouselItem.astro'
+import DbIcon from "../icons/DbIcon.astro"
+import BackendIcon from "../icons/BackendIcon.astro"
+import CommandIcon from "../icons/CommandIcon.astro"
+import FrontendIcon from "../icons/FrontendIcon.astro"
+import BackendFWIcon from "../icons/BackendFWIcon.astro"
+import FrontendFWIcon from "../icons/FrontendFWIcon.astro"
+import ToolsIcon from "../icons/ToolsIcon.astro"
+import ServerIcon from "../icons/ServerIcon.astro"
 
 const skills = {
   backendSkills: [
@@ -101,32 +113,56 @@ const skills = {
     { name: 'Maven', iconItem_: ApacheMaven, className: '' },
     { name: 'Yaml', iconItem_: Yaml, className: '' },
     { name: 'Git', iconItem_: Git, className: '' },
+    { name: 'Svn', iconItem_: Svn, className: '' },
+  ],
+  server: [
     { name: 'GitHub', iconItem_: GitHub, className: '' },
     { name: 'Docker', iconItem_: Docker, className: '' },
-    { name: 'AWS', iconItem_: AmazonWebServices, className: '' },
     { name: 'SAP Hana', iconItem_: SAPHana, className: '' },
     { name: 'OpenAI', iconItem_: OpenAI, className: '' },
-    { name: 'Svn', iconItem_: Svn, className: '' },
-  ]
+    { name: 'Ollama', iconItem_: Ollama, className: '' },
+    { name: 'Kubernetes', iconItem_: Kubernetes, className: '' },
+    { name: 'AWS', iconItem_: AmazonWebServices, className: '' },
+    { name: 'Azure', iconItem_: Azure, className: '' },
+    { name: 'RedHat', iconItem_: RedHat, className: '' },
+  ],
 };
 ---
 
 <section id='skills' class='w-full mx-auto container lg:max-w-4xl md:max-w-2xl'>
-  <h2 class="text-2xl font-bold mb-4">Backend</h2>
+
+  <h2 class="flex items-center mb-6 text-2xl font-bold">
+    <BackendIcon class="size-8 pr-2"/> Backend
+  </h2>
   <SkillsCarouselItem nameSkill={skills.backendSkills} />
 
-  <h2 class="text-2xl font-bold mb-4">Backend Frameworks</h2>
+  <h2 class="flex items-center mb-6 text-2xl font-bold">
+    <BackendFWIcon class="size-8 pr-2"/> Backend Frameworks
+  </h2>
   <SkillsCarouselItem nameSkill={skills.backendFrameworks} />
 
-  <h2 class="text-2xl font-bold mb-4">Frontend</h2>
+  <h2 class="flex items-center mb-6 text-2xl font-bold">
+    <FrontendIcon class="size-8 pr-2"/> Frontend
+  </h2>
   <SkillsCarouselItem nameSkill={skills.frontendSkills} />
 
-  <h2 class="text-2xl font-bold mb-4">Frontend Frameworks</h2>
+  <h2 class="text-2xl font-bold mb-4">
+    <FrontendFWIcon class="size-8 pr-2"/> Frontend Frameworks</h2>
   <SkillsCarouselItem nameSkill={skills.frontendFrameworks} />
 
-  <h2 class="text-2xl font-bold mb-4">Databases</h2>
+  <h2 class="flex items-center mb-6 text-2xl font-bold">
+    <DbIcon class="size-8 pr-2"/> Databases
+  </h2>
   <SkillsCarouselItem nameSkill={skills.databaseSkills} />
 
-  <h2 class="text-2xl font-bold mb-4">Tools</h2>
+  <h2 class="flex items-center mb-6 text-2xl font-bold">
+    <ToolsIcon class="size-8 pr-2"/>Tools
+  </h2>
   <SkillsCarouselItem nameSkill={skills.tools} />
+
+  <h2 class="flex items-center mb-6 text-2xl font-bold">
+    <ServerIcon class="size-8 pr-2"/> Server
+  </h2>
+  <SkillsCarouselItem nameSkill={skills.server} />
+
 </section>
