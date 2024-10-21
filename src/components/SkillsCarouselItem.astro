@@ -1,7 +1,7 @@
 ---
 
 interface Props {
-    nameSkill: { iconItem_: any; name: string }[];
+    nameSkill: { iconItem_: any; name: string; className: string}[];
 }
 
 const { nameSkill} = Astro.props
@@ -13,7 +13,7 @@ const { nameSkill} = Astro.props
         {nameSkill.map((skill) => (
             <div class="flex-none w-32">
                 <div class="flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125">
-                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 [&>svg]:fill-white`}/>
+                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 ${skill.className} [&>svg]:fill-white`}/>
                 <span class="text-l text-primary-300">{skill.name}</span>
                 </div>
             </div>
@@ -24,7 +24,7 @@ const { nameSkill} = Astro.props
         {nameSkill.map((skill) => (
             <div class="flex-none w-32">
                 <div class="flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125">
-                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 [&>svg]:fill-white`}/>
+                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 ${skill.className} [&>svg]:fill-white`}/>
                 <span class="text-l text-primary-300">{skill.name}</span>
                 </div>
             </div>

@@ -41,60 +41,72 @@ import SAPHana from "../icons/SAPHana.astro"
 import Yaml from "../icons/Yaml.astro"
 import SpringBoot from "../icons/SpringBoot.astro"
 import SpringData from "../icons/SpringData.astro"
+import Svn from "../icons/Svn.astro"
+import Css from "../icons/Css.astro"
+import VueJs from "../icons/VueJs.astro"
+import Preact from "../icons/Preact.astro"
+import Htmx from "../icons/Htmx.astro"
 import SkillsCarouselItem from '../components/SkillsCarouselItem.astro'
 
-// Definir una lista de mapas
 const skills = {
   backendSkills: [
-    { name: 'Java', iconItem_: Java },
-    { name: 'Python', iconItem_: Python },
-    { name: 'Groovy', iconItem_: Groovy },
-    { name: 'C++', iconItem_: C__ },
-    { name: 'Lua', iconItem_: Lua },
-    { name: 'Dart', iconItem_: Dart },
-  ],
-  frontendSkills: [
-    { name: 'JavaScript', iconItem_: JavaScript },
-    { name: 'NextJS', iconItem_: NextJS },
-    { name: 'React', iconItem_: React },
-    { name: 'Angular', iconItem_: Angular },
-    { name: 'AngularJs', iconItem_: AngularJs },
-    { name: 'Nodejs', iconItem_: Nodejs },
-    { name: 'Astro', iconItem_: _Astr },
-    { name: 'TypeScript', iconItem_: TypeScript },
-    { name: 'Tailwind', iconItem_: Tailwind },
-    { name: 'Html', iconItem_: Html },
-  ],
-  databaseSkills: [
-    { name: 'Sqlserver', iconItem_: Sqlserver },
-    { name: 'Oracle', iconItem_: Oracle },
-    { name: 'MySql', iconItem_: MySql },
-    { name: 'PostgreSQL', iconItem_: PostgreSQL },
-    { name: 'Solr', iconItem_: Solr },
-    { name: 'MongoDb', iconItem_: MongoDb },
-    { name: 'Redis', iconItem_: Redis },
+    { name: 'Java', iconItem_: Java, className: '' },
+    { name: 'Python', iconItem_: Python, className: ''  },
+    { name: 'Groovy', iconItem_: Groovy, className: ''  },
+    { name: 'C++', iconItem_: C__, className: ''  },
+    { name: 'Lua', iconItem_: Lua, className: ''  },
+    { name: 'Dart', iconItem_: Dart, className: ''  },
   ],
   backendFrameworks: [
-    { name: 'Spring', iconItem_: Spring },
-    { name: 'Spring Boot', iconItem_: SpringBoot },
-    { name: 'Spring Batch', iconItem_: SpringBatch },
-    { name: 'Spring Security', iconItem_: SpringSecurity },
-    { name: 'Spring Data', iconItem_: SpringData },
-    { name: 'Hibernate', iconItem_: Hibernate },
-    { name: 'Flutter', iconItem_: Flutter },
+    { name: 'Spring', iconItem_: Spring, className: '' },
+    { name: 'Spring Boot', iconItem_: SpringBoot, className: '' },
+    { name: 'Spring Batch', iconItem_: SpringBatch, className: '' },
+    { name: 'Spring Security', iconItem_: SpringSecurity, className: '' },
+    { name: 'Spring Data', iconItem_: SpringData, className: '' },
+    { name: 'Hibernate', iconItem_: Hibernate, className: '' },
+    { name: 'Flutter', iconItem_: Flutter, className: ''  },
+  ],
+  frontendSkills: [
+    { name: 'JavaScript', iconItem_: JavaScript, className: '' },
+    { name: 'Css', iconItem_: Css, className: '' },
+    { name: 'Html', iconItem_: Html, className: '' },
+    { name: 'React', iconItem_: React, className: '' },
+    { name: 'Nodejs', iconItem_: Nodejs, className: '' },
+    { name: 'TypeScript', iconItem_: TypeScript, className: '' },
+    { name: 'Htmx', iconItem_: Htmx, className: '' },
+  ],
+  frontendFrameworks: [
+    { name: 'NextJS', iconItem_: NextJS, className: '' },
+    { name: 'VueJs', iconItem_: VueJs, className: '' },
+    { name: 'Angular', iconItem_: Angular, className: '' },
+    { name: 'AngularJs', iconItem_: AngularJs, className: '' },
+    { name: 'Tailwind', iconItem_: Tailwind, className: '' },
+    { name: 'Astro', iconItem_: _Astr, className: '' },
+    //{ name: 'Svelte', iconItem_: Svelte },
+    { name: 'Preact', iconItem_: Preact, className: '' },
+  ],
+  databaseSkills: [
+    { name: 'Sqlserver', iconItem_: Sqlserver, className: '' },
+    { name: 'Oracle', iconItem_: Oracle, className: '' },
+    { name: 'MySql', iconItem_: MySql, className: '' },
+    { name: 'PostgreSQL', iconItem_: PostgreSQL, className: '' },
+    { name: 'Solr', iconItem_: Solr, className: '' },
+    { name: 'MongoDb', iconItem_: MongoDb, className: '' },
+    { name: 'Redis', iconItem_: Redis, className: '' },
   ],
   tools: [
-    { name: 'Postman', iconItem_: Postman },
-    { name: 'Gradle', iconItem_: Gradle },
-    { name: 'Xml', iconItem_: Xml },
-    { name: 'Maven', iconItem_: ApacheMaven },
-    { name: 'Yaml', iconItem_: Yaml },
-    { name: 'Git', iconItem_: Git },
-    { name: 'GitHub', iconItem_: GitHub },
-    { name: 'Docker', iconItem_: Docker },
-    { name: 'AWS', iconItem_: AmazonWebServices },
-    { name: 'SAP Hana', iconItem_: SAPHana },
-    { name: 'OpenAI', iconItem_: OpenAI },
+    { name: 'Postman', iconItem_: Postman, className: '' },
+    { name: 'Gradle', iconItem_: Gradle, className: '' },
+    { name: 'Xml', iconItem_: Xml, className: '' },
+    { name: 'Maven', iconItem_: ApacheMaven, className: '' },
+    { name: 'Yaml', iconItem_: Yaml, className: '' },
+    { name: 'Git', iconItem_: Git, className: '' },
+    { name: 'GitHub', iconItem_: GitHub, className: '' },
+    { name: 'Docker', iconItem_: Docker, className: '' },
+    { name: 'AWS', iconItem_: AmazonWebServices, className: '' },
+    { name: 'SAP Hana', iconItem_: SAPHana, className: '' },
+    { name: 'OpenAI', iconItem_: OpenAI, className: '' },
+    { name: 'Svn', iconItem_: Svn, className: '' },
   ]
 };
 ---
@@ -103,14 +115,17 @@ const skills = {
   <h2 class="text-2xl font-bold mb-4">Backend</h2>
   <SkillsCarouselItem nameSkill={skills.backendSkills} />
 
+  <h2 class="text-2xl font-bold mb-4">Backend Frameworks</h2>
+  <SkillsCarouselItem nameSkill={skills.backendFrameworks} />
+
   <h2 class="text-2xl font-bold mb-4">Frontend</h2>
   <SkillsCarouselItem nameSkill={skills.frontendSkills} />
 
+  <h2 class="text-2xl font-bold mb-4">Frontend Frameworks</h2>
+  <SkillsCarouselItem nameSkill={skills.frontendFrameworks} />
+
   <h2 class="text-2xl font-bold mb-4">Databases</h2>
   <SkillsCarouselItem nameSkill={skills.databaseSkills} />
-
-  <h2 class="text-2xl font-bold mb-4">Backend Frameworks</h2>
-  <SkillsCarouselItem nameSkill={skills.backendFrameworks} />
 
   <h2 class="text-2xl font-bold mb-4">Tools</h2>
   <SkillsCarouselItem nameSkill={skills.tools} />
