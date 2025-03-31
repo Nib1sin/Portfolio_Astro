@@ -59,6 +59,8 @@ import BackendFWIcon from "../icons/BackendFWIcon.astro"
 import FrontendFWIcon from "../icons/FrontendFWIcon.astro"
 import ToolsIcon from "../icons/ToolsIcon.astro"
 import ServerIcon from "../icons/ServerIcon.astro"
+import MariaDB from "@/icons/MariaDB.astro"
+import CassandraDB from "@/icons/Cassandra.astro"
 
 const skills = {
   backendSkills: [
@@ -105,6 +107,8 @@ const skills = {
     { name: 'Solr', iconItem_: Solr, className: '' },
     { name: 'MongoDb', iconItem_: MongoDb, className: '' },
     { name: 'Redis', iconItem_: Redis, className: '' },
+    { name: 'MariaDb', iconItem_: MariaDB, className: '' },
+    { name: 'Cassandra', iconItem_: CassandraDB, className: '' },
   ],
   tools: [
     { name: 'Postman', iconItem_: Postman, className: '' },
@@ -115,7 +119,7 @@ const skills = {
     { name: 'Git', iconItem_: Git, className: '' },
     { name: 'Svn', iconItem_: Svn, className: '' },
   ],
-  server: [
+  devOps: [
     { name: 'GitHub', iconItem_: GitHub, className: '' },
     { name: 'Docker', iconItem_: Docker, className: '' },
     { name: 'SAP Hana', iconItem_: SAPHana, className: '' },
@@ -146,8 +150,9 @@ const skills = {
   </h2>
   <SkillsCarouselItem nameSkill={skills.frontendSkills} />
 
-  <h2 class="text-2xl font-bold mb-4">
-    <FrontendFWIcon class="size-8 pr-2"/> Frontend Frameworks</h2>
+  <h2 class="flex items-center mb-6 text-2xl font-bold">
+    <FrontendFWIcon class="size-8 pr-2"/> Frontend Frameworks
+  </h2>
   <SkillsCarouselItem nameSkill={skills.frontendFrameworks} />
 
   <h2 class="flex items-center mb-6 text-2xl font-bold">
@@ -161,8 +166,8 @@ const skills = {
   <SkillsCarouselItem nameSkill={skills.tools} />
 
   <h2 class="flex items-center mb-6 text-2xl font-bold">
-    <ServerIcon class="size-8 pr-2"/> Server
+    <ServerIcon class="size-8 pr-2"/> DevOps
   </h2>
-  <SkillsCarouselItem nameSkill={skills.server} />
+  <SkillsCarouselItem nameSkill={skills.devOps} />
 
 </section>
