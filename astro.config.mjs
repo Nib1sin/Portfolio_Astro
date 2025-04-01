@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import astroI18next from "astro-i18next";
 import robotsTxt from "astro-robots-txt";
-
 import preact from "@astrojs/preact";
 
 // https://astro.build/config

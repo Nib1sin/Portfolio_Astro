@@ -1,9 +1,10 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.tsx";
+import ExperienceList from "./ExperienceList.tsx";
 
 //Translate
-import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import i18next, { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 
 const EXPERIENCE = [
     {
@@ -51,15 +52,7 @@ const EXPERIENCE = [
         ],
         link: 'http://www.sunat.gob.pe'
     }
-]
+];
 ---
 
-<ol class="relative mt-16">
-    {
-        EXPERIENCE.map(experience=>(
-            <li class="">
-                <ExperienceItem {...experience}/>
-            </li>
-        ))
-    }
-</ol>
+<ExperienceList experiences={EXPERIENCE} client:load />
