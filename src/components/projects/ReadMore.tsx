@@ -2,7 +2,7 @@
 import { useState } from 'preact/hooks';
 
 // Componente ReadMore
-const ReadMore = ({ description }: { description: string }, maxLines = 4) => {
+const ReadMore = ({ description, maxLines }: { description: string; maxLines: number }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
@@ -24,4 +24,3 @@ const ReadMore = ({ description }: { description: string }, maxLines = 4) => {
 };
 
 export default ReadMore;
-

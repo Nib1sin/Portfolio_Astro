@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import AboutMe from "@/components/AboutMe.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Experience from "@/components/experience/Experience.astro";
-import Projects from "@/components/Projects.astro";
+import Projects from "@/components/projects/Projects.astro";
 import Me from "@/components/contact/Me.astro";
 import BriefcaseIcon from "@/icons/Briefcase.astro";
 import CodeIcon from "@/icons/Code.astro";
@@ -17,52 +17,63 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
 changeLanguage("en");
 ---
 
-<Layout 
-	title="Portfolio Pedro | Software Developer & Software Engineer"
-	description="Contrata a Pedro para desarrollar, implementar y/o mejorar tu software"
+<Layout
+  title="Portfolio Pedro | Software Developer & Software Engineer"
+  description="Contrata a Pedro para desarrollar, implementar y/o mejorar tu software"
 >
-	<main class="px-4">
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-32" id="contacto">
+      <Me />
+    </SectionContainer>
+  </main>
 
-		<SectionContainer class="py-16 md:py-32" id="contacto">
-			<Me>
-				</slot>
-			</Me>
-		</SectionContainer>
-		
-		<div class="space-y-20">
-			<SectionContainer id="experiencia">
-				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
-					<BriefcaseIcon class="size-8" />
-					<p class="duration-500 hover:scale-110 origin-left">{t("index.section_1")}</p>
-			  	</h2>
-			  	<Experience />
-			</SectionContainer>
-		
-			<SectionContainer id="proyectos">
-			  	<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
-					<CodeIcon class="size-8" />
-					{t("index.section_2")}
-			  	</h2>
-			  	<Projects />
-			</SectionContainer>
-		
-			<SectionContainer id="sobre-mi">
-			  	<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
-					<ProfileCheck class="size-8" />
-					{t("index.section_3")}
-			  	</h2>
-			  	<AboutMe />
-			</SectionContainer>
+  <div class="space-y-20">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <BriefcaseIcon class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t("index.section_1")}
+        </p>
+      </h2>
+      <Experience />
+    </SectionContainer>
 
-			<SectionContainer id="skills">
-				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
-				  <SkillsIcon class="size-8" />
-				  {t("index.section_4")}
-				</h2>
-				<Skills />
-		  	</SectionContainer>
-		</div>
-		
-	</main>
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <CodeIcon class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t("index.section_2")}
+        </p>
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <ProfileCheck class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t("index.section_3")}
+        </p>
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <SkillsIcon class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t("index.section_4")}
+        </p>
+      </h2>
+      <Skills />
+    </SectionContainer>
+  </div>
 </Layout>
-
