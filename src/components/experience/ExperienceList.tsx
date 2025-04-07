@@ -1,5 +1,6 @@
-import { useState } from "preact/hooks";
+import { useState, useRef } from "preact/hooks";
 import ExperienceItem from "./ExperienceItem";
+import i18next, { t, changeLanguage } from "i18next";
 
 interface Experience {
   date: string;
@@ -19,6 +20,18 @@ const ExperienceList = ({ experiences }: Props) => {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
   const visibleExperiences = showAll ? sortedExperiences : sortedExperiences.slice(0, 1);
+  const experienceRef = useRef<HTMLDivElement>(null);
+
+  const handleToggle = () => {
+    setShowAll(!showAll);
+
+    // Scroll to the "Experiencia" section when collapsing the list
+    if (showAll) {
+      const experienciaSection = document.getElementById("experiencia");
+      if (experienciaSection)
+        experienciaSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div>
@@ -34,15 +47,22 @@ const ExperienceList = ({ experiences }: Props) => {
       ))}
       <div class="flex justify-center mt-4">
         <button
-          class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-900 flex items-center gap-2"
-          onClick={() => setShowAll(!showAll)}
+          class={`
+            px-4 py-2 hover:scale-110
+          dark:text-white text-black rounded 
+          dark:border-white/10 border-black/30
+          dark:bg-white/5 bg-black/5
+          dark:hover:bg-slate-900 hover:bg-black/10
+            transition duration-400 ease-in-out
+            flex items-center gap-2`}
+          onClick={handleToggle}
         >
           <span class="text-sm">{showAll ? "Mostrar menos" : "Mostrar más"}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class={`w-5 h-5 transition-transform duration-300 ${
-              showAll ? "rotate-180" : "rotate-0"
-            }`}
+            class={`w-5 h-5 transition-transform duration-300 
+              ${showAll ? "rotate-180" : "rotate-0"
+              }`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
