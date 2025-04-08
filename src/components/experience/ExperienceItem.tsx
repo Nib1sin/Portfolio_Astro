@@ -47,7 +47,7 @@ const ExperienceItem = ({ title, company, description, link, date }: Props) => {
             {company}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-5 icon icon-tabler icon-tabler-chevron-right"
+              class="w-5 icon icon-tabler icon-tabler-chevron-right animate-pulse"
               width="24"
               height="24"
               viewBox="0 0 24 24"

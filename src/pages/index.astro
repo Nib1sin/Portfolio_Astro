@@ -13,6 +13,7 @@ import Skills from "@/components/SkillsCarousel.astro";
 //Translate
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import "@/styles/global.css";
 
 changeLanguage("es");
 ---
@@ -26,7 +27,6 @@ changeLanguage("es");
       <Me />
     </SectionContainer>
   </main>
-
   <div class="space-y-20">
     <SectionContainer id="experiencia">
       <h2

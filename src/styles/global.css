@@ -1,0 +1,48 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@import "tailwindcss";
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+}
+
+.link-active {
+  background-color: rgba(0, 0, 0, 0.1); /* Equivalente a bg-transparent/10 */
+  font-weight: 600; /* Equivalente a font-semibold */
+  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1); /* Equivalente a shadow-lg shadow-white/10 */
+  backdrop-filter: blur(50px); /* Equivalente a backdrop-blur-sm */
+}
+
+.dark .link-active {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Equivalente a dark:bg-transparent/10 */
+}
+
+@keyframes scale-up-center {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#themes-menu.open {
+  display: inline;
+  animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
