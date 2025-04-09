@@ -5,9 +5,10 @@ import Link from "@/icons/Link.astro";
 import ReadMore from "@/components/projects/ReadMore";
 import { TAGS } from "./TagList.astro";
 
-//Translate
+// Traducción
 import { t } from "i18next";
 
+// Datos de los proyectos
 const PROJECTS = [
   {
     title: "Spring Boot 3 Microservices with Maven",
@@ -54,74 +55,122 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+<div id="indicators-carousel" class="relative w-full" data-carousel="static">
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+    {
+      PROJECTS.map(
+        ({ image, title, description, tags, link, github }, index) => (
+          <div
+            class={`${
+              index === 0 ? "block" : "hidden"
+            } duration-700 ease-in-out`}
+            data-carousel-item={index === 0 ? "active" : ""}
+          >
             <img
-              alt={title}
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
               src={image}
+              alt={title}
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             />
-          </div>
-        </div>
-
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 duration-500 hover:scale-110 origin-left">
-            {title}
-          </h3>
-          <div class="flex flex-wrap mt-2">
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              <ul class="flex flex-wrap mb-2 gap-x-2 gap-y-2">
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white">
+              <h3 class="text-lg font-bold">{title}</h3>
+              <p class="text-sm">{description}</p>
+              <div class="flex gap-2 mt-2">
                 {tags.map((tag) => (
-                  <li>
-                    <span
-                      class={`hover:scale-110 transition duration-400 ease-in-out
-                        flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 
-                        dark:hover:text-white
-                        border border-gray-700 dark:border-gray-500`}
-                    >
-                      <tag.icon class="size-4" />
-                      {tag.name}
-                    </span>
-                  </li>
+                  <span
+                    class={`px-2 py-1 text-xs rounded-full ${tag.class} border border-gray-700 dark:border-gray-500`}
+                  >
+                    {tag.name}
+                  </span>
                 ))}
-              </ul>
+              </div>
+              <div class="flex gap-4 mt-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </div>
             </div>
-
-            <div class="mt-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-100">
-              <ReadMore description={description} maxLines={4} />
-            </div>
-
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                  Code
-                </LinkButton>
-              )}
-              {link && (
-                <LinkButton href={link}>
-                  <Link class="size-4" />
-                  Preview
-                </LinkButton>
-              )}
-            </footer>
           </div>
-        </div>
-      </article>
-    ))
-  }
-</div>
+        )
+      )
+    }
+  </div>
 
-<style>
-  .custom-border {
-    border: 2px solid #4b5563; /* Color gris oscuro */
-    border-radius: 8px; /* Ajusta el radio de las esquinas del borde según necesites */
-    padding: 4px; /* Agrega un espacio dentro del borde para que no se superponga con el SVG */
-    display: inline-block; /* Para que el contenedor se ajuste al contenido */
-  }
-</style>
+  <!-- Slider indicators -->
+  <div
+    class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2"
+  >
+    {
+      PROJECTS.map((_, index) => (
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current={index === 0 ? "true" : "false"}
+          aria-label={`Slide ${index + 1}`}
+          data-carousel-slide-to={index}
+        />
+      ))
+    }
+  </div>
+
+  <!-- Slider controls -->
+  <button
+    type="button"
+    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-prev
+  >
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+    >
+      <svg
+        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 1 1 5l4 4"></path>
+      </svg>
+      <span class="sr-only">Previous</span>
+    </span>
+  </button>
+  <button
+    type="button"
+    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-next
+  >
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+    >
+      <svg
+        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 9 4-4-4-4"></path>
+      </svg>
+      <span class="sr-only">Next</span>
+    </span>
+  </button>
+</div>
