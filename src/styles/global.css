@@ -47,3 +47,33 @@
   display: inline;
   animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+
+@keyframes bounce-horizontal {
+  0%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce-horizontal-right {
+  animation: bounce-horizontal 2s infinite;
+}
+
+@keyframes bounce-horizontal-left {
+  0%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce-horizontal-left {
+  animation: bounce-horizontal-left 2s infinite;
+}
