@@ -48,7 +48,8 @@
   animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@keyframes bounce-horizontal {
+/* Animation that bounce into rigt */
+@keyframes bounce-horizontal-right {
   0%,
   100% {
     transform: translateX(0);
@@ -60,9 +61,10 @@
   }
 }
 .animate-bounce-horizontal-right {
-  animation: bounce-horizontal 2s infinite;
+  animation: bounce-horizontal-right 2s infinite;
 }
 
+/* Animation that bounce into left */
 @keyframes bounce-horizontal-left {
   0%,
   100% {
@@ -76,4 +78,49 @@
 }
 .animate-bounce-horizontal-left {
   animation: bounce-horizontal-left 2s infinite;
+}
+
+/* Effect that show last child when hover */
+.custom-article {
+  position: relative;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+.custom-article img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+.custom-article img:last-child {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.custom-article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.custom-article:hover::before {
+  opacity: 1;
+}
+.custom-article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
 }

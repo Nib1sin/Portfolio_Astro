@@ -1,0 +1,48 @@
+---
+import Study from "./Study.astro";
+import LanguagesTable from "./LanguagesTable.astro";
+
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+---
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+  <div
+    class="[&>p]:mb-6 [&>p>strong]:text-red-600 dark:[&>p>strong]:text-red-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p class="text-gray-600 dark:hover:text-gray-100 hover:text-black">
+      {t("aboutMe.p_1_1")}
+      <strong><em class="italic">{t("aboutMe.p_1_2")}</em></strong>
+      {t("aboutMe.p_1_3")}
+      <strong>{t("aboutMe.p_1_4")}</strong>
+      {t("aboutMe.p_1_5")}
+    </p>
+
+    <p class="text-gray-600 dark:hover:text-gray-100 hover:text-black">
+      {t("aboutMe.p_2_1")}
+      <strong>{t("aboutMe.p_2_2")}</strong>
+      {t("aboutMe.p_2_3")}
+      <strong>{t("aboutMe.p_2_4")}</strong>
+    </p>
+
+    <p class="text-gray-600 dark:hover:text-gray-100 hover:text-black">
+      {t("aboutMe.p_3_1")}
+      <strong><em class="italic">{t("aboutMe.p_3_2")}</em></strong>
+      {t("aboutMe.p_3_3")}
+      <strong>{t("aboutMe.p_3_4")}</strong>
+    </p>
+  </div>
+  <img
+    class="rounded-full size-64 order-1 md:order-2 transition duration-500 hover:scale-105"
+    loading="lazy"
+    src="/images/image_aboutMe.webp"
+  />
+</article>
+
+<LanguagesTable />
+
+<div class="px-10 py-10 md:py-15">
+  <Study />
+</div>

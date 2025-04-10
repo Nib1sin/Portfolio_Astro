@@ -1,0 +1,63 @@
+---
+import StudyItem from "./StudyItem.astro";
+
+//Translate
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
+const STUDY = [
+  {
+    date: t("study.item_4_date"),
+    title: t("study.item_4_title"),
+    school: t("study.item_4_company"),
+    description: [
+      t("study.item_4_description_1"),
+      t("study.item_4_description_2"),
+      t("study.item_4_description_3"),
+      t("study.item_4_description_4"),
+    ],
+    link: "https://www.polimi.it",
+  },
+  {
+    date: t("study.item_3_date"),
+    title: t("study.item_3_title"),
+    school: t("study.item_3_company"),
+    description: [t("study.item_3_description_1")],
+    link: "https://www.pcacademy.it",
+  },
+  {
+    date: t("study.item_2_date"),
+    title: t("study.item_2_title"),
+    school: t("study.item_2_company"),
+    description: [
+      t("study.item_2_description_1"),
+      t("study.item_2_description_2"),
+      t("study.item_2_description_3"),
+      t("study.item_2_description_4"),
+    ],
+    link: "https://www.britanico.edu.pe",
+  },
+  {
+    date: t("study.item_1_date"),
+    title: t("study.item_1_title"),
+    school: t("study.item_1_company"),
+    description: [
+      t("study.item_1_description_1"),
+      t("study.item_1_description_2"),
+      t("study.item_1_description_3"),
+      t("study.item_1_description_4"),
+    ],
+    link: "https://www.utp.edu.pe/web/",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    STUDY.map((study) => (
+      <li class="mb-10 ms-6">
+        <StudyItem {...study} />
+      </li>
+    ))
+  }
+</ol>
