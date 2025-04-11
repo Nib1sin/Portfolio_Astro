@@ -1,11 +1,11 @@
 ---
-import NextJS from "../icons/NextJs.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import GitHub from "../icons/Github.astro";
-import Java from "../icons/Java.astro";
-import Gradle from "../icons/Gradle.astro";
-import Oracle from "../icons/Oracle.astro";
-import Python from "../icons/Python.astro";
+import NextJS from "@/icons/NextJs.astro";
+import Tailwind from "@/icons/Tailwind.astro";
+import GitHub from "@/icons/Github.astro";
+import Java from "@/icons/Java.astro";
+import Gradle from "@/icons/Gradle.astro";
+import Oracle from "@/icons/Oracle.astro";
+import Python from "@/icons/Python.astro";
 import Sqlserver from "@/icons/Sqlserver.astro";
 import Groovy from "@/icons/Groovy.astro";
 import Spring from "@/icons/Spring.astro";
@@ -16,49 +16,49 @@ import _Astr from "@/icons/_Astr.astro";
 import JavaScript from "@/icons/JavaScript.astro";
 import OpenAI from "@/icons/OpenAI.astro";
 import Html from "@/icons/HTML.astro";
-import C__ from "../icons/C++.astro";
-import Lua from "../icons/Lua.astro";
-import React from "../icons/React.astro";
-import Angular from "../icons/Angular.astro";
-import AngularJs from "../icons/AngularJs.astro";
-import Nodejs from "../icons/Nodejs.astro";
-import MySql from "../icons/MySql.astro";
-import Solr from "../icons/Solr.astro";
-import MongoDb from "../icons/MongoDb.astro";
-import Redis from "../icons/Redis.astro";
-import SpringBatch from "../icons/SpringBatch.astro";
-import SpringSecurity from "../icons/SpringSecurity.astro";
-import Git from "../icons/Git.astro";
-import Docker from "../icons/Docker.astro";
-import Dart from "../icons/Dart.astro";
-import Flutter from "../icons/Flutter.astro";
-import Hibernate from "../icons/Hibernate.astro";
-import PostgreSQL from "../icons/PostgreSQL.astro";
-import Postman from "../icons/Postman.astro";
-import ApacheMaven from "../icons/ApacheMaven.astro";
-import AmazonWebServices from "../icons/AmazonWebServices.astro";
-import SAPHana from "../icons/SAPHana.astro";
-import Yaml from "../icons/Yaml.astro";
-import SpringBoot from "../icons/SpringBoot.astro";
-import SpringData from "../icons/SpringData.astro";
-import Svn from "../icons/Svn.astro";
-import Css from "../icons/Css.astro";
-import VueJs from "../icons/VueJs.astro";
-import Preact from "../icons/Preact.astro";
-import Htmx from "../icons/Htmx.astro";
-import Ollama from "../icons/Ollama.astro";
-import Kubernetes from "../icons/Kubernetes_.astro";
-import Azure from "../icons/Azure_.astro";
-import RedHat from "../icons/RedHat.astro";
-import SkillsCarouselItem from "../components/SkillsCarouselItem.astro";
-import DbIcon from "../icons/DbIcon.astro";
-import BackendIcon from "../icons/BackendIcon.astro";
-import CommandIcon from "../icons/CommandIcon.astro";
-import FrontendIcon from "../icons/FrontendIcon.astro";
-import BackendFWIcon from "../icons/BackendFWIcon.astro";
-import FrontendFWIcon from "../icons/FrontendFWIcon.astro";
-import ToolsIcon from "../icons/ToolsIcon.astro";
-import ServerIcon from "../icons/ServerIcon.astro";
+import C__ from "@/icons/C++.astro";
+import Lua from "@/icons/Lua.astro";
+import React from "@/icons/React.astro";
+import Angular from "@/icons/Angular.astro";
+import AngularJs from "@/icons/AngularJs.astro";
+import Nodejs from "@/icons/Nodejs.astro";
+import MySql from "@/icons/MySql.astro";
+import Solr from "@/icons/Solr.astro";
+import MongoDb from "@/icons/MongoDb.astro";
+import Redis from "@/icons/Redis.astro";
+import SpringBatch from "@/icons/SpringBatch.astro";
+import SpringSecurity from "@/icons/SpringSecurity.astro";
+import Git from "@/icons/Git.astro";
+import Docker from "@/icons/Docker.astro";
+import Dart from "@/icons/Dart.astro";
+import Flutter from "@/icons/Flutter.astro";
+import Hibernate from "@/icons/Hibernate.astro";
+import PostgreSQL from "@/icons/PostgreSQL.astro";
+import Postman from "@/icons/Postman.astro";
+import ApacheMaven from "@/icons/ApacheMaven.astro";
+import AmazonWebServices from "@/icons/AmazonWebServices.astro";
+import SAPHana from "@/icons/SAPHana.astro";
+import Yaml from "@/icons/Yaml.astro";
+import SpringBoot from "@/icons/SpringBoot.astro";
+import SpringData from "@/icons/SpringData.astro";
+import Svn from "@/icons/Svn.astro";
+import Css from "@/icons/Css.astro";
+import VueJs from "@/icons/VueJs.astro";
+import Preact from "@/icons/Preact.astro";
+import Htmx from "@/icons/Htmx.astro";
+import Ollama from "@/icons/Ollama.astro";
+import Kubernetes from "@/icons/Kubernetes_.astro";
+import Azure from "@/icons/Azure_.astro";
+import RedHat from "@/icons/RedHat.astro";
+import SkillsCarouselItem from "@/components/skills/SkillsCarouselItem.astro";
+import DbIcon from "@/icons/DbIcon.astro";
+import BackendIcon from "@/icons/BackendIcon.astro";
+import CommandIcon from "@/icons/CommandIcon.astro";
+import FrontendIcon from "@/icons/FrontendIcon.astro";
+import BackendFWIcon from "@/icons/BackendFWIcon.astro";
+import FrontendFWIcon from "@/icons/FrontendFWIcon.astro";
+import ToolsIcon from "@/icons/ToolsIcon.astro";
+import ServerIcon from "@/icons/ServerIcon.astro";
 import MariaDB from "@/icons/MariaDB.astro";
 import CassandraDB from "@/icons/Cassandra.astro";
 import GoogleCloud from "@/icons/GoogleCloud.astro";
@@ -79,7 +79,7 @@ import Notepad from "@/icons/Notepad.astro";
 import Pnpm from "@/icons/Pnpm.astro";
 import Bun from "@/icons/Bun.astro";
 import Dotenv from "@/icons/Dotenv.astro";
-import Vite from "../icons/Vite.astro";
+import Vite from "@/icons/Vite.astro";
 
 const skills = {
   backendSkills: [
@@ -172,7 +172,10 @@ const skills = {
 };
 ---
 
-<section id="skills" class="w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+<section
+  id="skills"
+  class="w-full mx-auto container lg:max-w-4xl md:max-w-2xl pb-10"
+>
   <h2 class="flex items-center mb-6 text-2xl font-bold">
     <BackendIcon class="size-8 pr-2" /> Backend
   </h2>
