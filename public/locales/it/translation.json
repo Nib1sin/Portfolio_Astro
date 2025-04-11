@@ -1,139 +1,142 @@
 {
   "index": {
-    "section_1" : "Esperienza Lavorativa",
-    "section_2" : "Progetti",
-    "section_3" : "Su di Me",
-    "section_4" : "Competenze"
+    "section_1": "Esperienza Lavorativa",
+    "section_2": "Progetti",
+    "section_3": "Su di Me",
+    "section_4": "Competenze"
   },
   "aboutMe": {
-    "p_1_1" : "Sono Pedro e la mia passione per i videogiochi mi ha spinto a studiare ",
-    "p_1_2" : "Ingegneria del Software",
-    "p_1_3" : ", il che mi ha permesso di lavorare in diversi paesi. Questa esperienza mi ha offerto una prospettiva globale sugli ",
-    "p_1_4" : " approcci e le metodologie ",
-    "p_1_5" : " per affrontare le sfide nel campo dell'informatica in modo innovativo.",
+    "p_1_1": "Sono Pedro e la mia passione per i videogiochi mi ha spinto a studiare ",
+    "p_1_2": "Ingegneria del Software",
+    "p_1_3": ", il che mi ha permesso di lavorare in diversi paesi. Questa esperienza mi ha offerto una prospettiva globale sugli ",
+    "p_1_4": " approcci e le metodologie ",
+    "p_1_5": " per affrontare le sfide nel campo dell'informatica in modo innovativo.",
 
-    "p_2_1" : "Nel corso di questo lungo percorso, ho avuto l'opportunità di portare ",
-    "p_2_2" : "con successo numerosi prodotti da 0 a 1.",
-    "p_2_3" : " Ho fatto parte di diversi team di lavoro che, in modo efficace ed efficiente, siamo riusciti a garantire ",
-    "p_2_4" : "un risultato ottimale ed efficiente.",
+    "p_2_1": "Nel corso di questo lungo percorso, ho avuto l'opportunità di portare ",
+    "p_2_2": "con successo numerosi prodotti da 0 a 1.",
+    "p_2_3": " Ho fatto parte di diversi team di lavoro che, in modo efficace ed efficiente, siamo riusciti a garantire ",
+    "p_2_4": "un risultato ottimale ed efficiente.",
 
-    "p_3_1" : "Attualmente lavoro nel settore ",
-    "p_3_2" : "banking",
-    "p_3_3" : ", utilizzando principalmente tecnologie come ",
-    "p_3_4" : "Java, groovy, AngularJs, database (sql e nosql), Hibernate, ecc."
+    "p_3_1": "Attualmente lavoro nel settore ",
+    "p_3_2": "banking",
+    "p_3_3": ", utilizzando principalmente tecnologie come ",
+    "p_3_4": "Java, groovy, AngularJs, database (sql e nosql), Hibernate, ecc."
   },
   "experience": {
-    "item_4_date" : "Agosto 2024 - Adesso",
-    "item_4_title" : "Full Stack Software Developer",
-    "item_4_company" : "AndXor",
-    "item_4_description_1" : "• Responsabile dell'evoluzione e del refactoring dell'applicazione web Cloud2Sign, utilizzando tecnologie come Spring Boot Framework e altri moduli Spring Core, DataBase (Sql e No-Sql), Gradle e SVN.",
+    "item_4_date": "Agosto 2024 - Adesso",
+    "item_4_title": "Full Stack Software Developer",
+    "item_4_company": "AndXor",
+    "item_4_description_1": "• Responsabile dell'evoluzione e del refactoring dell'applicazione web Cloud2Sign, utilizzando tecnologie come Spring Boot Framework e altri moduli Spring Core, DataBase (Sql e No-Sql), Gradle e SVN.",
 
-    "item_3_date" : "Agosto 2018 - Luglio 2024",
-    "item_3_title" : "Full Stack Software Developer",
-    "item_3_company" : "Sydema",
-    "item_3_description_1" : "• Analista dati, sviluppatore, evoluzione e manutenzione di Laweb4. Applicazione web per il processo di recupero credito.",
-    "item_3_description_2" : "• Sviluppo di applicazioni web utilizzando tecnologie come JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql e No-Sql), Gradle e Git.",
-    "item_3_description_3" : "• Sviluppo di Processi Batch per il trasferimento di dati da diverse tipologie di Data Base (Spring Batch, SqlLoader).",
-    "item_3_description_4" : "• Responsabile della gestione e manutenzione dei server Linux (RedHat), per il deploy delle applicazioni.",
+    "item_3_date": "Agosto 2018 - Luglio 2024",
+    "item_3_title": "Full Stack Software Developer",
+    "item_3_company": "Sydema",
+    "item_3_description_1": "• Analista dati, sviluppatore, evoluzione e manutenzione di Laweb4. Applicazione web per il processo di recupero credito.",
+    "item_3_description_2": "• Sviluppo di applicazioni web utilizzando tecnologie come JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql e No-Sql), Gradle e Git.",
+    "item_3_description_3": "• Sviluppo di Processi Batch per il trasferimento di dati da diverse tipologie di Data Base (Spring Batch, SqlLoader).",
+    "item_3_description_4": "• Responsabile della gestione e manutenzione dei server Linux (RedHat), per il deploy delle applicazioni.",
 
-    "item_2_date" : "Gennaio 2017 - gennaio 2018",
-    "item_2_title" : "Junior Software Developer",
-    "item_2_company" : "Movistar",
-    "item_2_description_1" : "• Sviluppatore di software per la gestione dei clienti, delle attività e del controllo dei ricavi. Sviluppato principalmente in C++.",
-    "item_2_description_2" : "• Controllo, gestione e validazione dei database clienti/fornitori (Sql server e MongoDB).",
-    "item_2_description_3" : "• Sviluppo e implementazione di software statistico e probabilistico che genera offerte a potenziali clienti. (Script dinamici con Python).",
-    "item_2_description_4" : "• Gestione dei servizi implementati su server Windows.",
-    "item_2_description_5" : "• Produzione di report settimanali che indicassero i possibili target a cui sarebbero stati offerti i diversi servizi. (Generato con JasperReport).",
+    "item_2_date": "Gennaio 2017 - gennaio 2018",
+    "item_2_title": "Junior Software Developer",
+    "item_2_company": "Movistar",
+    "item_2_description_1": "• Sviluppatore di software per la gestione dei clienti, delle attività e del controllo dei ricavi. Sviluppato principalmente in C++.",
+    "item_2_description_2": "• Controllo, gestione e validazione dei database clienti/fornitori (Sql server e MongoDB).",
+    "item_2_description_3": "• Sviluppo e implementazione di software statistico e probabilistico che genera offerte a potenziali clienti. (Script dinamici con Python).",
+    "item_2_description_4": "• Gestione dei servizi implementati su server Windows.",
+    "item_2_description_5": "• Produzione di report settimanali che indicassero i possibili target a cui sarebbero stati offerti i diversi servizi. (Generato con JasperReport).",
 
-    "item_1_date" : "Giugno 2016 - dicembre 2016",
-    "item_1_title" : "Stagista informatico",
-    "item_1_company" : "SUNAT",
-    "item_1_description_1" : "• Gestione delle entrate tributarie incassate nel periodo 2016-II.",
-    "item_1_description_2" : "• Durante la mia permanenza in SUNAT ho appreso le basi dell'organizzazione dei progetti e delle loro applicazioni a diversi livelli nella logica degli algoritmi.",
-    "item_1_description_3" : "• Scrivere report utilizzando query per ottenere il risultato desiderato per l'utente finale."
+    "item_1_date": "Giugno 2016 - dicembre 2016",
+    "item_1_title": "Stagista informatico",
+    "item_1_company": "SUNAT",
+    "item_1_description_1": "• Gestione delle entrate tributarie incassate nel periodo 2016-II.",
+    "item_1_description_2": "• Durante la mia permanenza in SUNAT ho appreso le basi dell'organizzazione dei progetti e delle loro applicazioni a diversi livelli nella logica degli algoritmi.",
+    "item_1_description_3": "• Scrivere report utilizzando query per ottenere il risultato desiderato per l'utente finale."
   },
   "footer": {
-    "section_1" : "Portafoglio di Pedro",
-    "section_2" : "Su di me",
-    "section_3" : "Contattami"
+    "section_1": "Portafoglio di Pedro",
+    "section_2": "Su di me",
+    "section_3": "Contattami"
   },
   "header": {
-    "element_1_tittle" : "Esperienza",
-    "element_1_url" : "/it/#experiencia",
+    "element_1_tittle": "Esperienza",
+    "element_1_url": "/it/#experiencia",
 
-    "element_2_tittle" : "Progetti",
-    "element_2_url" : "/it/#proyectos",
+    "element_2_tittle": "Progetti",
+    "element_2_url": "/it/#proyectos",
 
-    "element_3_tittle" : "Su di me",
-    "element_3_url" : "/it/#sobre-mi",
-    
-    "element_4_tittle" : "Contatto",
-    "element_4_url" : "/it/#contacto",
+    "element_3_tittle": "Su di me",
+    "element_3_url": "/it/#sobre-mi",
 
-    "element_5_tittle" : "Competenze",
-    "element_5_url" : "/it/#skills"
+    "element_4_tittle": "Contatto",
+    "element_4_url": "/it/#contacto",
+
+    "element_5_tittle": "Competenze",
+    "element_5_url": "/it/#skills"
   },
   "LanguagesTable": {
-    "language_es" : "Spagnolo",
-    "language_en" : "Inglese",
-    "language_it" : "Italiano",
-    "language_de" : "Tedesco",
-    "language_lvl" : "Madre lingua",
+    "language_table": "Lingue",
+    "language_table_show": "Mostra",
+    "language_table_hide": "Nascondi",
 
-    "language_language" : "Lingua",
-    "language_listening" : "Comprensione",
-    "language_speaking" : "Parlato",
-    "language_writing" : "Scrittura"
+    "language_es": "Spagnolo",
+    "language_en": "Inglese",
+    "language_it": "Italiano",
+    "language_de": "Tedesco",
+    "language_lvl": "Madre lingua",
+
+    "language_language": "Lingua",
+    "language_listening": "Comprensione",
+    "language_speaking": "Parlato",
+    "language_writing": "Scrittura"
   },
   "study": {
-    "item_1_date" : "Marzo 2012 - Gennaio 2017",
-    "item_1_title" : "Ingegneria del Software",
-    "item_1_company" : "Universidad Tecnológica del Perú (UTP)",
-    "item_1_description_1" : "• Controllo e gestione dei dati informatici e del bilancio industriale.",
-    "item_1_description_2" : "• Specializzazione nella creazione di algoritmi.",
-    "item_1_description_3" : "• Introduzione al processo logico, competenze e conoscenze per scrivere software.",
-    "item_1_description_4" : "• Conoscenza dei processi fisici, matematici e logici che consentono la semplificazione di alcuni processi.",
+    "item_1_date": "Marzo 2012 - Gennaio 2017",
+    "item_1_title": "Ingegneria del Software",
+    "item_1_company": "Universidad Tecnológica del Perú (UTP)",
+    "item_1_description_1": "• Controllo e gestione dei dati informatici e del bilancio industriale.",
+    "item_1_description_2": "• Specializzazione nella creazione di algoritmi.",
+    "item_1_description_3": "• Introduzione al processo logico, competenze e conoscenze per scrivere software.",
+    "item_1_description_4": "• Conoscenza dei processi fisici, matematici e logici che consentono la semplificazione di alcuni processi.",
 
-    "item_2_date" : "Gennaio 2013 - Dicembre 2015",
-    "item_2_title" : "Studente di Inglese",
-    "item_2_company" : "El Britanico",
-    "item_2_description_1" : "• Conoscenza approfondita della lingua inglese con comprensione appropriata dei termini tecnici.",
-    "item_2_description_2" : "• Linguaggio fluente e chiaro.",
-    "item_2_description_3" : "• Sviluppo e implementazione di un software statistico e probabilistico che genera offerte per i potenziali clienti. (Script dinamici con Python).",
-    "item_2_description_4" : "• In particolare, durante lo sviluppo del mio lavoro, ho sempre dovuto trattare con parlanti nativi di inglese.",
+    "item_2_date": "Gennaio 2013 - Dicembre 2015",
+    "item_2_title": "Studente di Inglese",
+    "item_2_company": "El Britanico",
+    "item_2_description_1": "• Conoscenza approfondita della lingua inglese con comprensione appropriata dei termini tecnici.",
+    "item_2_description_2": "• Linguaggio fluente e chiaro.",
+    "item_2_description_3": "• Sviluppo e implementazione di un software statistico e probabilistico che genera offerte per i potenziali clienti. (Script dinamici con Python).",
+    "item_2_description_4": "• In particolare, durante lo sviluppo del mio lavoro, ho sempre dovuto trattare con parlanti nativi di inglese.",
 
-    "item_3_date" : "Marzo 2018 - Giugno 2018",
-    "item_3_title" : "Certificazione Oracle Java e Php",
-    "item_3_company" : "Pc Academy",
-    "item_3_description_1" : "Approfondimento e conoscenza della lingua nei dettagli più specifici al fine di aggiornare le mie conoscenze attuali.",
+    "item_3_date": "Marzo 2018 - Giugno 2018",
+    "item_3_title": "Certificazione Oracle Java e Php",
+    "item_3_company": "Pc Academy",
+    "item_3_description_1": "Approfondimento e conoscenza della lingua nei dettagli più specifici al fine di aggiornare le mie conoscenze attuali.",
 
-    "item_4_date" : "Settembre 2021 - Adesso",
-    "item_4_title" : "Ingegneria Informatica",
-    "item_4_company" : "Politecnico di Milano",
-    "item_4_description_1" : "• Ampia gestione e infrastruttura del database.",
-    "item_4_description_2" : "• Specializzazione nello sviluppo di software in linguaggi di basso e alto livello (Architettura delle calcolatrici e Sistemi operativi).",
-    "item_4_description_3" : "• Introduzione al processo logico, competenze e conoscenze per scrivere software (Algoritmi e principi dell'Informatica).",
-    "item_4_description_4" : "• Economia e Organizzazione Aziendale, sviluppo di calcoli probabilistici e statistica."
+    "item_4_date": "Settembre 2021 - Adesso",
+    "item_4_title": "Ingegneria Informatica",
+    "item_4_company": "Politecnico di Milano",
+    "item_4_description_1": "• Ampia gestione e infrastruttura del database.",
+    "item_4_description_2": "• Specializzazione nello sviluppo di software in linguaggi di basso e alto livello (Architettura delle calcolatrici e Sistemi operativi).",
+    "item_4_description_3": "• Introduzione al processo logico, competenze e conoscenze per scrivere software (Algoritmi e principi dell'Informatica).",
+    "item_4_description_4": "• Economia e Organizzazione Aziendale, sviluppo di calcoli probabilistici e statistica."
   },
   "me": {
-    "me_hire" : "Assumimi",
-    "me_intro_1" : "Focalizzato nell'aggiornare, sviluppare ed implementare prodotti con particolare attenzione ai dettagli.",
-    "me_intro_2" : "Specializzato in soluzioni progettuali in applicazioni uniche."
+    "me_hire": "Assumimi",
+    "me_intro_1": "Focalizzato nell'aggiornare, sviluppare ed implementare prodotti con particolare attenzione ai dettagli.",
+    "me_intro_2": "Specializzato in soluzioni progettuali in applicazioni uniche."
   },
   "projects": {
-    "item_1_description_1" : "Spring Batch è lo standard de facto per l'elaborazione batch su JVM. La sua implementazione di comuni modelli di batch, come l'elaborazione basata su frammenti e la suddivisione, mi consente di creare applicazioni batch scalabili e ad alte prestazioni che sono sufficientemente resilienti per i tuoi processi più critici. Questo rende possibile popolare un database da un file di input o gestire anche un report da un database con una grande quantità di informazioni al suo interno.",
+    "item_1_description_1": "Spring Batch è lo standard de facto per l'elaborazione batch su JVM. La sua implementazione di comuni modelli di batch, come l'elaborazione basata su frammenti e la suddivisione, mi consente di creare applicazioni batch scalabili e ad alte prestazioni che sono sufficientemente resilienti per i tuoi processi più critici. Questo rende possibile popolare un database da un file di input o gestire anche un report da un database con una grande quantità di informazioni al suo interno.",
 
-    "item_2_description_1" : "Applicazione che consente di estrarre informazioni e rispondere a domande da file PDF di grandi dimensioni, come manuali, saggi e libri. ChatPDF analizza il PDF e l'IA utilizzerà paragrafi rilevanti per fornirti una risposta.",
+    "item_2_description_1": "Applicazione che consente di estrarre informazioni e rispondere a domande da file PDF di grandi dimensioni, come manuali, saggi e libri. ChatPDF analizza il PDF e l'IA utilizzerà paragrafi rilevanti per fornirti una risposta.",
 
-    "item_3_description_1" : {
-      "description" : "In questo progetto vengono definiti 5 microservices che si comunicano tramite OpenFeign. La versione di Spring Framework utilizzata è 3.3.1, java17 LTS, Spring Data JPA, Spring Web, Spring Boot Actuator, Eureka, Mysql Driver, PostgreSQL Driver. I microservice sono: ",
+    "item_3_description_1": {
+      "description": "In questo progetto vengono definiti 5 microservices che si comunicano tramite OpenFeign. La versione di Spring Framework utilizzata è 3.3.1, java17 LTS, Spring Data JPA, Spring Web, Spring Boot Actuator, Eureka, Mysql Driver, PostgreSQL Driver. I microservice sono: ",
       "microservices": "microservice-gateway, microservice-config, microservice-course, microservice-student, microservice-eureka",
-      "item_1" : "• microservice-gateway: Si incarica di mappare e successivamente sporre gli endpoint che sono definiti nei microservices course & student (spring-cloud-starter-gateway)",
-      "item_2" : "• microservice-config : microservice che permette la configurazione delle properties di ogni microservice (spring-cloud-config-server)",
-      "item_3" : "• microservice-course: microservice che materializza i dati da un db Mysql, si comunica col microservice student tramite una chiamata REST (spring-cloud-starter-openfeign)",
-      "item_4" : "• microservice-student: microservice che materializza i dati da un db PostgreSQL, si comunica col microservice course tramite una chiamata REST (spring-cloud-starter-openfeign)",
-      "item_5" : "• microservice-eureka: microservice che permette la registrazione e la scoperta dei microservices (spring-cloud-starter-netflix-eureka-server)"
+      "item_1": "• microservice-gateway: Si incarica di mappare e successivamente sporre gli endpoint che sono definiti nei microservices course & student (spring-cloud-starter-gateway)",
+      "item_2": "• microservice-config : microservice che permette la configurazione delle properties di ogni microservice (spring-cloud-config-server)",
+      "item_3": "• microservice-course: microservice che materializza i dati da un db Mysql, si comunica col microservice student tramite una chiamata REST (spring-cloud-starter-openfeign)",
+      "item_4": "• microservice-student: microservice che materializza i dati da un db PostgreSQL, si comunica col microservice course tramite una chiamata REST (spring-cloud-starter-openfeign)",
+      "item_5": "• microservice-eureka: microservice che permette la registrazione e la scoperta dei microservices (spring-cloud-starter-netflix-eureka-server)"
     }
   }
-
- }
+}

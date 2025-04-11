@@ -1,9 +1,9 @@
 ---
-const personalImageAlt = "Pedro"
-import Badge from "@/components/contact/Badge.astro"
-import LinkedInIcon from "@/icons/LinkedIn.astro"
-import MailIcon from "@/icons/Mail.astro"
-import SocialPill from "@/icons/SocialPill.astro"
+const personalImageAlt = "Pedro";
+import Badge from "@/components/contact/Badge.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+import MailIcon from "@/icons/Mail.astro";
+import SocialPill from "@/icons/SocialPill.astro";
 import GitHubIcon from "@/icons/Github.astro";
 import CvIcon from "@/icons/Cv.astro";
 
@@ -12,54 +12,65 @@ import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "astro-i18next/components";
 ---
 
-
 <div class="max-w-[800px]">
-
-    <div class="flex gap-4 mb-4">
-        <img 
-            src="/images/image_me.webp" 
-            class="rounded-full shadow-lg w-24 h-24 object-cover object-center transition duration-500 hover:scale-110"
-            alt="nibi photo"/> 
-        <a
-            href="https://www.linkedin.com/in/pjaimer/"
-            target="_blank"
-            rel="noopener"
-            class="flex justify-center items-center hover:scale-105 transition" >
-            <Badge>{t("me.me_hire")}</Badge>
-        </a>
-    </div>
-    <h1 class="p-hidden text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 ">
+  <div class="flex gap-4 mb-4">
+    <img
+      src="/images/image_me.webp"
+      class="rounded-full shadow-lg w-24 h-24 object-cover object-center transition duration-500 hover:scale-110"
+      alt="nibi photo"
+    />
+    <a
+      href="https://www.linkedin.com/in/pjaimer/"
+      target="_blank"
+      rel="noopener"
+      class="flex justify-center items-center hover:scale-105 transition"
+    >
+      <Badge>{t("me.me_hire")}</Badge>
+    </a>
+  </div>
+  <h1
+    class="p-hidden text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4"
+  >
     Hello there, Im Pedro
-    </h1>
-    <h2 class="text-2xl lg:text-2xl text-balance max-w-[1000px] text-orange-800 dark:text-red-400 pt-6 lg:pt-10">
-        <strong>Full Stack Software Engineer ☕ .</strong>
-        <span class="mt-6 text-2xl text-slate-700 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-            {t("me.me_intro_1")}
-        </span>
-        <span class="text-lime-800 dark:text-red-400">
-            {t("me.me_intro_2")} 💻.
-        </span>
-    </h2>
+  </h1>
+  <h2
+    class="text-2xl lg:text-2xl text-balance max-w-[1000px] text-orange-800 dark:text-red-400 pt-6 lg:pt-10"
+  >
+    <strong
+      class="underline-offset-4 decoration-red-400 hover:underline transition duration-300"
+    >
+      Full Stack Software Engineer ☕.
+    </strong>
+    <span
+      class="mt-6 text-2xl text-slate-700 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    >
+      {t("me.me_intro_1")}
+    </span>
+    <span
+      class="text-lime-800 dark:text-red-400 transition duration-300 hover:brightness-150 hover:shadow-lg"
+    >
+      {t("me.me_intro_2")} 💻.
+    </span>
+  </h2>
 
-    <nav class="flex gap-4 mt-8 flex-wrap">
-
-        <SocialPill href="https://www.linkedin.com/in/pjaimer/">
-            <LinkedInIcon class="size-4 md:size-6"></LinkedInIcon>
-            LinkedIn
-        </SocialPill>
-        <SocialPill href="https://drive.google.com/file/d/1tNhecRKMrslu_8xLFIY5HG5fnam5b8JW/view?usp=sharing">
-            <CvIcon class="size-4 md:size-6"></CvIcon>
-            CV
-        </SocialPill>
-        <SocialPill href="https://github.com/Nib1sin">
-            <GitHubIcon class="size-4 md:size-6"></GitHubIcon>
-            Github
-        </SocialPill>
-        <SocialPill href="mailto:nibi.amdukia@gmail.com">
-            <MailIcon class="size-4 md:size-6"></MailIcon>
-            nibi.amdukia@gmail.com
-        </SocialPill>
-        
-    </nav>
-
+  <nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill href="https://www.linkedin.com/in/pjaimer/">
+      <LinkedInIcon class="size-4 md:size-6" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill
+      href="https://drive.google.com/file/d/1tNhecRKMrslu_8xLFIY5HG5fnam5b8JW/view?usp=sharing"
+    >
+      <CvIcon class="size-4 md:size-6" />
+      CV
+    </SocialPill>
+    <SocialPill href="https://github.com/Nib1sin">
+      <GitHubIcon class="size-4 md:size-6" />
+      Github
+    </SocialPill>
+    <SocialPill href="mailto:nibi.amdukia@gmail.com">
+      <MailIcon class="size-4 md:size-6" />
+      nibi.amdukia@gmail.com
+    </SocialPill>
+  </nav>
 </div>
