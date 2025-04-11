@@ -45,7 +45,7 @@ const ExperienceList = ({ experiences }: Props) => {
           date={experience.date}
         />
       ))}
-      <div class="flex justify-center mt-4">
+      <div class="flex justify-center mt-4 rounded-full animate-bounce">
         <button
           class={`
             px-4 py-2 hover:scale-110
@@ -58,16 +58,20 @@ const ExperienceList = ({ experiences }: Props) => {
           onClick={handleToggle}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class={`w-5 h-5 transition-transform duration-300 animate-bounce
-              ${showAll ? "rotate-180" : "rotate-0"
+            class={`w-4 h-4 text-black dark:text-gray-300 rtl:rotate-180 transition-transform duration-300 
+              ${showAll ? "rotate-270" : "rotate-90"
               }`}
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+            viewBox="0 0 6 10"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"></path>
           </svg>
         </button>
       </div>
