@@ -4,6 +4,7 @@ import StudyItem from "./StudyItem.astro";
 //Translate
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import StudyList from "./StudyList";
 
 const STUDY = [
   {
@@ -52,6 +53,9 @@ const STUDY = [
 ];
 ---
 
+<StudyList studies={STUDY} client:load />
+
+<!--
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
     STUDY.map((study) => (
@@ -61,3 +65,4 @@ const STUDY = [
     ))
   }
 </ol>
+-->
