@@ -1,34 +1,50 @@
 ---
-
 interface Props {
-    nameSkill: { iconItem_: any; name: string; className: string}[];
+    nameSkill: { iconItem_: any; name: string; className: string }[];
 }
 
-const { nameSkill} = Astro.props
-
+const { nameSkill } = Astro.props;
 ---
 
-<div class="w-full inline-flex flex-nowrap overflow-hidden h-40 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-        {nameSkill.map((skill) => (
-            <div class="flex-none w-32">
-                <div class="flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125">
-                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 ${skill.className} [&>svg]:fill-white`}/>
-                <span class="text-l text-primary-300">{skill.name}</span>
+<div
+    class="w-full inline-flex flex-nowrap overflow-hidden h-40 mask-[linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-200px),transparent_100%)]"
+>
+    <ul
+        class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+    >
+        {
+            nameSkill.map((skill) => (
+                <div class="flex-none w-32">
+                    <div class="flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125">
+                        <skill.iconItem_
+                            class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 ${skill.className} [&>svg]:fill-white`}
+                        />
+                        <span class="text-l text-primary-300">
+                            {skill.name}
+                        </span>
+                    </div>
                 </div>
-            </div>
-            ))}
-        
+            ))
+        }
     </ul>
-    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-        {nameSkill.map((skill) => (
-            <div class="flex-none w-32">
-                <div class="flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125">
-                <skill.iconItem_ class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 ${skill.className} [&>svg]:fill-white`}/>
-                <span class="text-l text-primary-300">{skill.name}</span>
+    <ul
+        class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        aria-hidden="true"
+    >
+        {
+            nameSkill.map((skill) => (
+                <div class="flex-none w-32">
+                    <div class="flex flex-col items-center gap-2 transition-all duration-100 ease-out hover:scale-125">
+                        <skill.iconItem_
+                            class={`dark:bg-transparent dark:fill-current text-white flex flex-col items-center gap-2 transition-all duration-100 w-16 h-16 ${skill.className} [&>svg]:fill-white`}
+                        />
+                        <span class="text-l text-primary-300">
+                            {skill.name}
+                        </span>
+                    </div>
                 </div>
-            </div>
-            ))}
+            ))
+        }
     </ul>
     <div class="fade pointer-events-none absolute inset-0"></div>
 </div>

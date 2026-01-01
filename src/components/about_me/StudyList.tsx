@@ -1,5 +1,5 @@
-import { useState, useRef } from "preact/hooks";
-import StudyItem from "./StudyItem";
+import { useState } from "preact/hooks";
+import StudyItem from "@/components/about_me/StudyItem";
 
 interface Study {
   title: string
@@ -24,8 +24,8 @@ const StudyList = ({ studies }: Props ) => {
     
         // Scroll to the "Experiencia" section when collapsing the list
         if (showAll) {
-        const experienciaSection = document.getElementById("sobre-mi")
-        if (experienciaSection)
+          const experienciaSection = document.getElementById("sobre-mi")
+          if (experienciaSection)
             experienciaSection.scrollIntoView({ behavior: "smooth", block: "start" })
         }
     };

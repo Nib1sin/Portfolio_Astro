@@ -138,5 +138,8 @@
       "item_4": "• microservice-student: microservicio que materializa los datos de una base de datos PostgreSQL, se comunica con el microservicio course a través de una llamada REST (spring-cloud-starter-openfeign)",
       "item_5": "• microservice-eureka: microservicio que permite el registro y descubrimiento de los microservicios (spring-cloud-starter-netflix-eureka-server)"
     }
+  },
+  "skills": {
+    "choose_theme": "Elegir Tema"
   }
 }

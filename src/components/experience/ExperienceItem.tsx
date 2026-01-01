@@ -8,10 +8,10 @@ interface Props {
 
 const ExperienceItem = ({ title, company, description, link, date }: Props) => {
   return (
-    <div class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-text-gray-800 dark:text-white before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
+    <div class="relative mx-12 pb-12 grid before:absolute before:-left-8.75 before:block before:h-full before:border-l-2 before:border-text-gray-800 dark:text-white before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
       <div class="relative pb-12 md:col-span-2">
         <div class="sticky top-0">
-          <span class="text-lime-800 dark:text-red-900 -left-[42px] absolute rounded-full text-5xl">
+          <span class="text-lime-800 dark:text-red-900 -left-10.5 absolute rounded-full text-5xl">
             &bull;
           </span>
           <h3 class="text-xl font-bold text-lime-800 dark:text-red-400 transition duration-500 hover:scale-110">
@@ -20,7 +20,9 @@ const ExperienceItem = ({ title, company, description, link, date }: Props) => {
           <h4 class="font-semibold text-xl text-yellow-800/40 dark:text-white duration-500 hover:scale-110 origin-left">
             {company}
           </h4>
-          <time class="p-0 m-0 text-sm text-gray-800 dark:text-white">{date}</time>
+          <time class="p-0 m-0 text-sm text-gray-800 dark:text-white">
+            {date}
+          </time>
         </div>
       </div>
 
@@ -43,7 +45,6 @@ const ExperienceItem = ({ title, company, description, link, date }: Props) => {
             dark:text-red-300 dark:hover:text-red-400 
             transition duration-500 ease-in-out
           ">
-            
             {company}
             <svg
               xmlns="http://www.w3.org/2000/svg"

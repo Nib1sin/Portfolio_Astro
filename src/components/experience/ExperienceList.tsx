@@ -1,5 +1,5 @@
 import { useState, useRef } from "preact/hooks";
-import ExperienceItem from "./ExperienceItem";
+import ExperienceItem from "@/components/experience/ExperienceItem";
 
 interface Experience {
   date: string;

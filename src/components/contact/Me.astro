@@ -1,5 +1,4 @@
 ---
-const personalImageAlt = "Pedro";
 import Badge from "@/components/contact/Badge.astro";
 import LinkedInIcon from "@/icons/LinkedIn.astro";
 import MailIcon from "@/icons/Mail.astro";
@@ -24,7 +23,9 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
       rel="noopener"
       class="flex justify-center items-center hover:scale-105 transition"
     >
-      <Badge>{t(locale, "me.me_hire")}</Badge>
+      <Badge>
+        {t(locale, "me.me_hire")}
+      </Badge>
     </a>
   </div>
   <h1

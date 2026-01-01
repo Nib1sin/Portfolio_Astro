@@ -4,12 +4,13 @@ import USAFlag from "@/icons/UsaFlag.astro";
 import ItalianFlag from "@/icons/ItalianFlag.astro";
 import ChevronIcon from "@/icons/chevron.astro";
 import EuIcon from "@/icons/Eu.astro";
+import SunIcon from "@/icons/Sun.astro";
+import MoonIcon from "@/icons/Moon.astro";
+import SystemIcon from "@/icons/System.astro";
+import { getLocaleFromPathname, t } from "@/i18n/i18n";
 
-import SunIcon from "../icons/Sun.astro";
-import MoonIcon from "../icons/Moon.astro";
-import SystemIcon from "../icons/System.astro";
+const locale = getLocaleFromPathname(Astro.url.pathname);
 const THEMES = ["Light", "Dark", "System"];
-
 const { currentLocale = "eu" } = Astro;
 const LOCALES: Record<
   string,
@@ -91,7 +92,9 @@ const otherLocales = Object.values(LOCALES).filter(
     id="theme-toggle-btn"
     class="appearance-none border-none flex backdrop-blur-xl"
   >
-    <span class="sr-only">Elegir Tema</span>
+    <span class="sr-only">
+      {t(locale, "footer.choose_theme")}
+    </span>
     <SunIcon
       id="light"
       class="theme-toggle-icon size-[1.2rem] transition-all"
@@ -158,10 +161,6 @@ const otherLocales = Object.values(LOCALES).filter(
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
   };
 
-  const applyTheme = (theme) => {
-    document.documentElement.classList.add(theme);
-  };
-
   updateTheme();
 
   document.addEventListener("click", () => themesMenu.classList.remove("open"));
@@ -181,19 +180,4 @@ const otherLocales = Object.values(LOCALES).filter(
   window.addEventListener("popstate", function (event) {
     updateTheme();
   });
-
-  function changeLocale(event, code, href) {
-    //console.log("code: " + code);
-    event.preventDefault();
-    window.location.href = href;
-    currentLocaleData = LOCALES[code]; // Actualiza currentLocaleData
-    updateIconLang(code); // Llama a updateIconLang después de actualizar currentLocaleData
-    updateTheme();
-  }
-
-  const updateIconLang = (codePreference) => {
-    document.querySelectorAll(".lang-menu-option").forEach((element) => {
-      element.style.scale = element.id === codePreference ? "1" : "0";
-    });
-  };
 </script>

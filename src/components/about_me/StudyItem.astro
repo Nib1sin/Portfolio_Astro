@@ -1,59 +1,62 @@
 ---
-import LinkButton from "@/icons/LinkInline.astro"
- import SchoolIcon from "@/icons/School.astro";
+import LinkButton from "@/icons/LinkInline.astro";
+import SchoolIcon from "@/icons/School.astro";
 
 interface Props {
-    title: string
-    school: string
-    description: string[]
-    link?: string
-    date: string
+  title: string;
+  school: string;
+  description: string[];
+  link?: string;
+  date: string;
 }
 
-const { title, school, description, link, date } = Astro.props
+const { title, school, description, link, date } = Astro.props;
 ---
 
-
-<span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-<SchoolIcon/>
+<span
+  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+>
+  <SchoolIcon />
 </span>
-<h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white transition duration-500 hover:scale-110 origin-left">{title}</h3>
-<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 dark:hover:text-red-400 hover:text-red-800">{date}</time>
+<h3
+  class="mb-1 text-lg font-semibold text-gray-900 dark:text-white transition duration-500 hover:scale-110 origin-left"
+>
+  {title}
+</h3>
+<time
+  class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 dark:hover:text-red-400 hover:text-red-800"
+  >{date}</time
+>
 <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-    {
-      link && (
-        
-        <LinkButton 
-          href={link}
-          >
-          {school}{" "}
-          <svg
+  {
+    link && (
+      <LinkButton href={link}>
+        {school}{" "}
+        <svg
           xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+          class="w-5 icon icon-tabler icon-tabler-chevron-right"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
           <>
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M9 6l6 6l-6 6" />
           </>
-          </svg>
-        </LinkButton>
-      )
-    }
-    {
-        description.map((paragraph) => (
-          <p class="mt-2 text-gray-600 dark:text-gray-400 dark:hover:text-gray-100 hover:text-black">
-            {paragraph}
-          </p>
-          )
-        )
-    }
+        </svg>
+      </LinkButton>
+    )
+  }
+  {
+    description.map((paragraph) => (
+      <p class="mt-2 text-gray-600 dark:text-gray-400 dark:hover:text-gray-100 hover:text-black">
+        {paragraph}
+      </p>
+    ))
+  }
 </p>
-

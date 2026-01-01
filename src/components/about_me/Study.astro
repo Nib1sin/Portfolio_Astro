@@ -1,7 +1,7 @@
 ---
-import StudyItem from "./StudyItem.astro";
+import StudyItem from "@/components/about_me/StudyItem.tsx";
 import { getLocaleFromPathname, t } from "@/i18n/i18n";
-import StudyList from "./StudyList";
+import StudyList from "@/components/about_me/StudyList.tsx";
 
 const locale = getLocaleFromPathname(Astro.url.pathname);
 const STUDY = [
