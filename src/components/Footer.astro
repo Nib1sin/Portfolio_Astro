@@ -1,36 +1,39 @@
 ---
-const currentYear = new Date().getFullYear()
+import { getLocaleFromPathname, t } from "@/i18n/i18n";
 
-//Translate
-import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
+const locale = getLocaleFromPathname(Astro.url.pathname);
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="rounded-lg shadow m-4 bg-black/5 dark:bg-white/5 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10"
+  class="rounded-lg shadow m-4 bg-black/5 dark:bg-white/5 backdrop-blur-lg w-full xl:w-280 mx-auto mb-10"
 >
   <div
-    class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+    class="w-full mx-auto max-w-7xl p-4 md:flex md:items-center md:justify-between"
   >
     <span
       class="text-sm sm:text-center text-yellow-800/95 dark:text-yellow-200/90"
       >© {currentYear}
-      <a 
-        class="hover:underline">
-        {t("footer.section_1")}
+      <a class="hover:underline">
+        {t(locale, "footer.section_1")}
       </a>
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href="https://www.linkedin.com/in/pjaimer/"
-        target="_blank"
-        rel="noopener"
-        class="hover:underline me-4 md:me-6">{t("footer.section_2")}</a>
+        <a
+          href="https://www.linkedin.com/in/pjaimer/"
+          target="_blank"
+          rel="noopener"
+          class="hover:underline me-4 md:me-6"
+          >{t(locale, "footer.section_2")}</a
+        >
       </li>
       <li>
-        <a href="mailto:nibi.amdukia@gmail.com" class="hover:underline">{t("footer.section_3")}</a>
+        <a href="mailto:nibi.amdukia@gmail.com" class="hover:underline"
+          >{t(locale, "footer.section_3")}</a
+        >
       </li>
     </ul>
   </div>

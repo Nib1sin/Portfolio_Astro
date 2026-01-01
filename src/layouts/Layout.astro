@@ -1,11 +1,11 @@
 ---
 import Header from "../components/Header.astro";
-import "@fontsource-variable/onest";
 import Footer from "@/components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
-
-import i18next, { t } from "i18next";
+import "@fontsource-variable/onest";
 import "@/styles/global.css";
+
+import { ViewTransitions } from "astro:transitions";
+import { getLocaleFromPathname } from "@/i18n/i18n";
 
 interface Props {
   title: string;
@@ -13,17 +13,24 @@ interface Props {
 }
 
 const { description, title } = Astro.props;
+
+const locale =
+  (Astro.currentLocale as string | undefined) ??
+  getLocaleFromPathname(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html lang={i18next.language}>
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>
+      {title}
+    </title>
+
     <ViewTransitions />
   </head>
   <body class="relative text-black dark:text-white">

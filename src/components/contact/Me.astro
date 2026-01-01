@@ -6,13 +6,12 @@ import MailIcon from "@/icons/Mail.astro";
 import SocialPill from "@/icons/SocialPill.astro";
 import GitHubIcon from "@/icons/Github.astro";
 import CvIcon from "@/icons/Cv.astro";
+import { getLocaleFromPathname, t } from "@/i18n/i18n";
 
-//Translate
-import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
+const locale = getLocaleFromPathname(Astro.url.pathname);
 ---
 
-<div class="max-w-[800px]">
+<div class="max-w-200">
   <div class="flex gap-4 mb-4">
     <img
       src="/images/image_me.webp"
@@ -25,7 +24,7 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
       rel="noopener"
       class="flex justify-center items-center hover:scale-105 transition"
     >
-      <Badge>{t("me.me_hire")}</Badge>
+      <Badge>{t(locale, "me.me_hire")}</Badge>
     </a>
   </div>
   <h1
@@ -34,7 +33,7 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
     Hello there, Im Pedro
   </h1>
   <h2
-    class="text-2xl lg:text-2xl text-balance max-w-[1000px] text-orange-800 dark:text-red-400 pt-6 lg:pt-10"
+    class="text-2xl lg:text-2xl text-balance max-w-250 text-orange-800 dark:text-red-400 pt-6 lg:pt-10"
   >
     <strong
       class="underline-offset-4 decoration-red-400 hover:underline transition duration-300"
@@ -44,12 +43,12 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
     <span
       class="mt-6 text-2xl text-slate-700 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
     >
-      {t("me.me_intro_1")}
+      {t(locale, "me.me_intro_1")}
     </span>
     <span
       class="text-lime-800 dark:text-red-400 transition duration-300 hover:brightness-150 hover:shadow-lg"
     >
-      {t("me.me_intro_2")} 💻.
+      {t(locale, "me.me_intro_2")} 💻.
     </span>
   </h2>
 

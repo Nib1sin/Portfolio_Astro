@@ -10,12 +10,10 @@ import CodeIcon from "@/icons/Code.astro";
 import ProfileCheck from "@/icons/ProfileCheck.astro";
 import SkillsIcon from "@/icons/SkillsIcon.astro";
 import Skills from "@/components/skills/SkillsCarousel.astro";
-//Translate
-import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import { getLocaleFromPathname, t } from "@/i18n/i18n";
 import "@/styles/global.css";
 
-changeLanguage("en");
+const locale = getLocaleFromPathname(Astro.url.pathname);
 ---
 
 <Layout
@@ -34,7 +32,7 @@ changeLanguage("en");
       >
         <BriefcaseIcon class="size-8" />
         <p class="hover:text-yellow-200">
-          {t("index.section_1")}
+          {t(locale, "index.section_1")}
         </p>
       </h2>
       <Experience />
@@ -46,7 +44,7 @@ changeLanguage("en");
       >
         <CodeIcon class="size-8" />
         <p class="hover:text-yellow-200">
-          {t("index.section_2")}
+          {t(locale, "index.section_2")}
         </p>
       </h2>
       <Projects />
@@ -58,7 +56,7 @@ changeLanguage("en");
       >
         <ProfileCheck class="size-8" />
         <p class="hover:text-yellow-200">
-          {t("index.section_3")}
+          {t(locale, "index.section_3")}
         </p>
       </h2>
       <AboutMe />
@@ -70,7 +68,7 @@ changeLanguage("en");
       >
         <SkillsIcon class="size-8" />
         <p class="hover:text-yellow-200">
-          {t("index.section_4")}
+          {t(locale, "index.section_4")}
         </p>
       </h2>
       <Skills />

@@ -1,37 +1,35 @@
 ---
-import Toggle from "./Toggle_Theme_Language.astro";
-import Menu from "../icons/Menu.astro";
-import ToggleMenuIcon from "../icons/Adjustments.astro";
+import Toggle from "@/components/ToggleThemeLanguage.astro";
+import Menu from "@/icons/Menu.astro";
+import ToggleMenuIcon from "@/icons/Adjustments.astro";
+import { getLocaleFromPathname, t } from "@/i18n/i18n";
 
-//Translate
-import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
-
+const locale = getLocaleFromPathname(Astro.url.pathname);
 const navItems = [
   {
-    title: t("header.element_4_tittle"),
+    title: t(locale, "header.element_4_tittle"),
     label: "contacto",
-    url: t("header.element_4_url"),
+    url: "#contacto",
   },
   {
-    title: t("header.element_1_tittle"),
+    title: t(locale, "header.element_1_tittle"),
     label: "experiencia",
-    url: t("header.element_1_url"),
+    url: "#experiencia",
   },
   {
-    title: t("header.element_2_tittle"),
+    title: t(locale, "header.element_2_tittle"),
     label: "proyectos",
-    url: t("header.element_2_url"),
+    url: "#proyectos",
   },
   {
-    title: t("header.element_3_tittle"),
+    title: t(locale, "header.element_3_tittle"),
     label: "sobre-mi",
-    url: t("header.element_3_url"),
+    url: "#sobre-mi",
   },
   {
-    title: t("header.element_5_tittle"),
+    title: t(locale, "header.element_5_tittle"),
     label: "skills",
-    url: t("header.element_5_url"),
+    url: "#skills",
   },
 ];
 ---

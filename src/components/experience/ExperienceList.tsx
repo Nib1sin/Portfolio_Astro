@@ -1,6 +1,5 @@
 import { useState, useRef } from "preact/hooks";
 import ExperienceItem from "./ExperienceItem";
-import i18next, { t, changeLanguage } from "i18next";
 
 interface Experience {
   date: string;

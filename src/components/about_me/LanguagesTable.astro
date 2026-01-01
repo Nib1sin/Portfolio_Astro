@@ -1,31 +1,30 @@
 ---
 import LanguagesTableItem from "./LanguagesTableItem.astro";
+import { getLocaleFromPathname, t } from "@/i18n/i18n";
 
-//Translate
-import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
+const locale = getLocaleFromPathname(Astro.url.pathname);
 
 const LANGUAGES = [
   {
-    language: t("LanguagesTable.language_es"),
-    listening: t("LanguagesTable.language_lvl"),
-    speaking: t("LanguagesTable.language_lvl"),
-    writing: t("LanguagesTable.language_lvl"),
+    language: t(locale, "LanguagesTable.language_es"),
+    listening: t(locale, "LanguagesTable.language_lvl"),
+    speaking: t(locale, "LanguagesTable.language_lvl"),
+    writing: t(locale, "LanguagesTable.language_lvl"),
   },
   {
-    language: t("LanguagesTable.language_en"),
+    language: t(locale, "LanguagesTable.language_en"),
     listening: "C2",
     speaking: "C2",
     writing: "C1",
   },
   {
-    language: t("LanguagesTable.language_it"),
+    language: t(locale, "LanguagesTable.language_it"),
     listening: "C1",
     speaking: "C1",
     writing: "C1",
   },
   {
-    language: t("LanguagesTable.language_de"),
+    language: t(locale, "LanguagesTable.language_de"),
     listening: "A2",
     speaking: "A2",
     writing: "A2",
@@ -43,7 +42,9 @@ const LANGUAGES = [
       class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800"
     >
       <div class="flex items-center justify-between">
-        <span> {t("LanguagesTable.language_table")} </span>
+        <span>
+          {t(locale, "LanguagesTable.language_table")}
+        </span>
         <button
           id="toggle-table-btn"
           class="right-7 relative px-4 py-2 text-sm font-medium text-white bg-white/30 dark:bg-gray-800/30 rounded-lg border-2 border-gray-500 hover:bg-gray-700 hover:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
@@ -51,15 +52,15 @@ const LANGUAGES = [
           <span
             class="absolute inset-0 rounded-lg border-2 bg-white/30 dark:bg-gray-800/30 animate-ping"
           ></span>
-          <span class="text-show hidden"
-            >{t("LanguagesTable.language_table_show")}</span
-          >
-          <span class="text-hide hidden"
-            >{t("LanguagesTable.language_table_hide")}</span
-          >
-
-          <span class="relative">{t("LanguagesTable.language_table_show")}</span
-          >
+          <span class="text-show hidden">
+            {t(locale, "LanguagesTable.language_table_show")}
+          </span>
+          <span class="text-hide hidden">
+            {t(locale, "LanguagesTable.language_table_hide")}
+          </span>
+          <span class="relative">
+            {t(locale, "LanguagesTable.language_table_show")}
+          </span>
         </button>
       </div>
     </caption>
@@ -70,16 +71,16 @@ const LANGUAGES = [
     >
       <tr>
         <th scope="col" class="px-6 py-3">
-          {t("LanguagesTable.language_language")}
+          {t(locale, "LanguagesTable.language_language")}
         </th>
         <th scope="col" class="px-6 py-3">
-          {t("LanguagesTable.language_listening")}
+          {t(locale, "LanguagesTable.language_listening")}
         </th>
         <th scope="col" class="px-6 py-3">
-          {t("LanguagesTable.language_speaking")}
+          {t(locale, "LanguagesTable.language_speaking")}
         </th>
         <th scope="col" class="px-6 py-3">
-          {t("LanguagesTable.language_writing")}
+          {t(locale, "LanguagesTable.language_writing")}
         </th>
       </tr>
     </thead>
