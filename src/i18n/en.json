@@ -1,0 +1,142 @@
+{
+  "index": {
+    "section_1": "Work Experience",
+    "section_2": "Proyects",
+    "section_3": "About Me",
+    "section_4": "Skills"
+  },
+  "aboutMe": {
+    "p_1_1": "I am Pedro, and my passion for video games led me to study ",
+    "p_1_2": "Software Engineering",
+    "p_1_3": ", which has allowed me to work in various countries. This experience has given me a global perspective on the ",
+    "p_1_4": " approaches and methodologies ",
+    "p_1_5": "  to tackle challenges in the field of computer science in an innovative way.",
+
+    "p_2_1": "Throughout this extensive journey, I have had the opportunity to ",
+    "p_2_2": "successfully take multiple products from 0 to 1.",
+    "p_2_3": " I have been part of various teams that, effectively and efficiently, have managed to ensure",
+    "p_2_4": "optimal and lasting results.",
+
+    "p_3_1": "I currently work in the ",
+    "p_3_2": "banking",
+    "p_3_3": " sector, mainly using technologies such as ",
+    "p_3_4": "Java, groovy, AngularJs, database (sql and nosql), Hibernate, etc."
+  },
+  "experience": {
+    "item_4_date": "Agosto 2024 - Now",
+    "item_4_title": "Full Stack Software Developer",
+    "item_4_company": "AndXor",
+    "item_4_description_1": "• Responsible for the evolution and refactoring of the Cloud2Sign web application, using technologies such as Spring Boot Framework and other Spring Core modules, Databases (SQL and No-SQL), Gradle, and SVN.",
+
+    "item_3_date": "August 2018 - July 2024",
+    "item_3_title": "Full Stack Software Developer",
+    "item_3_company": "Sydema",
+    "item_3_description_1": "• Data analyst, developer, evolution and maintenance of Laweb4. Web application for the credit recovery process.",
+    "item_3_description_2": "• Development of web applications using technologies such as JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql and No-Sql), Gradle and Git.",
+    "item_3_description_3": "• Development of Batch Processes for data transfer from different types of Data bases (Spring Batch, SqlLoader).",
+    "item_3_description_4": "• Responsible for the management and maintenance of Linux servers (RedHat), for deploying applications.",
+
+    "item_2_date": "January 2017 - January 2018",
+    "item_2_title": "Junior Software Developer",
+    "item_2_company": "Movistar",
+    "item_2_description_1": "• Developer of customer management, activity and revenue control software. Mainly developed in c++.",
+    "item_2_description_2": "• Control, management and validation of client/supplier databases (Sql server and MongoDB).",
+    "item_2_description_3": "• Development and implementation of statistical and probabilistic software that generates offers to potential clients. (Dynamic scripts with Python).",
+    "item_2_description_4": "• Management of services implemented on Windows server.",
+    "item_2_description_5": "• Production of weekly reports that indicated the possible targets to which the different services would be offered. (Generated with JasperReport).",
+
+    "item_1_date": "June 2016 - December 2016",
+    "item_1_title": "IT Intern",
+    "item_1_company": "SUNAT",
+    "item_1_description_1": "• Management of tax revenues collected in the 2016-II period.",
+    "item_1_description_2": "• During my stay at SUNAT I have learned the basics of project organization and applying them at different levels in algorithm logic.",
+    "item_1_description_3": "• Writing reports using queries to obtain the desired result for the end user."
+  },
+  "footer": {
+    "section_1": "Pedro's Portfolio",
+    "section_2": "About me",
+    "section_3": "Contact me"
+  },
+  "header": {
+    "element_1_tittle": "Experience",
+    "element_1_url": "/en/#experiencia",
+
+    "element_2_tittle": "Projects",
+    "element_2_url": "/en/#proyectos",
+
+    "element_3_tittle": "About me",
+    "element_3_url": "/en/#sobre-mi",
+
+    "element_4_tittle": "Contact",
+    "element_4_url": "/en/#contacto",
+
+    "element_5_tittle": "Skills",
+    "element_5_url": "/en/#skills"
+  },
+  "LanguagesTable": {
+    "language_table": "Languages",
+    "language_table_show": "Show",
+    "language_table_hide": "Hide",
+
+    "language_es": "Spanish",
+    "language_en": "English",
+    "language_it": "Italian",
+    "language_de": "German",
+    "language_lvl": "Native Speaker",
+
+    "language_language": "Language",
+    "language_listening": "Listening",
+    "language_speaking": "Speaking",
+    "language_writing": "Writing"
+  },
+  "study": {
+    "item_1_date": "March 2012 - January 2017",
+    "item_1_title": "Software Engineering",
+    "item_1_company": "Universidad Tecnológica del Perú (UTP)",
+    "item_1_description_1": "• Control and management of computer data and industrial balance.",
+    "item_1_description_2": "• Specialization in algorithm creation.",
+    "item_1_description_3": "• Introduction to the logical process, skills, and knowledge for writing software.",
+    "item_1_description_4": "• Understanding of physical, mathematical, and logical processes that allow the simplification of some processes.",
+
+    "item_2_date": "January 2013 - December 2015",
+    "item_2_title": "English Student",
+    "item_2_company": "El Britanico",
+    "item_2_description_1": "• Deep knowledge of the English language with appropriate understanding of technical terms.",
+    "item_2_description_2": "• Fluent and clear language.",
+    "item_2_description_3": "• Development and implementation of statistical and probabilistic software that generates offers to potential clients. (Dynamic scripts with Python).",
+    "item_2_description_4": "• In particular, during the development of my work, I have always had to deal with native English speakers.",
+
+    "item_3_date": "March 2018 - June 2018",
+    "item_3_title": "Oracle Java and Php Certification",
+    "item_3_company": "Pc Academy",
+    "item_3_description_1": "Deepening and knowledge of the language in the most specific details in order to update my current knowledge.",
+
+    "item_4_date": "September 2021 - Present",
+    "item_4_title": "Computer Engineering",
+    "item_4_company": "Politecnico di Milano",
+    "item_4_description_1": "• Extensive management and database infrastructure.",
+    "item_4_description_2": "• Specialization in software development in low and high-level languages (Calculator architecture and Operating Systems).",
+    "item_4_description_3": "• Introduction to the logical process, skills, and knowledge for writing software (Algorithms and Computer Science principles).",
+    "item_4_description_4": "• Economics and Corporate Organization, development of probabilistic calculations and statistics."
+  },
+  "me": {
+    "me_hire": "Hire me",
+    "me_intro_1": "Focused on updating, developing, and implementing products with extra attention to detail.",
+    "me_intro_2": "Specialized in project solutions in unique applications."
+  },
+  "projects": {
+    "item_1_description_1": "Spring Batch is the de facto standard for batch processing on the JVM. Its implementation of common batch patterns, such as chunk-based processing and partitioning, allows me to create scalable, high-performance batch applications that are resilient enough for your most critical processes. This makes it possible to populate a database from an input file or manage a report from a database with a large amount of information in it.",
+
+    "item_2_description_1": "Application that allows extracting information and answering questions from large PDF files, such as manuals, essays, and books. ChatPDF analyzes the PDF and the AI will use relevant paragraphs to provide you with an answer.",
+
+    "item_3_description_1": {
+      "description": "In this project, 5 microservices are defined that communicate via OpenFeign. The Spring Framework version used is 3.3.1, java17 LTS, Spring Data JPA, Spring Web, Spring Boot Actuator, Eureka, Mysql Driver, PostgreSQL Driver. The microservices are: ",
+      "microservices": "microservice-gateway, microservice-config, microservice-course, microservice-student, microservice-eureka",
+      "item_1": "• microservice-gateway: Responsible for mapping and subsequently exposing the endpoints defined in the course & student microservices (spring-cloud-starter-gateway)",
+      "item_2": "• microservice-config : microservice that allows the configuration of properties for each microservice (spring-cloud-config-server)",
+      "item_3": "• microservice-course: microservice that materializes data from a Mysql database, communicates with the student microservice via a REST call (spring-cloud-starter-openfeign)",
+      "item_4": "• microservice-student: microservice that materializes data from a PostgreSQL database, communicates with the course microservice via a REST call (spring-cloud-starter-openfeign)",
+      "item_5": "• microservice-eureka: microservice that allows the registration and discovery of microservices (spring-cloud-starter-netflix-eureka-server)"
+    }
+  }
+}
