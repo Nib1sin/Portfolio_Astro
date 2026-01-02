@@ -4,7 +4,7 @@ import Footer from "@/components/Footer.astro";
 import "@fontsource-variable/onest";
 import "@/styles/global.css";
 
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { getLocaleFromPathname } from "@/i18n/i18n";
 
 interface Props {
@@ -31,7 +31,7 @@ const locale =
       {title}
     </title>
 
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="relative text-black dark:text-white">
     <div
