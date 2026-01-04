@@ -52,7 +52,7 @@ const StudyItem: FunctionalComponent<Props> = ({ title, school, description, lin
       <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 dark:hover:text-red-400 hover:text-red-800">
         {date}
       </time>
-      <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+      <div className="text-base font-normal text-gray-500 dark:text-gray-400">
         {link && (
           <LinkButton href={link}>
             {school}{" "}
@@ -81,7 +81,7 @@ const StudyItem: FunctionalComponent<Props> = ({ title, school, description, lin
             {paragraph}
           </p>
         ))}
-      </p>
+      </div>
     </li>
   );
 };
