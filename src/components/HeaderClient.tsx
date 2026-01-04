@@ -6,11 +6,23 @@ import UKFlag from "@/icons/UKFlag";
 export type NavItem = { title: string; label: string; url: string };
 type Theme = "light" | "dark";
 
-const FLAG_BY_LOCALE = {
-  es: SpainFlag,
-  en: UKFlag,
-  it: ItalianFlag,
+const LOCALE_UI = {
+  es: { code: "es", name: "ES", Flag: SpainFlag },
+  en: { code: "en", name: "EN", Flag: UKFlag },
+  it: { code: "it", name: "IT", Flag: ItalianFlag },
 } as const;
+
+function ChevronDownIcon(props: preact.JSX.IntrinsicElements["svg"]) {
+  return (
+    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" {...props}>
+      <path
+        fill-rule="evenodd"
+        d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  );
+}
 
 type Props = {
   navItems: NavItem[];
@@ -56,16 +68,18 @@ export default function HeaderClient({
   locale,
   locales,
   defaultLocale,
-  defaultThemeByLocale = { es: "dark", en: "dark", it: "dark", pr: "dark" },
+  defaultThemeByLocale = { es: "dark", en: "dark", it: "dark" },
 }: Props) {
 
-  const CurrentFlag = FLAG_BY_LOCALE[locale as keyof typeof FLAG_BY_LOCALE];
+  const CurrentFlag = LOCALE_UI[locale as keyof typeof LOCALE_UI].Flag;
   const headerRef = useRef<HTMLElement | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
-
+  const [langOpen, setLangOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>(() => "dark");
+  const currentLocaleUI = LOCALE_UI[locale as keyof typeof LOCALE_UI];
+  const otherLocales = locales.filter((l) => l !== locale);
 
   // Theme init/apply
   useEffect(() => {
@@ -82,10 +96,12 @@ export default function HeaderClient({
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const header = headerRef.current;
-      if (!header) return;
+      if (!header)
+        return;
       if (!header.contains(e.target as Node)) {
         setMenuOpen(false);
         setPanelOpen(false);
+        setLangOpen(false);
       }
     };
 
@@ -93,6 +109,7 @@ export default function HeaderClient({
       if (e.key === "Escape") {
         setMenuOpen(false);
         setPanelOpen(false);
+        setLangOpen(false);
       }
     };
 
@@ -107,7 +124,8 @@ export default function HeaderClient({
   // Active section observer
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>("section[id]"));
-    if (!sections.length) return;
+    if (!sections.length)
+      return;
 
     const obs = new IntersectionObserver(
       (entries) => {
@@ -115,7 +133,8 @@ export default function HeaderClient({
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-        if (visible?.target?.id) setActiveId(visible.target.id);
+        if (visible?.target?.id)
+          setActiveId(visible.target.id);
       },
       {
         root: null,
@@ -219,20 +238,61 @@ export default function HeaderClient({
 
         {/* Desktop controls */}
         <div class="hidden md:flex items-center gap-2">
-          <div class="inline-flex items-center gap-2 rounded-full border border-gray-500 px-3 py-1">
-            {CurrentFlag ? <CurrentFlag class="h-4 w-4" /> : null}
-            <select
-              class="bg-transparent text-sm outline-none"
-              value={locale}
-              onChange={(e) =>
-                onSelectLocale((e.currentTarget as HTMLSelectElement).value)
-              }
-              aria-label="Language"
+          <div class="relative">
+            <button
+              type="button"
+              class="inline-flex items-center gap-2 rounded-xl border border-gray-500 px-3 py-1
+                hover:bg-white/10 transition"
+              aria-haspopup="true"
+              aria-expanded={langOpen ? "true" : "false"}
+              onClick={(e) => {
+                e.stopPropagation();
+                setMenuOpen(false);
+                setPanelOpen(false);
+                setLangOpen((v) => !v);
+              }}
             >
-              {locales.map((l) => (
-                <option value={l}>{l.toUpperCase()}</option>
-              ))}
-            </select>
+              {currentLocaleUI?.Flag ? (
+                <currentLocaleUI.Flag class="size-4" />
+              ) : null}
+
+              <span class="text-sm">
+                {currentLocaleUI?.name ?? locale.toUpperCase()}
+              </span>
+
+              <ChevronDownIcon class="size-4 opacity-80" />
+            </button>
+
+            <ul class={`absolute left-0 mt-2 ml-4.5 rounded-xl border border-gray-100/30
+                bg-white/80 dark:bg-gray-900/70 dark:border-gray-500/20
+                shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md p-1
+                ${langOpen ? "block" : "hidden"}`}
+              role="menu"
+            >
+              {otherLocales.map((l) => {
+                const item = LOCALE_UI[l as keyof typeof LOCALE_UI];
+                const Flag = item?.Flag;
+
+                return (
+                  <li role="none">
+                    <button
+                      type="button"
+                      role="menuitem"
+                      class="w-auto rounded-lg px-2 py-2 text-left text-sm
+                        hover:bg-neutral-400/20 dark:hover:bg-gray-500/30
+                        inline-flex items-center gap-2"
+                      onClick={() => {
+                        setLangOpen(false);
+                        onSelectLocale(l);
+                      }}
+                    >
+                      {Flag ? <Flag class="size-4" /> : null}
+                      <span class="ml-auto opacity-70">{l.toUpperCase()}</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
           <button
