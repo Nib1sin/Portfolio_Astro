@@ -26,6 +26,35 @@ function ChevronDownIcon(props: preact.JSX.IntrinsicElements["svg"]) {
   );
 }
 
+function ThemeIconButton({ theme, onToggle, class: className = "", }: {
+  theme: "light" | "dark"; onToggle: () => void; class?: string; }) {
+  return (
+    <button
+      type="button"
+      class={`relative inline-flex items-center justify-center rounded-full border border-gray-500
+        px-3 py-2 hover:bg-white/10 transition ${className}`}
+      onClick={onToggle}
+      aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+      title={theme === "dark" ? "Dark" : "Light"}
+    >
+      <span class="sr-only">{theme === "dark" ? "Dark theme" : "Light theme"}</span>
+
+      <span class="relative h-5 w-5">
+        <SunIcon
+          class={`absolute inset-0 h-5 w-5 transition-transform duration-200 ${
+            theme === "light" ? "scale-100" : "scale-0"
+          }`}
+        />
+        <MoonIcon
+          class={`absolute inset-0 h-5 w-5 transition-transform duration-200 ${
+            theme === "dark" ? "scale-100" : "scale-0"
+          }`}
+        />
+      </span>
+    </button>
+  );
+}
+
 type Props = {
   navItems: NavItem[];
   locale: string;
@@ -190,6 +219,7 @@ export default function HeaderClient({
             aria-expanded={ariaExpandedMenu}
             onClick={() => {
               setPanelOpen(false);
+              setLangOpen(false);
               setMenuOpen((v) => !v);
             }}
           >
@@ -208,6 +238,7 @@ export default function HeaderClient({
             aria-expanded={ariaExpandedPanel}
             onClick={() => {
               setMenuOpen(false);
+              setLangOpen(false);
               setPanelOpen((v) => !v);
             }}
           >
@@ -238,7 +269,7 @@ export default function HeaderClient({
           </div>
         </div>
 
-        {/* Desktop controls */}
+        {/* Desktop menus */}
         <div class="hidden md:flex items-center gap-2">
           {/* Language selector */}
           <div class="relative">
@@ -299,34 +330,11 @@ export default function HeaderClient({
           </div>
 
           {/* Theme selector */}
-          <button
-            type="button"
-            class="relative inline-flex items-center justify-center rounded-full border border-gray-500
-              px-3 py-1 hover:bg-white/10 transition"
-            onClick={onToggleTheme}
-            aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-            title={theme === "dark" ? "Dark" : "Light"}
-          >
-            <span class="sr-only">
-              {theme === "dark" ? "Dark theme" : "Light theme"}
-            </span>
-
-            <span class="relative h-5 w-5">
-              <SunIcon
-                class={`absolute inset-0 h-5 w-5 transition-transform duration-200 ${
-                  theme === "light" ? "scale-100" : "scale-0"
-                }`}
-              />
-              <MoonIcon
-                class={`absolute inset-0 h-5 w-5 transition-transform duration-200 ${
-                  theme === "dark" ? "scale-100" : "scale-0"
-                }`}
-              />
-            </span>
-          </button>
+          <ThemeIconButton theme={theme} onToggle={onToggleTheme} />
         </div>
 
-        {/* Mobile menu dropdown */}
+
+        {/* Mobile menu */}
         <div id="menu" class={`${menuOpen ? "flex" : "hidden"} md:hidden w-full flex-col gap-1 pt-1`}>
           {navItems.map((link) => (
             <a
@@ -342,28 +350,67 @@ export default function HeaderClient({
           ))}
         </div>
 
-        {/* Mobile panel dropdown */}
-        <div id="panel" class={`${panelOpen ? "flex" : "hidden"} md:hidden w-full flex-col gap-2 pt-1`}>
-          <div class="flex items-center gap-2">
-            <label class="text-sm">Language</label>
-            <select
-              class="flex-1 rounded-xl border border-gray-500 bg-transparent px-3 py-2 text-sm"
-              value={locale}
-              onChange={(e) => onSelectLocale((e.currentTarget as HTMLSelectElement).value)}
+        {/* Mobile Menu dropdown */}
+        <div id="panel"
+          class={`${panelOpen ? "flex" : "hidden"} md:hidden w-full flex-col gap-2 pt-1`}
+        >
+          {/* Language selector (mobile) */}
+          <div class="relative min-w-22 self-end">
+            <button
+              type="button"
+              class="w-full inline-flex items-center gap-2 rounded-xl border border-gray-500 px-3 py-2
+                hover:bg-white/10 transition"
+              aria-haspopup="true"
+              aria-expanded={langOpen ? "true" : "false"}
+              onClick={(e) => {
+                e.stopPropagation();
+                setLangOpen((v) => !v);
+              }}
             >
-              {locales.map((l) => (
-                <option value={l}>{l.toUpperCase()}</option>
-              ))}
-            </select>
+              {currentLocaleUI?.Flag ? <currentLocaleUI.Flag class="size-4" /> : null}
+              <span class="text-sm">{currentLocaleUI?.name ?? locale.toUpperCase()}</span>
+              <ChevronDownIcon class="ml-auto size-4 opacity-80" />
+            </button>
+
+            <ul class={`mt-2 w-full rounded-xl border border-gray-100/30
+                bg-white/80 dark:bg-gray-900/70 dark:border-gray-500/20
+                shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md p-1
+                ${langOpen ? "block" : "hidden"}`}
+              role="menu"
+            >
+              {otherLocales.map((l) => {
+                const item = LOCALE_UI[l as keyof typeof LOCALE_UI];
+                const Flag = item?.Flag;
+
+                return (
+                  <li role="none">
+                    <button
+                      type="button"
+                      role="menuitem"
+                      class="w-full rounded-lg px-2 py-2 text-left text-sm
+                        hover:bg-neutral-400/20 dark:hover:bg-gray-500/30
+                        inline-flex items-center gap-2"
+                      onClick={() => {
+                        setLangOpen(false);
+                        onSelectLocale(l);
+                      }}
+                    >
+                      {Flag ? <Flag class="size-4" /> : null}
+                      <span class="font-medium">{item?.name ?? l.toUpperCase()}</span>
+                      <span class="ml-auto opacity-70">{l.toUpperCase()}</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
-          <button
-            type="button"
-            class="rounded-xl border border-gray-500 px-3 py-2 text-sm hover:bg-white/10 transition"
-            onClick={onToggleTheme}
-          >
-            Theme: {theme}
-          </button>
+          {/* ✅ Theme con iconos (mobile) */}
+          <ThemeIconButton
+            theme={theme}
+            onToggle={onToggleTheme}
+            class="self-end rounded-xl min-w-22"
+          />
         </div>
       </nav>
     </header>
