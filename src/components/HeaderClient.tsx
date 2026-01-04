@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import SpainFlag from "@/icons/SpainFlag.tsx";
 import ItalianFlag from "@/icons/ItalianFlag.tsx";
 import UKFlag from "@/icons/UKFlag";
+import SunIcon from "@/icons/SunIcon";
+import MoonIcon from "@/icons/MoonIcon";
 
 export type NavItem = { title: string; label: string; url: string };
 type Theme = "light" | "dark";
@@ -238,6 +240,7 @@ export default function HeaderClient({
 
         {/* Desktop controls */}
         <div class="hidden md:flex items-center gap-2">
+          {/* Language selector */}
           <div class="relative">
             <button
               type="button"
@@ -295,12 +298,31 @@ export default function HeaderClient({
             </ul>
           </div>
 
+          {/* Theme selector */}
           <button
             type="button"
-            class="rounded-full border border-gray-500 px-3 py-1 text-sm hover:bg-white/10 transition"
+            class="relative inline-flex items-center justify-center rounded-full border border-gray-500
+              px-3 py-1 hover:bg-white/10 transition"
             onClick={onToggleTheme}
+            aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+            title={theme === "dark" ? "Dark" : "Light"}
           >
-            Theme: {theme}
+            <span class="sr-only">
+              {theme === "dark" ? "Dark theme" : "Light theme"}
+            </span>
+
+            <span class="relative h-5 w-5">
+              <SunIcon
+                class={`absolute inset-0 h-5 w-5 transition-transform duration-200 ${
+                  theme === "light" ? "scale-100" : "scale-0"
+                }`}
+              />
+              <MoonIcon
+                class={`absolute inset-0 h-5 w-5 transition-transform duration-200 ${
+                  theme === "dark" ? "scale-100" : "scale-0"
+                }`}
+              />
+            </span>
           </button>
         </div>
 
