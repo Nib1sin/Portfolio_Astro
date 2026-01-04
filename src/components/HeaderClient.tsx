@@ -31,8 +31,8 @@ function ThemeIconButton({ theme, onToggle, class: className = "", }: {
   return (
     <button
       type="button"
-      class={`relative inline-flex items-center justify-center rounded-full border border-gray-500
-        px-3 py-2 hover:bg-white/10 transition ${className}`}
+      class={`relative inline-flex items-center justify-center rounded-xl border border-gray-500
+        px-3 py-1 hover:bg-white/10 transition ${className}`}
       onClick={onToggle}
       aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
       title={theme === "dark" ? "Dark" : "Light"}
@@ -288,7 +288,7 @@ export default function HeaderClient({
           <div class="hidden md:flex md:flex-row md:items-center md:justify-center gap-1">
             {navItems.map((link) => (
               <a
-                class={`hover:bg-white/10 rounded-full px-3 py-1 transition text-sm sm:text-base capitalize ${
+                class={`hover:bg-white/10 rounded-xl px-3 py-1 transition text-sm sm:text-base capitalize ${
                   activeId === link.label ? "bg-black/10 dark:bg-white/10" : ""
                 }`}
                 aria-label={link.label}
