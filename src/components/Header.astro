@@ -3,7 +3,6 @@ import HeaderClient from "@/components/HeaderClient.tsx";
 import { getLocaleFromPathname, t } from "@/i18n/i18n";
 
 const locale = getLocaleFromPathname(Astro.url.pathname);
-
 const navItems = [
   {
     title: t(locale, "header.element_4_tittle"),

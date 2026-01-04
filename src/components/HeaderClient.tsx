@@ -101,8 +101,6 @@ export default function HeaderClient({
   defaultLocale,
   defaultThemeByLocale = { es: "dark", en: "dark", it: "dark" },
 }: Props) {
-
-  const CurrentFlag = LOCALE_UI[locale as keyof typeof LOCALE_UI].Flag;
   const headerRef = useRef<HTMLElement | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
@@ -153,30 +151,63 @@ export default function HeaderClient({
   }, []);
 
   // Active section observer
+  
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>("section[id]"));
     if (!sections.length)
       return;
 
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    let obs: IntersectionObserver | null = null;
+    const setupObserver = () => {
+      // Si ya existe, lo destruimos antes de recrear
+      if (obs)
+        obs.disconnect();
 
-        if (visible?.target?.id)
-          setActiveId(visible.target.id);
-      },
-      {
-        root: null,
-        // Ajusta si tu header tapa contenido
-        rootMargin: "-10% 0px -70% 0px",
-        threshold: [0.2, 0.35, 0.5, 0.75],
-      },
-    );
+      const headerH = headerRef.current?.getBoundingClientRect().height ?? 0;
 
-    sections.forEach((s) => obs.observe(s));
-    return () => obs.disconnect();
+      // Un pequeño padding extra para que el cambio ocurra justo “debajo” del header
+      const topPx = Math.ceil(headerH + 4);
+
+      // Solo consideramos activa la franja superior del viewport
+      const bottomPx = Math.round(window.innerHeight * 0.4);
+
+      obs = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (visible?.target?.id)
+            setActiveId(visible.target.id);
+        },
+        {
+          root: null,
+          // “Zona activa”: desde debajo del header hasta ~40% de pantalla
+          rootMargin: `-${topPx}px 0px -${bottomPx}px 0px`,
+          threshold: [0.15, 0.3, 0.5],
+        },
+      );
+
+      sections.forEach((s) => obs!.observe(s));
+    };
+
+    setupObserver();
+
+    // Recalcular cuando cambie el tamaño (responsive / font / etc.)
+    const onResize = () => setupObserver();
+    window.addEventListener("resize", onResize);
+
+    let ro: ResizeObserver | null = null;
+    if ("ResizeObserver" in window && headerRef.current) {
+      ro = new ResizeObserver(() => setupObserver());
+      ro.observe(headerRef.current);
+    }
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+      ro?.disconnect();
+      obs?.disconnect();
+    };
   }, []);
 
   const onSelectLocale = (nextLocale: string) => {
