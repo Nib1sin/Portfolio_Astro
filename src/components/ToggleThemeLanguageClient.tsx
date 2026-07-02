@@ -176,7 +176,7 @@ export default function ToggleThemeLanguageClient({
       <div class="relative">
         <button
           type="button"
-          class="appearance-none border-none flex items-center gap-2"
+          class="appearance-none border-none flex items-center gap-2 cursor-pointer"
           aria-haspopup="true"
           aria-expanded={themeOpen ? "true" : "false"}
           onClick={(e) => {
