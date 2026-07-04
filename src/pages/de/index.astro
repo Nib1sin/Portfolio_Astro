@@ -1,0 +1,77 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import AboutMe from "@/components/about_me/AboutMe.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Experience from "@/components/experience/Experience.astro";
+import Projects from "@/components/projects/Projects.astro";
+import Me from "@/components/contact/Me.astro";
+import BriefcaseIcon from "@/icons/Briefcase.astro";
+import CodeIcon from "@/icons/Code.astro";
+import ProfileCheck from "@/icons/ProfileCheck.astro";
+import SkillsIcon from "@/icons/SkillsIcon.astro";
+import Skills from "@/components/skills/SkillsCarousel.astro";
+import { getLocaleFromPathname, t } from "@/i18n/i18n";
+import "@/styles/global.css";
+
+const locale = getLocaleFromPathname(Astro.url.pathname);
+---
+
+<Layout
+  title="Portfolio Pedro | Software Developer & Software Engineer"
+  description="Contrata a Pedro para desarrollar, implementar y/o mejorar tu software"
+>
+  <main>
+    <SectionContainer class="py-16 md:py-32" id="contacto">
+      <Me />
+    </SectionContainer>
+  </main>
+  <div class="space-y-20">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <BriefcaseIcon class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t(locale, "index.section_1")}
+        </p>
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <CodeIcon class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t(locale, "index.section_2")}
+        </p>
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <ProfileCheck class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t(locale, "index.section_3")}
+        </p>
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white duration-500 hover:scale-110 origin-left"
+      >
+        <SkillsIcon class="size-8" />
+        <p class="hover:text-yellow-200">
+          {t(locale, "index.section_4")}
+        </p>
+      </h2>
+      <Skills />
+    </SectionContainer>
+  </div>
+</Layout>

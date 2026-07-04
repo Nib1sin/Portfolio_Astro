@@ -1,12 +1,13 @@
 import es from "@/i18n/es.json";
 import en from "@/i18n/en.json";
 import it from "@/i18n/it.json";
+import de from "@/i18n/de.json";
 
 export const DEFAULT_LOCALE = "es" as const;
-export const LOCALES = ["es", "en", "it"] as const;
+export const LOCALES = ["es", "en", "it", "de"] as const;
 export type Locale = (typeof LOCALES)[number];
 export type Dict = { [key: string]: string | Dict };
-const DICTS: Record<Locale, Dict> = { es, en, it };
+const DICTS: Record<Locale, Dict> = { es, en, it, de };
 
 export function getLocaleFromPathname(pathname: string): Locale {
   const seg = pathname.split("/").filter(Boolean)[0];

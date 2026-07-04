@@ -1,0 +1,145 @@
+{
+  "index": {
+    "section_1": "Berufserfahrung",
+    "section_2": "Projekte",
+    "section_3": "Über mich",
+    "section_4": "Fähigkeiten"
+  },
+  "aboutMe": {
+    "p_1_1": "Ich bin Pedro und meine Leidenschaft für Videospiele hat mich dazu gebracht, ",
+    "p_1_2": "Softwaretechnik",
+    "p_1_3": " zu studieren, was es mir ermöglicht hat, in verschiedenen Ländern zu arbeiten. Diese Erfahrung hat mir eine globale Perspektive auf ",
+    "p_1_4": " Ansätze und Methoden ",
+    "p_1_5": " gegeben, um Herausforderungen im Bereich der Informatik auf innovative Weise anzugehen.",
+
+    "p_2_1": "Im Laufe dieser langen Reise hatte ich die Gelegenheit, ",
+    "p_2_2": "mehrere Produkte erfolgreich von 0 auf 1 zu bringen.",
+    "p_2_3": " Ich war Teil verschiedener Teams, die effektiv und effizient ",
+    "p_2_4": "optimale und dauerhafte Ergebnisse sichergestellt haben.",
+
+    "p_3_1": "Derzeit arbeite ich im ",
+    "p_3_2": "Banking",
+    "p_3_3": "-Sektor und nutze hauptsächlich Technologien wie ",
+    "p_3_4": "Java, Groovy, AngularJs, Datenbanken (SQL und NoSQL), Hibernate usw."
+  },
+  "experience": {
+    "item_4_date": "August 2024 - Jetzt",
+    "item_4_title": "Full Stack Software Developer",
+    "item_4_company": "AndXor",
+    "item_4_description_1": "• Verantwortlich für die Weiterentwicklung und das Refactoring der Webanwendung Cloud2Sign unter Verwendung von Technologien wie Spring Boot Framework und weiteren Spring-Core-Modulen, Datenbanken (SQL und No-SQL), Gradle und SVN.",
+
+    "item_3_date": "August 2018 - Juli 2024",
+    "item_3_title": "Full Stack Software Developer",
+    "item_3_company": "Sydema",
+    "item_3_description_1": "• Datenanalyst, Entwickler, Weiterentwicklung und Wartung von Laweb4. Webanwendung für den Kreditrückgewinnungsprozess.",
+    "item_3_description_2": "• Entwicklung von Webanwendungen mit Technologien wie JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, Datenbanken (SQL und No-SQL), Gradle und Git.",
+    "item_3_description_3": "• Entwicklung von Batch-Prozessen für die Datenübertragung zwischen verschiedenen Datenbanktypen (Spring Batch, SqlLoader).",
+    "item_3_description_4": "• Verantwortlich für die Verwaltung und Wartung von Linux-Servern (RedHat) zur Bereitstellung der Anwendungen.",
+
+    "item_2_date": "Januar 2017 - Januar 2018",
+    "item_2_title": "Junior Software Developer",
+    "item_2_company": "Movistar",
+    "item_2_description_1": "• Entwickler von Software zur Kundenverwaltung, Aktivitäts- und Umsatzkontrolle. Hauptsächlich in C++ entwickelt.",
+    "item_2_description_2": "• Kontrolle, Verwaltung und Validierung der Kunden-/Lieferantendatenbanken (SQL Server und MongoDB).",
+    "item_2_description_3": "• Entwicklung und Implementierung statistischer und probabilistischer Software, die Angebote für potenzielle Kunden generiert. (Dynamische Skripte mit Python).",
+    "item_2_description_4": "• Verwaltung der auf Windows-Server implementierten Dienste.",
+    "item_2_description_5": "• Erstellung wöchentlicher Berichte, die die möglichen Zielgruppen für die verschiedenen angebotenen Dienste aufzeigten. (Erstellt mit JasperReport).",
+
+    "item_1_date": "Juni 2016 - Dezember 2016",
+    "item_1_title": "IT-Praktikant",
+    "item_1_company": "SUNAT",
+    "item_1_description_1": "• Verwaltung der im Zeitraum 2016-II erhobenen Steuereinnahmen.",
+    "item_1_description_2": "• Während meines Aufenthalts bei SUNAT habe ich die Grundlagen der Projektorganisation erlernt und sie auf verschiedenen Ebenen der Algorithmenlogik angewendet.",
+    "item_1_description_3": "• Erstellung von Berichten mithilfe von Abfragen, um das gewünschte Ergebnis für den Endbenutzer zu erzielen."
+  },
+  "footer": {
+    "section_1": "Pedros Portfolio",
+    "section_2": "Über mich",
+    "section_3": "Kontaktiere mich"
+  },
+  "header": {
+    "element_1_tittle": "Erfahrung",
+    "element_1_url": "/de/#experiencia",
+
+    "element_2_tittle": "Projekte",
+    "element_2_url": "/de/#proyectos",
+
+    "element_3_tittle": "Über mich",
+    "element_3_url": "/de/#sobre-mi",
+
+    "element_4_tittle": "Kontakt",
+    "element_4_url": "/de/#contacto",
+
+    "element_5_tittle": "Fähigkeiten",
+    "element_5_url": "/de/#skills"
+  },
+  "LanguagesTable": {
+    "language_table": "Sprachen",
+    "language_table_show": "Anzeigen",
+    "language_table_hide": "Ausblenden",
+
+    "language_es": "Spanisch",
+    "language_en": "Englisch",
+    "language_it": "Italienisch",
+    "language_de": "Deutsch",
+    "language_lvl": "Muttersprache",
+
+    "language_language": "Sprache",
+    "language_listening": "Hörverständnis",
+    "language_speaking": "Sprechen",
+    "language_writing": "Schreiben"
+  },
+  "study": {
+    "item_1_date": "März 2012 - Januar 2017",
+    "item_1_title": "Softwaretechnik",
+    "item_1_company": "Universidad Tecnológica del Perú (UTP)",
+    "item_1_description_1": "• Kontrolle und Verwaltung von IT-Daten und industrieller Bilanz.",
+    "item_1_description_2": "• Spezialisierung auf die Entwicklung von Algorithmen.",
+    "item_1_description_3": "• Einführung in den logischen Prozess sowie Fähigkeiten und Kenntnisse zum Schreiben von Software.",
+    "item_1_description_4": "• Kenntnis physikalischer, mathematischer und logischer Prozesse zur Vereinfachung bestimmter Abläufe.",
+
+    "item_2_date": "Januar 2013 - Dezember 2015",
+    "item_2_title": "Englischstudent",
+    "item_2_company": "El Britanico",
+    "item_2_description_1": "• Fundierte Englischkenntnisse mit angemessenem Verständnis technischer Begriffe.",
+    "item_2_description_2": "• Fließende und klare Sprache.",
+    "item_2_description_3": "• Entwicklung und Implementierung statistischer und probabilistischer Software, die Angebote für potenzielle Kunden generiert. (Dynamische Skripte mit Python).",
+    "item_2_description_4": "• Insbesondere musste ich während meiner Arbeit immer wieder mit englischen Muttersprachlern kommunizieren.",
+
+    "item_3_date": "März 2018 - Juni 2018",
+    "item_3_title": "Oracle Java und Php Zertifizierung",
+    "item_3_company": "Pc Academy",
+    "item_3_description_1": "Vertiefung und Kenntnis der Sprache in den spezifischsten Details, um mein aktuelles Wissen zu aktualisieren.",
+
+    "item_4_date": "September 2021 - Heute",
+    "item_4_title": "Informatik-Ingenieurwesen",
+    "item_4_company": "Politecnico di Milano",
+    "item_4_description_1": "• Umfassende Verwaltung und Datenbankinfrastruktur.",
+    "item_4_description_2": "• Spezialisierung auf Softwareentwicklung in Low- und High-Level-Sprachen (Rechnerarchitektur und Betriebssysteme).",
+    "item_4_description_3": "• Einführung in den logischen Prozess sowie Fähigkeiten und Kenntnisse zum Schreiben von Software (Algorithmen und Grundlagen der Informatik).",
+    "item_4_description_4": "• Wirtschaft und Unternehmensorganisation, Entwicklung probabilistischer Berechnungen und Statistik."
+  },
+  "me": {
+    "me_hire": "Stell mich ein",
+    "me_intro_1": "Fokussiert auf die Aktualisierung, Entwicklung und Implementierung von Produkten mit besonderem Augenmerk auf Details.",
+    "me_intro_2": "Spezialisiert auf Projektlösungen für individuelle Anwendungen."
+  },
+  "projects": {
+    "item_1_description_1": "Spring Batch ist der De-facto-Standard für die Stapelverarbeitung auf der JVM. Seine Implementierung gängiger Batch-Muster, wie chunk-basierte Verarbeitung und Partitionierung, ermöglicht es mir, skalierbare und leistungsstarke Batch-Anwendungen zu erstellen, die robust genug für die kritischsten Prozesse sind. Dadurch ist es möglich, eine Datenbank über eine Eingabedatei zu befüllen oder auch einen Bericht aus einer Datenbank mit großen Datenmengen zu verwalten.",
+
+    "item_2_description_1": "Anwendung, die es ermöglicht, Informationen aus großen PDF-Dateien wie Handbüchern, Aufsätzen und Büchern zu extrahieren und Fragen dazu zu beantworten. ChatPDF analysiert das PDF, und die KI verwendet relevante Absätze, um dir eine Antwort zu geben.",
+
+    "item_3_description_1": {
+      "description": "In diesem Projekt werden 5 Microservices definiert, die über OpenFeign kommunizieren. Die verwendete Spring-Framework-Version ist 3.3.1, Java17 LTS, Spring Data JPA, Spring Web, Spring Boot Actuator, Eureka, Mysql Driver, PostgreSQL Driver. Die Microservices sind: ",
+      "microservices": "microservice-gateway, microservice-config, microservice-course, microservice-student, microservice-eureka",
+      "item_1": "• microservice-gateway: Zuständig für das Mapping und anschließende Bereitstellen der in den Microservices course & student definierten Endpunkte (spring-cloud-starter-gateway)",
+      "item_2": "• microservice-config: Microservice, der die Konfiguration der Eigenschaften jedes Microservices ermöglicht (spring-cloud-config-server)",
+      "item_3": "• microservice-course: Microservice, der Daten aus einer Mysql-Datenbank bereitstellt und über einen REST-Aufruf mit dem Microservice student kommuniziert (spring-cloud-starter-openfeign)",
+      "item_4": "• microservice-student: Microservice, der Daten aus einer PostgreSQL-Datenbank bereitstellt und über einen REST-Aufruf mit dem Microservice course kommuniziert (spring-cloud-starter-openfeign)",
+      "item_5": "• microservice-eureka: Microservice, der die Registrierung und Erkennung der Microservices ermöglicht (spring-cloud-starter-netflix-eureka-server)"
+    }
+  },
+  "skills": {
+    "choose_theme": "Thema wählen"
+  }
+}

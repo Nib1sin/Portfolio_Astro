@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import SpainFlag from "@/icons/SpainFlag.tsx";
 import ItalianFlag from "@/icons/ItalianFlag.tsx";
 import UKFlag from "@/icons/UKFlag";
+import GermanyFlag from "@/icons/GermanyFlag";
 import SunIcon from "@/icons/SunIcon";
 import MoonIcon from "@/icons/MoonIcon";
 
@@ -12,6 +13,7 @@ const LOCALE_UI = {
   es: { code: "es", name: "ES", Flag: SpainFlag },
   en: { code: "en", name: "EN", Flag: UKFlag },
   it: { code: "it", name: "IT", Flag: ItalianFlag },
+  de: { code: "de", name: "DE", Flag: GermanyFlag },
 } as const;
 
 function ChevronDownIcon(props: preact.JSX.IntrinsicElements["svg"]) {
@@ -31,7 +33,7 @@ function ThemeIconButton({ theme, onToggle, class: className = "", }: {
   return (
     <button
       type="button"
-      class={`relative inline-flex items-center justify-center rounded-xl border border-gray-500
+      class={`relative inline-flex cursor-pointer items-center justify-center rounded-xl border border-gray-500
         px-3 py-1 hover:bg-white/10 transition ${className}`}
       onClick={onToggle}
       aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
@@ -99,7 +101,7 @@ export default function HeaderClient({
   locale,
   locales,
   defaultLocale,
-  defaultThemeByLocale = { es: "dark", en: "dark", it: "dark" },
+  defaultThemeByLocale = { es: "dark", en: "dark", it: "dark", de: "dark" },
 }: Props) {
   const headerRef = useRef<HTMLElement | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -304,9 +306,8 @@ export default function HeaderClient({
         <div class="hidden md:flex items-center gap-2">
           {/* Language selector */}
           <div class="relative">
-            <button
-              type="button"
-              class="inline-flex items-center gap-2 rounded-xl border border-gray-500 px-3 py-1
+            <button type="button"
+              class="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-gray-500 px-3 py-1
                 hover:bg-white/10 transition"
               aria-haspopup="true"
               aria-expanded={langOpen ? "true" : "false"}
