@@ -12,13 +12,11 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
 
 <div class="max-w-200">
   <div class="flex gap-4 mb-4">
-    <img
-      src="/images/image_me.webp"
+    <img src="/images/image_me.webp"
       class="rounded-full shadow-lg w-24 h-24 object-cover object-center transition duration-500 hover:scale-110"
       alt="nibi photo"
     />
-    <a
-      href="https://www.linkedin.com/in/pjaimer/"
+    <a href="https://www.linkedin.com/in/pjaimer/"
       target="_blank"
       rel="noopener"
       class="flex justify-center items-center hover:scale-105 transition"
@@ -28,17 +26,11 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
       </Badge>
     </a>
   </div>
-  <h1
-    class="p-hidden text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4"
-  >
+  <h1 class="p-hidden text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4">
     Hello there, Im Pedro
   </h1>
-  <h2
-    class="text-2xl lg:text-2xl text-balance max-w-250 text-orange-800 dark:text-red-400 pt-6 lg:pt-10"
-  >
-    <strong
-      class="underline-offset-4 decoration-red-400 hover:underline transition duration-300"
-    >
+  <h2 class="text-2xl lg:text-2xl text-balance max-w-250 text-orange-800 dark:text-red-400 pt-6 lg:pt-10">
+    <strong class="underline-offset-4 cursor-help decoration-red-400 hover:underline transition duration-300">
       Full Stack Software Engineer ☕.
     </strong>
     <span
@@ -46,9 +38,7 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
     >
       {t(locale, "me.me_intro_1")}
     </span>
-    <span
-      class="text-lime-800 dark:text-red-400 transition duration-300 hover:brightness-150 hover:shadow-lg"
-    >
+    <span class="text-lime-800 dark:text-red-400 transition duration-300 hover:brightness-150 hover:shadow-lg">
       {t(locale, "me.me_intro_2")} 💻.
     </span>
   </h2>
@@ -58,9 +48,7 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
       <LinkedInIcon class="size-4 md:size-6" />
       LinkedIn
     </SocialPill>
-    <SocialPill
-      href="https://drive.google.com/file/d/1tNhecRKMrslu_8xLFIY5HG5fnam5b8JW/view?usp=sharing"
-    >
+    <SocialPill href="https://drive.google.com/file/d/1tNhecRKMrslu_8xLFIY5HG5fnam5b8JW/view?usp=sharing">
       <CvIcon class="size-4 md:size-6" />
       CV
     </SocialPill>

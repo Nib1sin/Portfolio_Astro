@@ -215,6 +215,7 @@ export default function HeaderClient({
   const onSelectLocale = (nextLocale: string) => {
     // regla: al cambiar idioma => aplicar tema por defecto del idioma
     const nextTheme = defaultThemeByLocale[nextLocale] ?? "dark";
+    applyTheme(nextTheme); // sync write, setTheme's effect may not flush before navigation
     setTheme(nextTheme);
 
     const { pathname, search, hash } = window.location;

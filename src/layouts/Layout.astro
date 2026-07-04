@@ -31,6 +31,16 @@ const locale =
       {title}
     </title>
 
+    <script is:inline>
+      // ponytail: sync pre-hydration read to avoid a light->dark flash on full page loads
+      const storedTheme = localStorage.getItem("theme");
+      const isDark =
+        storedTheme === "dark" ||
+        (storedTheme !== "light" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.documentElement.classList.toggle("dark", isDark);
+    </script>
+
     <ClientRouter />
   </head>
   <body class="relative text-black dark:text-white">
