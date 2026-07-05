@@ -1,7 +1,5 @@
-// Importaciones necesarias
 import { useState } from 'preact/hooks';
 
-// Componente ReadMore
 const ReadMore = ({ description, maxLines }: { description: string; maxLines: number }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => setIsExpanded(!isExpanded);
