@@ -26,6 +26,7 @@
     "item_4_date": "Agosto 2024 - Adesso",
     "item_4_title": "Full Stack Software Developer",
     "item_4_company": "AndXor",
+    "item_4_description_0": "• Project Leader – 'Detect My ID' (Backend & Frontend)\nHo guidato lo sviluppo del progetto 'Detect My ID', una piattaforma di onboarding 'KYC (Know Your Customer)' che consente alle aziende di registrare e convalidare l'identità dei propri utenti tramite un flusso di lavoro (workflow) modulare e configurabile.\nLa soluzione integra un sistema di 'OCR' per l'estrazione automatica delle informazioni dai documenti d'identità, elaborando e restituendo i risultati in 'tempo reale', ottimizzando il processo di verifica e migliorando l'esperienza dell'utente.\nTecnologie utilizzate:\nFrontend:' Vue 3, TypeScript, WebAssembly e Tailwind CSS 4.\nBackend:' Java 25, Spring Boot 4.1.0, Groovy 5.4, MariaDB 12 e Python 3.10.",
     "item_4_description_1": "• Responsabile dell'evoluzione e del refactoring dell'applicazione web Cloud2Sign, utilizzando tecnologie come Spring Boot Framework e altri moduli Spring Core, DataBase (Sql e No-Sql), Gradle e SVN.",
 
     "item_3_date": "Agosto 2018 - Luglio 2024",
@@ -111,7 +112,7 @@
     "item_3_company": "Pc Academy",
     "item_3_description_1": "Approfondimento e conoscenza della lingua nei dettagli più specifici al fine di aggiornare le mie conoscenze attuali.",
 
-    "item_4_date": "Settembre 2021 - Adesso",
+    "item_4_date": "Settembre 2021 - Maggio 2024",
     "item_4_title": "Ingegneria Informatica",
     "item_4_company": "Politecnico di Milano",
     "item_4_description_1": "• Ampia gestione e infrastruttura del database.",

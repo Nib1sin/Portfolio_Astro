@@ -46,8 +46,7 @@ const ExperienceList = ({ experiences }: Props) => {
       ))}
       <div class="flex justify-center mt-4 rounded-full animate-bounce">
         <button
-          class={`
-            px-4 py-2 hover:scale-110
+          class={`px-4 py-2 hover:scale-110 cursor-pointer
           dark:text-white text-black rounded 
           dark:border-white/10 border-black/30
           dark:bg-white/5 bg-black/5

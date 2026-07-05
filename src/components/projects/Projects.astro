@@ -133,9 +133,8 @@ const PROJECTS = [
   <div class="absolute z-30 flex -translate-x-1/2 gap-x-3 rtl:space-x-reverse bottom-3 left-1/2 rounded-full bg-black/30 px-3 py-1.5 backdrop-blur-sm">
     {
       PROJECTS.map((_, index) => (
-        <button
-          type="button"
-          class={`w-3 h-3 rounded-full transition-colors ${
+        <button type="button"
+          class={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
             index === 0 ? "bg-gray-100" : "bg-gray-400/70"
           }`}
           aria-current={index === 0 ? "true" : "false"}
