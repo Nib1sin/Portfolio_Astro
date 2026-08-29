@@ -1,5 +1,4 @@
 ---
-import StudyItem from "@/components/about_me/StudyItem.tsx";
 import { getLocaleFromPathname, t } from "@/i18n/i18n";
 import StudyList from "@/components/about_me/StudyList.tsx";
 
@@ -52,15 +51,3 @@ const STUDY = [
 ---
 
 <StudyList studies={STUDY} client:load />
-
-<!--
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
-  {
-    STUDY.map((study) => (
-      <li class="mb-10 ms-6">
-        <StudyItem {...study} />
-      </li>
-    ))
-  }
-</ol>
--->

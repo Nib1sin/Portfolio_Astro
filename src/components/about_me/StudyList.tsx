@@ -32,7 +32,7 @@ const StudyList = ({ studies }: Props ) => {
 
     return (
         <ol class="relative border-s border-gray-200 dark:border-gray-700">
-        {visibleStudies.map((study, index) => (
+        {visibleStudies.map((study) => (
           <StudyItem
             key={study.date}
             title={study.title}

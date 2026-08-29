@@ -1,4 +1,4 @@
-import { useState, useRef } from "preact/hooks";
+import { useState } from "preact/hooks";
 import ExperienceItem from "@/components/experience/ExperienceItem";
 
 interface Experience {
@@ -19,7 +19,6 @@ const ExperienceList = ({ experiences }: Props) => {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
   const visibleExperiences = showAll ? sortedExperiences : sortedExperiences.slice(0, 1);
-  const experienceRef = useRef<HTMLDivElement>(null);
 
   const handleToggle = () => {
     setShowAll(!showAll);
@@ -34,7 +33,7 @@ const ExperienceList = ({ experiences }: Props) => {
 
   return (
     <div>
-      {visibleExperiences.map((experience, index) => (
+      {visibleExperiences.map((experience) => (
         <ExperienceItem
           key={experience.date}
           title={experience.title}
