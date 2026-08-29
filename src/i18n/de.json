@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Pedro | Full Stack Software Engineer - Java & Spring Boot",
+    "description": "Portfolio von Pedro, Full Stack Software Engineer mit über 8 Jahren Erfahrung in Java, Spring Boot, Angular sowie SQL- und NoSQL-Datenbanken. Kontaktiere mich."
+  },
   "index": {
     "section_1": "Berufserfahrung",
     "section_2": "Projekte",

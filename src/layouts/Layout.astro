@@ -5,18 +5,34 @@ import "@fontsource-variable/onest";
 import "@/styles/global.css";
 
 import { ClientRouter } from "astro:transitions";
-import { getLocaleFromPathname } from "@/i18n/i18n";
+import { LOCALES, DEFAULT_LOCALE, getLocaleFromPathname, t } from "@/i18n/i18n";
 
-interface Props {
-  title: string;
-  description: string;
-}
+const locale = getLocaleFromPathname(Astro.url.pathname);
 
-const { description, title } = Astro.props;
+const title = t(locale, "seo.title");
+const description = t(locale, "seo.description");
 
-const locale =
-  (Astro.currentLocale as string | undefined) ??
-  getLocaleFromPathname(Astro.url.pathname);
+// ponytail: sitio de una sola pagina, la ruta base siempre es "/"
+const localeHref = (l: string) =>
+  new URL(l === DEFAULT_LOCALE ? "/" : `/${l}/`, Astro.site).href;
+
+const canonical = localeHref(locale);
+const ogImage = new URL("/images/image_me.webp", Astro.site).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Pedro",
+  jobTitle: "Full Stack Software Engineer",
+  url: canonical,
+  image: ogImage,
+  description,
+  knowsAbout: ["Java", "Spring Boot", "Groovy", "Angular", "TypeScript", "SQL", "NoSQL"],
+  sameAs: [
+    "https://www.linkedin.com/in/pjaimer/",
+    "https://github.com/Nib1sin",
+  ],
+};
 ---
 
 <!doctype html>
@@ -27,9 +43,27 @@ const locale =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>
-      {title}
-    </title>
+    <title>{title}</title>
+
+    <link rel="canonical" href={canonical} />
+    {LOCALES.map((l) => (
+      <link rel="alternate" hreflang={l} href={localeHref(l)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={localeHref(DEFAULT_LOCALE)} />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Portfolio Pedro" />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
 
     <script is:inline>
       // ponytail: sync pre-hydration read to avoid a light->dark flash on full page loads
