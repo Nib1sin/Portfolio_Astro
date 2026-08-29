@@ -97,28 +97,27 @@ const LANGUAGES = [
 </div>
 
 <script is:inline>
-  document.addEventListener("astro:page-load", () => {
-    const toggleButton = document.getElementById("toggle-table-btn");
-    const tableHeader = document.getElementById("table-header");
-    const tableBody = document.getElementById("table-body");
-    const textHide = toggleButton.querySelector(".text-hide");
-    const textShow = toggleButton.querySelector(".text-show");
-    let isTableVisible = false;
+  const toggleButton = document.getElementById("toggle-table-btn");
+  const tableHeader = document.getElementById("table-header");
+  const tableBody = document.getElementById("table-body");
+  const textHide = toggleButton.querySelector(".text-hide");
+  const textShow = toggleButton.querySelector(".text-show");
+  let isTableVisible = false;
 
-    toggleButton.addEventListener("click", () => {
-      isTableVisible = !isTableVisible;
+  toggleButton.addEventListener("click", () => {
+    isTableVisible = !isTableVisible;
 
-      if (isTableVisible) {
-        tableHeader.style.display = "table-header-group";
-        tableBody.style.display = "table-row-group";
-        toggleButton.querySelector(".relative").textContent =
-          textHide.textContent;
-      } else {
-        tableHeader.style.display = "none";
-        tableBody.style.display = "none";
-        toggleButton.querySelector(".relative").textContent =
-          textShow.textContent;
-      }
-    });
+    if (isTableVisible) {
+      tableHeader.style.display = "table-header-group";
+      tableBody.style.display = "table-row-group";
+      toggleButton.querySelector(".relative").textContent =
+        textHide.textContent;
+    } else {
+      tableHeader.style.display = "none";
+      tableBody.style.display = "none";
+      toggleButton.querySelector(".relative").textContent =
+        textShow.textContent;
+    }
   });
+
 </script>

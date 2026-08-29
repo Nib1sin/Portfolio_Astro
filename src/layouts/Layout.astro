@@ -4,8 +4,8 @@ import Footer from "@/components/Footer.astro";
 import "@fontsource-variable/onest";
 import "@/styles/global.css";
 
-import { ClientRouter } from "astro:transitions";
 import { LOCALES, DEFAULT_LOCALE, getLocaleFromPathname, t } from "@/i18n/i18n";
+import imageMe from "@/assets/image_me.webp";
 
 const locale = getLocaleFromPathname(Astro.url.pathname);
 
@@ -17,7 +17,7 @@ const localeHref = (l: string) =>
   new URL(l === DEFAULT_LOCALE ? "/" : `/${l}/`, Astro.site).href;
 
 const canonical = localeHref(locale);
-const ogImage = new URL("/images/image_me.webp", Astro.site).href;
+const ogImage = new URL(imageMe.src, Astro.site).href;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -74,8 +74,6 @@ const jsonLd = {
           window.matchMedia("(prefers-color-scheme: dark)").matches);
       document.documentElement.classList.toggle("dark", isDark);
     </script>
-
-    <ClientRouter />
   </head>
   <body class="relative text-black dark:text-white">
     <div

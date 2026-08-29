@@ -10,7 +10,13 @@ import CodeIcon from "@/icons/Code.astro";
 import ProfileCheck from "@/icons/ProfileCheck.astro";
 import SkillsIcon from "@/icons/SkillsIcon.astro";
 import Skills from "@/components/skills/SkillsCarousel.astro";
-import { getLocaleFromPathname, t } from "@/i18n/i18n";
+import { getLocaleFromPathname, t, LOCALES, DEFAULT_LOCALE } from "@/i18n/i18n";
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({
+    params: { locale: locale === DEFAULT_LOCALE ? undefined : locale },
+  }));
+}
 
 const locale = getLocaleFromPathname(Astro.url.pathname);
 ---

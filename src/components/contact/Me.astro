@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import imageMe from "@/assets/image_me.webp";
 import Badge from "@/components/contact/Badge.astro";
 import LinkedInIcon from "@/icons/LinkedIn.astro";
 import MailIcon from "@/icons/Mail.astro";
@@ -12,11 +14,13 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
 
 <div class="max-w-200">
   <div class="flex gap-4 mb-4">
-    <img src="/images/image_me.webp"
+    <Image
+      src={imageMe}
       class="rounded-full shadow-lg w-24 h-24 object-cover object-center transition duration-500 hover:scale-110"
       alt="Pedro, Full Stack Software Engineer"
-      width="96"
-      height="96"
+      width={192}
+      height={192}
+      loading="eager"
       fetchpriority="high"
     />
     <a href="https://www.linkedin.com/in/pjaimer/"
@@ -32,7 +36,7 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
   <h1 class="p-hidden text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4">
     Hello there, Im Pedro
   </h1>
-  <h2 class="text-2xl lg:text-2xl text-balance max-w-250 text-orange-800 dark:text-red-400 pt-6 lg:pt-10">
+  <p class="text-2xl lg:text-2xl text-balance max-w-250 text-orange-800 dark:text-red-400 pt-6 lg:pt-10">
     <strong class="underline-offset-4 cursor-help decoration-red-400 hover:underline transition duration-300">
       Full Stack Software Engineer ☕.
     </strong>
@@ -44,7 +48,7 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
     <span class="text-lime-800 dark:text-red-400 transition duration-300 hover:brightness-150 hover:shadow-lg">
       {t(locale, "me.me_intro_2")} 💻.
     </span>
-  </h2>
+  </p>
 
   <nav class="flex gap-4 mt-8 flex-wrap">
     <SocialPill href="https://www.linkedin.com/in/pjaimer/">

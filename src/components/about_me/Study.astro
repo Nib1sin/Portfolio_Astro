@@ -1,6 +1,6 @@
 ---
 import { getLocaleFromPathname, t } from "@/i18n/i18n";
-import StudyList from "@/components/about_me/StudyList.tsx";
+import StudyItem from "@/components/about_me/StudyItem.astro";
 
 const locale = getLocaleFromPathname(Astro.url.pathname);
 const STUDY = [
@@ -50,4 +50,49 @@ const STUDY = [
 ];
 ---
 
-<StudyList studies={STUDY} client:load />
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  <StudyItem {...STUDY[0]} />
+</ol>
+<details class="group">
+    <summary
+      class="flex justify-center mt-4 rounded-full animate-bounce list-none [&::-webkit-details-marker]:hidden"
+    >
+      <span
+        class="px-4 py-2 hover:scale-110 cursor-pointer
+        dark:text-white text-black rounded 
+        dark:border-white/10 border-black/30
+        dark:bg-white/5 bg-black/5
+        dark:hover:bg-slate-900 hover:bg-black/10
+        transition duration-400 ease-in-out
+        flex items-center gap-2"
+      >
+        <svg
+          class="w-4 h-4 text-black dark:text-gray-300 rtl:rotate-180 transition-transform duration-300"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+      </span>
+    </summary>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {STUDY.slice(1).map((study) => <StudyItem {...study} />)}
+  </ol>
+</details>
+
+<style>
+  /* ponytail: la variante group-open de Tailwind no ganaba; una linea de CSS lo resuelve */
+  summary svg {
+    rotate: 90deg;
+  }
+  details[open] summary svg {
+    rotate: -90deg;
+  }
+</style>

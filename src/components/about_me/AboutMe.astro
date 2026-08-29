@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import imageAboutMe from "@/assets/image_aboutMe.webp";
 import Study from "@/components/about_me/Study.astro";
 import LanguagesTable from "@/components/about_me/LanguagesTable.astro";
 import { getLocaleFromPathname, t } from "@/i18n/i18n";
@@ -34,13 +36,13 @@ const locale = getLocaleFromPathname(Astro.url.pathname);
       <strong>{t(locale, "aboutMe.p_3_4")}</strong>
     </p>
   </div>
-  <img
+  <Image
     class="rounded-full size-64 order-1 md:order-2 transition duration-500 hover:scale-105"
     loading="lazy"
-    src="/images/image_aboutMe.webp"
+    src={imageAboutMe}
     alt="Pedro trabajando como desarrollador de software"
-    width="256"
-    height="256"
+    width={512}
+    height={512}
   />
 </article>
 
