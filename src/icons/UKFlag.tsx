@@ -2,8 +2,8 @@ import type { JSX } from "preact";
 
 export default function UKFlag(props: JSX.IntrinsicElements["svg"]) {
   return (
-    <svg class="w-4 h-auto" {...props} height="200px" width="200px" version="1.1" id="Layer_1" viewBox="0 0 512 512" fill="#000000">
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="SVGRepo_iconCarrier"> 
+    <svg class="w-4 h-auto" {...props} height="200px" width="200px" version="1.1" id="ukflag-Layer_1" viewBox="0 0 512 512" fill="#000000">
+      <g id="ukflag-SVGRepo_bgCarrier" stroke-width="0"></g><g id="ukflag-SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="ukflag-SVGRepo_iconCarrier"> 
       <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38 c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621 C512,105.443,494.833,88.276,473.655,88.276z"></path>
       <path style="fill:#F5F5F5;" d="M511.469,120.282c-3.022-18.159-18.797-32.007-37.814-32.007h-9.977l-163.54,107.147V88.276h-88.276 v107.147L48.322,88.276h-9.977c-19.017,0-34.792,13.847-37.814,32.007l139.778,91.58H0v88.276h140.309L0.531,391.717 c3.022,18.159,18.797,32.007,37.814,32.007h9.977l163.54-107.147v107.147h88.276V316.577l163.54,107.147h9.977 c19.017,0,34.792-13.847,37.814-32.007l-139.778-91.58H512v-88.276H371.691L511.469,120.282z"></path> 
       <g> <polygon style="fill:#FF4B55;" points="282.483,88.276 229.517,88.276 229.517,229.517 0,229.517 0,282.483 229.517,282.483 229.517,423.724 282.483,423.724 282.483,282.483 512,282.483 512,229.517 282.483,229.517 "></polygon> 
