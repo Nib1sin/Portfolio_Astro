@@ -20,7 +20,7 @@ export function getLocaleFromPathname(pathname: string): Locale {
 export function t(locale: Locale, key: string): string {
   const value = key
     .split(".")
-    .reduce<unknown>((acc, part) => (acc && typeof acc === "object" ? (acc as any)[part] : undefined), DICTS[locale]);
+    .reduce<unknown>((acc, part) => (acc && typeof acc === "object" ? (acc as Record<string, unknown>)[part] : undefined), DICTS[locale]);
 
   return typeof value === "string" ? value : key; // fallback
 }
