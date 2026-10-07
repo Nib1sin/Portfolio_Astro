@@ -93,6 +93,7 @@ const jsonLd = {
 <style is:global>
   :root {
     color-scheme: light dark;
+    interpolate-size: allow-keywords;
     --scrollbar-color-light: #666666;
     --scrollbar-color-dark: #cccccc;
   }
@@ -119,11 +120,12 @@ const jsonLd = {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 15.5ch;
+    width: max-content;
+    padding-bottom: 0.15em; /* overflow:hidden clips descenders like y */
     max-width: 100%;
 
     animation:
-      typing 2s steps(12),
+      typing 2s steps(var(--n)),
       blink 0.5s infinite step-end alternate;
     overflow: hidden;
   }

@@ -125,14 +125,19 @@
     "item_4_description_4": "• Wirtschaft und Unternehmensorganisation, Entwicklung probabilistischer Berechnungen und Statistik."
   },
   "me": {
+    "me_greeting": "Hallo, ich bin Pedro",
     "me_hire": "Stell mich ein",
     "me_intro_1": "Fokussiert auf die Aktualisierung, Entwicklung und Implementierung von Produkten mit besonderem Augenmerk auf Details.",
     "me_intro_2": "Spezialisiert auf Projektlösungen für individuelle Anwendungen."
   },
   "projects": {
-    "item_1_description_1": "Spring Batch ist der De-facto-Standard für die Stapelverarbeitung auf der JVM. Seine Implementierung gängiger Batch-Muster, wie chunk-basierte Verarbeitung und Partitionierung, ermöglicht es mir, skalierbare und leistungsstarke Batch-Anwendungen zu erstellen, die robust genug für die kritischsten Prozesse sind. Dadurch ist es möglich, eine Datenbank über eine Eingabedatei zu befüllen oder auch einen Bericht aus einer Datenbank mit großen Datenmengen zu verwalten.",
+    "item_1_description_1": "ETL-Prozess, gebaut mit Spring Batch auf Java 8 und Gradle, der Daten zwischen MySQL- und Oracle-Datenbanken verschiebt. Der Ablauf wird über eine XML-Eingabekonfiguration gesteuert, verbindet sich über die JDBC-Treiber von MySQL und Oracle und protokolliert jeden Lauf mit Logback. Nützlich, um eine Datenbank aus einer anderen zu befüllen oder große Datenmengen synchron zu halten.",
 
     "item_2_description_1": "Anwendung, die es ermöglicht, Informationen aus großen PDF-Dateien wie Handbüchern, Aufsätzen und Büchern zu extrahieren und Fragen dazu zu beantworten. ChatPDF analysiert das PDF, und die KI verwendet relevante Absätze, um dir eine Antwort zu geben.",
+
+    "item_4_description_1": "World-of-Warcraft-3.3.5a-Addon in Lua, das Charakterdaten für Server-Migrationen nach JSON exportiert. Während des Spielens erfasst es passiv Talente, Glyphen, Zauber, Ausrüstung, Taschen, Bank, Erfolge, Rufe, Begleiter und Flugrouten. Es unterstützt mehrere Charaktere pro Account, wird mit drei einfachen Befehlen bedient und enthält eine Lua-5.1-Testsuite.",
+
+    "item_5_description_1": "Kursübung: eine CRUD-Anwendung zur Verwaltung von Produkten, gebaut mit Angular 18 und TypeScript. Sie deckt das Erstellen, Auflisten, Bearbeiten und Löschen von Produkten ab, mit über die Angular CLI generierten Komponenten und Unit-Tests mit Karma.",
 
     "item_3_description_1": {
       "description": "In diesem Projekt werden 5 Microservices definiert, die über OpenFeign kommunizieren. Die verwendete Spring-Framework-Version ist 3.3.1, Java17 LTS, Spring Data JPA, Spring Web, Spring Boot Actuator, Eureka, Mysql Driver, PostgreSQL Driver. Die Microservices sind: ",

@@ -152,63 +152,28 @@ export default function HeaderClient({
     };
   }, []);
 
-  // Active section observer
-  
+  // Active section: last section whose top crossed the line below the header
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>("section[id]"));
     if (!sections.length)
       return;
 
-    let obs: IntersectionObserver | null = null;
-    const setupObserver = () => {
-      // Si ya existe, lo destruimos antes de recrear
-      if (obs)
-        obs.disconnect();
-
+    const update = () => {
       const headerH = headerRef.current?.getBoundingClientRect().height ?? 0;
-
-      // Un pequeño padding extra para que el cambio ocurra justo “debajo” del header
-      const topPx = Math.ceil(headerH + 4);
-
-      // Solo consideramos activa la franja superior del viewport
-      const bottomPx = Math.round(window.innerHeight * 0.4);
-
-      obs = new IntersectionObserver(
-        (entries) => {
-          const visible = entries
-            .filter((e) => e.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-          if (visible?.target?.id)
-            setActiveId(visible.target.id);
-        },
-        {
-          root: null,
-          // “Zona activa”: desde debajo del header hasta ~40% de pantalla
-          rootMargin: `-${topPx}px 0px -${bottomPx}px 0px`,
-          threshold: [0.15, 0.3, 0.5],
-        },
-      );
-
-      sections.forEach((s) => obs!.observe(s));
+      const line = headerH + window.innerHeight * 0.3;
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      const current = atBottom
+        ? sections[sections.length - 1]
+        : sections.filter((s) => s.getBoundingClientRect().top <= line).pop();
+      setActiveId((current ?? sections[0]).id);
     };
 
-    setupObserver();
-
-    // Recalcular cuando cambie el tamaño (responsive / font / etc.)
-    const onResize = () => setupObserver();
-    window.addEventListener("resize", onResize);
-
-    let ro: ResizeObserver | null = null;
-    if ("ResizeObserver" in window && headerRef.current) {
-      ro = new ResizeObserver(() => setupObserver());
-      ro.observe(headerRef.current);
-    }
-
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
     return () => {
-      window.removeEventListener("resize", onResize);
-      ro?.disconnect();
-      obs?.disconnect();
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
     };
   }, []);
 

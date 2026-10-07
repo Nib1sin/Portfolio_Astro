@@ -33,10 +33,10 @@ const PROJECTS = [
     tags: [
       TAGS.JAVA,
       TAGS.GRADLE,
-      TAGS.ORACLE,
-      TAGS.SQL,
-      TAGS.GROOVY,
       TAGS.SPRING,
+      TAGS.SPRINGBATCH,
+      TAGS.MYSQL,
+      TAGS.ORACLE,
       TAGS.XML,
     ],
   },
@@ -55,7 +55,23 @@ const PROJECTS = [
       TAGS.TAILWIND,
     ],
   },
-];
+  {
+    title: "CharacterDump - WoW 3.3.5a character exporter",
+    description: t(locale, "projects.item_4_description_1"),
+    link: "",
+    github: "https://github.com/Nib1sin/CharacterDump",
+    image: null,
+    tags: [TAGS.LUA],
+  },
+  {
+    title: "Angular 18 CRUD Products",
+    description: t(locale, "projects.item_5_description_1"),
+    link: "",
+    github: "https://github.com/Nib1sin/crud_produtcs_A18",
+    image: null,
+    tags: [TAGS.ANGULAR, TAGS.TYPESCRIPT],
+  },
+].map((p) => ({ ...p, Icon: p.tags[0].icon }));
 ---
 
 <div id="projects-carousel" class="relative w-full overflow-hidden" data-carousel="static">
@@ -63,7 +79,7 @@ const PROJECTS = [
   <div class="relative overflow-hidden rounded-lg pb-14 md:pb-0 md:h-96">
     {
       PROJECTS.map(
-        ({ image, title, description, tags, link, github }, index) => (
+        ({ image, title, description, tags, link, github, Icon }, index) => (
           <div
             class={`${
               index === 0 ? "block" : "hidden"
@@ -71,16 +87,22 @@ const PROJECTS = [
             data-carousel-item={index === 0 ? "active" : ""}
           >
             <article class="flex flex-col space-x-0 space-y-8 group md:h-full md:flex-row md:space-x-8 md:space-y-0">
-              <div class="w-full md:h-full md:w-1/2">
-                <div class="relative flex h-full flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                  <Image
-                    alt={title}
-                    class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                    loading="lazy"
-                    src={image}
-                    width={800}
-                    quality={72}
-                  />
+              <div class="w-full md:w-1/2 md:self-start">
+                <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                  {image ? (
+                    <Image
+                      alt={title}
+                      class="object-cover object-center w-full h-56 transition duration-500 sm:h-auto sm:aspect-[8/5] md:group-hover:scale-105"
+                      loading="lazy"
+                      src={image}
+                      width={800}
+                      quality={72}
+                    />
+                  ) : (
+                    <div class="flex items-center justify-center w-full h-56 sm:h-auto sm:aspect-[8/5] bg-linear-to-br from-indigo-500/20 to-fuchsia-500/20">
+                      <Icon class="size-24" />
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -135,7 +157,7 @@ const PROJECTS = [
   </div>
 
   <!-- Indicadores del carrusel -->
-  <div class="absolute z-30 flex -translate-x-1/2 gap-x-3 rtl:space-x-reverse bottom-3 left-1/2 rounded-full bg-black/30 px-3 py-1.5 backdrop-blur-sm">
+  <div class="absolute z-30 flex -translate-x-1/2 gap-x-3 rtl:space-x-reverse bottom-3 left-1/2 md:left-1/4 rounded-full bg-black/30 px-3 py-1.5 backdrop-blur-sm">
     {
       PROJECTS.map((_, index) => (
         <button type="button"
@@ -178,7 +200,7 @@ const PROJECTS = [
   </button>
   <button
     type="button"
-    class="absolute top-0 right-0 z-30 flex items-center justify-center h-56 md:h-full px-4 cursor-pointer group focus:outline-none animate-bounce-horizontal-right"
+    class="absolute top-0 right-0 md:right-auto md:left-[calc(50%-5.5rem)] z-30 flex items-center justify-center h-56 md:h-full px-4 cursor-pointer group focus:outline-none animate-bounce-horizontal-right"
     data-carousel-next
   >
     <span
