@@ -52,9 +52,22 @@ const EXPERIENCE = [
     link: "http://www.sunat.gob.pe",
   },
 ];
+
+const HIGHLIGHTS = [1, 2, 3, 4].map((n) => ({
+  value: t(locale, `experience.highlight_${n}_value`),
+  label: t(locale, `experience.highlight_${n}_label`),
+}));
 ---
 
 <div>
+  <ul class="grid grid-cols-2 gap-3 mb-10 md:grid-cols-4">
+    {HIGHLIGHTS.map(({ value, label }) => (
+      <li class="p-4 border rounded-xl border-black/10 bg-white/60 backdrop-blur-sm dark:border-white/10 dark:bg-white/5">
+        <p class="text-2xl font-bold text-indigo-600 dark:text-red-400">{value}</p>
+        <p class="mt-1 text-sm text-slate-600 dark:text-gray-400">{label}</p>
+      </li>
+    ))}
+  </ul>
   <ExperienceItem {...EXPERIENCE[0]} />
   <details class="group">
     <summary

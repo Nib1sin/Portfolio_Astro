@@ -5,7 +5,7 @@
   },
   "index": {
     "section_1": "Work Experience",
-    "section_2": "Proyects",
+    "section_2": "Projects",
     "section_3": "About Me",
     "section_4": "Skills"
   },
@@ -27,24 +27,33 @@
     "p_3_4": "Java, groovy, AngularJs, database (sql and nosql), Hibernate, etc."
   },
   "experience": {
-    "item_4_date": "Agosto 2024 - Now",
+    "highlight_1_value": "8+",
+    "highlight_1_label": "Years of experience",
+    "highlight_2_value": "5",
+    "highlight_2_label": "Team members on Detect My ID",
+    "highlight_3_value": "2000",
+    "highlight_3_label": "Test users verified successfully",
+    "highlight_4_value": "2-3 min",
+    "highlight_4_label": "Typical full KYC onboarding",
+
+    "item_4_date": "August 2024 - Now",
     "item_4_title": "Full Stack Software Developer",
     "item_4_company": "AndXor",
-    "item_4_description_0": "• Project Leader – 'Detect My ID' (Backend & Frontend)\nI led the development of the 'Detect My ID' project, a 'KYC (Know Your Customer)' onboarding platform that allows companies to register and validate their users' identity through a modular, configurable workflow.\nThe solution integrates an 'OCR' system for automatic extraction of information from identity documents, processing and returning results in 'real time', which streamlines the verification process and improves the user experience.\nTechnologies used:\nFrontend:' Vue 3, TypeScript, WebAssembly and Tailwind CSS 4.\nBackend:' Java 25, Spring Boot 4.1.0, Groovy 5.4, MariaDB 12 and Python 3.10.",
-    "item_4_description_1": "• Responsible for the evolution and refactoring of the Cloud2Sign web application, using technologies such as Spring Boot Framework and other Spring Core modules, Databases (SQL and No-SQL), Gradle, and SVN.",
+    "item_4_description_0": "• Project Leader – 'Detect My ID' (Backend & Frontend)\nI led a team of 5 (2 backend, 2 frontend and 1 analyst) building 'Detect My ID', a 'KYC (Know Your Customer)' onboarding platform that lets companies register and validate their users' identity through a modular, configurable workflow. A full verification usually takes 2-3 minutes, depending on the configured steps, and the platform successfully handled a test run of 2000 users. It is currently in its commercial phase.\nThe solution integrates an 'OCR' system that extracts information from identity documents automatically and returns the results in 'real time', streamlining verification and improving the user experience.\nTechnologies used:\nFrontend: Vue 3, TypeScript, WebAssembly and Tailwind CSS 4.\nBackend: Java 25, Spring Boot 4.1.0, Groovy 5.4, MariaDB 12 and Python 3.10.",
+    "item_4_description_1": "• Responsible for the evolution and refactoring of the Cloud2Sign web application, where I built about 80% of the backend, improving code quality and response speed, until I moved to the Onboarding team. Technologies: Spring Boot and other Spring Core modules, databases (SQL and NoSQL), Gradle and SVN.",
 
     "item_3_date": "August 2018 - July 2024",
     "item_3_title": "Full Stack Software Developer",
     "item_3_company": "Sydema",
-    "item_3_description_1": "• Data analyst, developer, evolution and maintenance of Laweb4. Web application for the credit recovery process.",
+    "item_3_description_1": "• Part of a 10-person team that built Laweb4, a web application for debt management and credit recovery, during the first 3 years. The product was sold to the banking sector and delivered fast response times.",
     "item_3_description_2": "• Development of web applications using technologies such as JEE, Spring Framework, AngularJs, Solr, Redis, Groovy, Hibernate, Web Services, DataBases (Sql and No-Sql), Gradle and Git.",
-    "item_3_description_3": "• Development of Batch Processes for data transfer from different types of Data bases (Spring Batch, SqlLoader).",
+    "item_3_description_3": "• Then spent 3 years on the ETL application: batch processes for data transfer between different types of databases (Spring Batch, SqlLoader), also sold to the banking sector and with fast processing times.",
     "item_3_description_4": "• Responsible for the management and maintenance of Linux servers (RedHat), for deploying applications.",
 
     "item_2_date": "January 2017 - January 2018",
     "item_2_title": "Junior Software Developer",
     "item_2_company": "Movistar",
-    "item_2_description_1": "• Developer of customer management, activity and revenue control software. Mainly developed in c++.",
+    "item_2_description_1": "• First steps in backend development (mainly C++) and database management, working on customer management, activity and revenue control software.",
     "item_2_description_2": "• Control, management and validation of client/supplier databases (Sql server and MongoDB).",
     "item_2_description_3": "• Development and implementation of statistical and probabilistic software that generates offers to potential clients. (Dynamic scripts with Python).",
     "item_2_description_4": "• Management of services implemented on Windows server.",

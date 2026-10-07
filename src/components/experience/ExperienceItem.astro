@@ -30,7 +30,7 @@ const { title, company, description, link, date } = Astro.props;
 
   <div class="relative flex flex-col gap-2 pb-4 text-gray-300 md:col-span-3">
     {description.map((paragraph) => (
-      <p class="mt-2 text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-100">
+      <p class="mt-2 whitespace-pre-line text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-100">
         {paragraph}
       </p>
     ))}
