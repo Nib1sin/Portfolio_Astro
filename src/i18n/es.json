@@ -69,7 +69,8 @@
   "footer": {
     "section_1": "Portfolio de Pedro",
     "section_2": "Sobre mí",
-    "section_3": "Contactame"
+    "section_3": "Contactame",
+    "back_to_top": "Volver arriba"
   },
   "header": {
     "element_1_tittle": "Experiencia",

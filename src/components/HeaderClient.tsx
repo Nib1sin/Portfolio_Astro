@@ -202,7 +202,7 @@ export default function HeaderClient({
   return (
     <header ref={headerRef} class="sticky top-0 z-50 w-full pt-2">
       <nav
-        class="mx-auto w-[min(100%-1.5rem,48rem)]
+        class="header-nav mx-auto w-[min(100%-1.5rem,48rem)]
           border-2 border-gray-500 rounded-2xl
           bg-neutral-200/50 dark:bg-black/10 backdrop-blur-2xl
           px-3 py-2 md:px-6

@@ -88,6 +88,18 @@ const jsonLd = {
     <Header />
     <slot />
     <Footer />
+    <a
+      id="to-top"
+      href="#contacto"
+      aria-label={t(locale, "footer.back_to_top")}
+      class="hidden fixed bottom-5 right-5 z-50 size-12 place-items-center rounded-full"
+    >
+      <span class="grid size-[calc(100%-6px)] place-items-center rounded-full bg-white text-black dark:bg-gray-900 dark:text-white">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </a>
   </body>
 </html>
 

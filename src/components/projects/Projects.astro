@@ -88,7 +88,7 @@ const PROJECTS = [
           >
             <article class="flex flex-col space-x-0 space-y-8 group md:h-full md:flex-row md:space-x-8 md:space-y-0">
               <div class="w-full md:w-1/2 md:self-start">
-                <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <div class="relative flex flex-col items-center gap-8 bg-black/10 dark:bg-white/10 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
                   {image ? (
                     <Image
                       alt={title}
@@ -273,6 +273,15 @@ const PROJECTS = [
   const indicators = document.querySelectorAll("[data-carousel-slide-to]");
   indicators.forEach((indicator, index) => {
     indicator.addEventListener("click", () => changeSlide(index));
+  });
+
+  // Swipe: horizontal drag over 50px changes slide
+  const carousel = document.getElementById("projects-carousel");
+  let touchX = 0;
+  carousel.addEventListener("touchstart", (e) => (touchX = e.touches[0].clientX), { passive: true });
+  carousel.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) changeSlide(dx < 0 ? "next" : "prev");
   });
 
 </script>
